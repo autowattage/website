@@ -1,3 +1,18 @@
+/* Color palette */
+:root {
+  --black: #111822;
+  --dark-gray: #32484B;
+  --light-gray: #AAC1AF;
+  --white: #F8FCF2;
+  --red: #FF0044;
+  --yellow: #FFC800;
+  --blue: #0B6CD3;
+  --purple: #5900B3;
+  --purple-hover: #A50082;
+}
+/* Nerd Font icons */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+/* Be Vietnam Pro font */
 @font-face {
   font-family: "Be Vietnam Pro";
   src: url("../../fonts/BeVietnamPro-Regular.ttf");
@@ -22,4 +37,18 @@
   font-weight: bold;
   font-style: italic;
 }
-html { font-family: "Be Vietname Pro", sans-serif; }
+/* Link styling */
+a {color: var(--blue);}
+a:visited {color: var(--purple);}
+a:hover {color: var(--purple-hover);}
+a:active {color: var(--red);}
+/* Highlight styling */
+::selection, ::-moz-selection {
+  background-color:var(--blue);
+  color: var(--white);
+}
+html {
+  font-family: "Be Vietnam Pro", sans-serif;
+  background-color: var(--black);
+  color: var(--black);
+}

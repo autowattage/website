@@ -1,0 +1,7 @@
+#sidenav {
+  height: 100vh;
+}
+#sidenav>ul, #sidenav li {
+  list-style-type: none;
+  padding: 0; margin: 0;
+}

@@ -1,16 +1,6 @@
 ---
-import Head from '../components/Head.astro';
-import Sidenav from '../components/Sidenav.astro';
-import '../css/global.css';
-import '@fontsource/be-vietnam-pro';
-
-import { Image } from 'astro:assets';
-//const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
+import Homepage from '../layouts/Homepage.astro';
 ---
-<html lang="en">
-  <Head title="bunnyguy.foo"/>
-  <body>
-    <Sidenav/>
-    <p>Hello world</p>
-  </body>
-</html>
+<Homepage title="bunnyguy.foo">
+  <p>My page content, wrapped in a layout!</p>
+</Homepage>

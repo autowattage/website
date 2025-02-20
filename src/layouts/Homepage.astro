@@ -1,0 +1,21 @@
+---
+/* components */
+import Head from '../components/Head.astro';
+import Sidenav from '../components/Sidenav.astro';
+/* css styling */
+import '../css/global.css';
+import '../css/homepage.css';
+import '@fontsource/be-vietnam-pro';
+/* images */
+import { Image } from 'astro:assets';
+//const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
+/* variables */
+const { title } = Astro.props;
+---
+<html lang="en">
+  <Head title={title}/>
+  <body>
+    <Sidenav/>
+    <main><slot/></main>
+  </body>
+</html>
