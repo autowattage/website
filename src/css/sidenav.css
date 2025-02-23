@@ -1,7 +1,12 @@
 #sidenav {
-  height: 100vh;
+  height: 100vh; margin: 0 1rem 0;
 }
 #sidenav>ul, #sidenav li {
   list-style-type: none;
-  padding: 0; margin: 0;
+  padding: 0; margin: 1rem 0 0;
+  text-align: center;
+}
+#sidenav a>img {
+  display: block; margin: 0 auto .25rem;
+  image-rendering: pixelated;
 }

@@ -1,6 +1,24 @@
 ---
 import Homepage from '../layouts/Homepage.astro';
+import '../css/index.css';
+/* images */
+import { Image } from 'astro:assets';
+const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 <Homepage title="bunnyguy.foo">
-  <p>My page content, wrapped in a layout!</p>
+  <header>
+    <Image src={images["../assets/header.png"]()} alt="foo"/>
+    <a href="/"><h1>bunnyguy dot foo</h1></a>
+  </header>
+  <div id="main-wrap">
+    <section id="main-intro">
+      <p>My page content, wrapped in a layout!</p>
+      <p>My page content, wrapped in a layout!</p>
+      <p>My page content, wrapped in a layout!</p>
+      <p>My page content, wrapped in a layout!</p>
+    </section>
+
+    <section id="main-nav">
+    </section>
+  </div>
 </Homepage>

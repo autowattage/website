@@ -1,11 +1,14 @@
 ---
 import '../css/sidenav.css';
+/* images */
+import { Image } from 'astro:assets';
+const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 <nav id="sidenav">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/">Filler link 1</a></li>
-    <li><a href="/">Filler link 2</a></li>
-    <li><a href="/">Filler link 3</a></li>
+    <li><a href="/"><Image src={images["../assets/icons/home.png"]()} alt="Pixel art of a playing jack in primary colors."/>Home</a></li>
+    <li><a href="/"><Image src={images["../assets/icons/about.png"]()} alt="Pixel art of a sparkling red heart."/>About</a></li>
+    <li><a href="/"><Image src={images["../assets/icons/art.png"]()} alt="Pixel art of a artist palette with blobs of paint (primary colors, black, and white) on top."/>Art</a></li>
+    <li><a href="/"><Image src={images["../assets/icons/tech.png"]()} alt="Pixel art of a computer blue-screened."/>Tech</a></li>
   </ul>
 </nav>

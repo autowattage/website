@@ -47,8 +47,4 @@ a:active {color: var(--red);}
   background-color:var(--blue);
   color: var(--white);
 }
-html {
-  font-family: "Be Vietnam Pro", sans-serif;
-  background-color: var(--black);
-  color: var(--black);
-}
+html { font-family: "Be Vietnam Pro", sans-serif; }
