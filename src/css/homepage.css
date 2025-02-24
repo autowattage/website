@@ -12,12 +12,17 @@ body {
 }
 main {
   background-color: var(--white);
-  border-radius: 0 0 1rem 1rem; flex-grow: 1;
+  border-radius: 0 0 1rem 1rem;
+  flex-grow: 1;
 }
-#sidenav { flex-shrink: 0; order: 1; }
+#sidenav { 
+  margin: 0 .5rem; 
+  flex-basis: 4rem; flex-shrink: 0; order: 1;
+}
 
 /* Tablet/Desktop */
 @media screen and (min-width: 35rem) {
   body {flex-direction: row;}
   #main-cont {border-radius: 1rem 0 0 1rem; order: 2;}
+  #sidenav {flex-shrink: 1;}
 }

@@ -3,9 +3,10 @@
 }
 #sidenav>ul, #sidenav li {
   list-style-type: none;
-  padding: 0; margin: 1rem 0 0;
+  padding: 0; margin: .5rem 0 0;
   text-align: center;
 }
+#sidenav li {margin: 1rem 0 0;}
 #sidenav a>img {
   display: block; margin: 0 auto .25rem;
   image-rendering: pixelated;
