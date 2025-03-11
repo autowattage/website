@@ -17,7 +17,7 @@ main {
 }
 #sidenav { 
   margin: 0 .5rem; 
-  flex-basis: 4rem; flex-shrink: 0; order: 1;
+  flex-basis: 5rem; flex-shrink: 0; order: 1;
 }
 
 /* Tablet/Desktop */
