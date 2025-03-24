@@ -1,3 +1,6 @@
+/* Nerd Font icons */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 /* Color palette */
 :root {
   --black: #111822;
@@ -7,12 +10,11 @@
   --white: #F8FCF2;
   --red: #FF0044;
   --yellow: #FFC800;
+  --green: #63CB1A;
   --blue: #0B6CD3;
   --purple: #5900B3;
   --purple-hover: #A50082;
 }
-/* Nerd Font icons */
-@import "https://www.nerdfonts.com/assets/css/webfont.css";
 /* Be Vietnam Pro font */
 @font-face {
   font-family: "Be Vietnam Pro";

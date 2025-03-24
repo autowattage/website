@@ -1,3 +1,6 @@
+/* Nerd Font icons */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 #sidenav {
   height: 100vh; margin: 0 1rem 0;
 }
@@ -7,10 +10,11 @@
   width: 100%; height: 100%; display: block;
   background-color: var(--dark-gray);
   padding: .5rem 0; border-radius: 1rem;
-  color: var(--light-gray);
+  color: var(--light-gray); text-decoration: none;
 }
 #sidenav li>a:hover {background-color: var(--gray);}
-#sidenav a>img {
-  display: block; margin: 0 auto .25rem;
-  image-rendering: pixelated;
-}
+#sidenav i {display: block; font-size: 1.5rem;}
+#sidenav li:first-child i {color: var(--red);}
+#sidenav li:nth-child(2) i {color: var(--yellow);}
+#sidenav li:nth-child(3) i {color: var(--green);}
+#sidenav li:nth-child(4) i {color: var(--blue);}

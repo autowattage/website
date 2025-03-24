@@ -18,8 +18,10 @@ h1 {
 #main-nav {margin: 1rem;}
 #main-nav * {min-height: 0;}
 #main-nav>article {height: 20rem;}
+#main-nav>article>a {flex-grow: 1;}
 #main-nav div { order: 1; flex-basis:35%; flex-shrink: 0; flex-direction: row; }
 #main-nav a:hover {transform: rotate(1deg);}
+
 /* Tablet */
 @media screen and (min-width: 35rem) {
   header {height: 8rem;}
