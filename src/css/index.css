@@ -9,13 +9,13 @@ h1 {
   mix-blend-mode: difference; text-decoration: underline;
 }
 #intro {
-  background-color: gray;
-  width: auto; margin: 0 1rem 0; padding: .5rem;
+  background-color: var(--light-gray);
+  width: auto; padding: .5rem;
   padding-right: 2.5rem; box-sizing: border-box;
   clip-path: polygon(0 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%);
 }
+#main-wrap {margin: 0 1rem 1rem;}
 #main-nav, #main-nav>article, #main-nav div {display: flex; gap: 1rem; flex-direction: column;}
-#main-nav {margin: 1rem;}
 #main-nav * {min-height: 0;}
 #main-nav>article {height: 20rem;}
 #main-nav>article>a {flex-grow: 1;}
@@ -37,7 +37,7 @@ h1 {
   }
   h1 {font-size: 3rem; top: 6rem;}
   #intro {
-    height: 9rem; bottom: 9rem; width: calc(75% - 2.5rem);
+    height: 9rem; bottom: 9rem; width: calc(75% - 1rem);
     clip-path: polygon(0 0, calc(100% - 9rem) 0, 100% 100%, 0 100%);
     padding-right: 9rem;
   }
