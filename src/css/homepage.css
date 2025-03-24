@@ -24,5 +24,5 @@ main {
 @media screen and (min-width: 35rem) {
   body {flex-direction: row;}
   #main-cont {border-radius: 1rem 0 0 1rem; order: 2;}
-  #sidenav {flex-shrink: 1;}
+  #sidenav {flex-basis: 4rem;}
 }

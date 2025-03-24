@@ -7,7 +7,7 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 <Homepage title="bunnyguy.foo">
   <header>
-    <Image src={images["../assets/header.png"]()} alt="foo"/>
+    <Image src={images["../assets/header.png"]()} alt="Header image"/>
     <a href="/"><h1>bunnyguy dot foo</h1></a>
   </header>
 
@@ -15,9 +15,21 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
     <p>On an isolated island far, far away, a white rabbit wearing a top hat and a yellow bowtie welcomes you.</p>
     <p>Welcome to bunnyguy island, a self-indulgent website made for my self-expression.</p>
   </section>
+
   <section id="main-nav">
     <article>
-      <a href=""></a>
+      <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
+      <div>
+        <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
+        <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
+      </div>
+    </article>
+    <article>
+      <div>
+        <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
+        <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
+      </div>
+      <a href=""><Image src={images["../assets/header.png"]()} alt="foo"/></a>
     </article>
   </section>
 </Homepage>
