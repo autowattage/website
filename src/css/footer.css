@@ -1,5 +1,4 @@
 footer, footer>nav {
-  background-color: var(--dark-gray);
   color: var(--white); padding: .25rem;
   align-items: center;
   display: flex; gap: .5rem;

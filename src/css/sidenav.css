@@ -2,18 +2,23 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 #sidenav {
-  height: 100vh; margin: 0 1rem 0;
+  height: 100vh; padding: 0 1rem 0;
 }
-#sidenav>ul, #sidenav>li { margin: .5rem 0 0; padding: 0; text-align: center; }
-#sidenav>ul { display: flex; gap: .5rem;}
+#sidenav>ul, #sidenav>li { margin: 1rem 0; padding: 0; text-align: center; }
+#sidenav>ul { 
+  display: flex; gap: 1rem; 
+  list-style: none;
+}
 #sidenav li {flex: 1 1 0;}
 #sidenav li>a {
   width: 100%; height: 100%; display: block;
-  background-color: var(--dark-gray);
   border-radius: 1rem; padding: .5rem; box-sizing: border-box;
-  color: var(--light-gray); text-decoration: none;
+  color: var(--white); text-decoration: none;
+  background-color: var(--gray);
+  background-image: url("../assets/cardboard.png");
 }
-#sidenav li>a:hover {background-color: var(--gray);}
+#sidenav li>a:hover {background-color: var(--light-gray);}
+#sidenav li>a:active {background-color: var(--light-gray);}
 #sidenav i {display: block; font-size: 1.5rem;}
 #sidenav li:first-child i {color: var(--red);}
 #sidenav li:nth-child(2) i {color: var(--yellow);}
