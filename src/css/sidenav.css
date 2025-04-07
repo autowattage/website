@@ -2,11 +2,11 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 
 #sidenav {
-  height: 100vh; padding: 0 1rem 0;
+  height: 100vh; padding: 0 .5rem 0;
 }
-#sidenav>ul, #sidenav>li { margin: 1rem 0; padding: 0; text-align: center; }
+#sidenav>ul, #sidenav>li { margin: .5rem 0; padding: 0; text-align: center; }
 #sidenav>ul { 
-  display: flex; gap: 1rem; 
+  display: flex; gap: .5rem; 
   list-style: none;
 }
 #sidenav li {flex: 1 1 0;}
@@ -24,6 +24,12 @@
 #sidenav li:nth-child(2) i {color: var(--yellow);}
 #sidenav li:nth-child(3) i {color: var(--green);}
 #sidenav li:nth-child(4) i {color: var(--blue);}
+
+@media screen and (min-width: 25rem) {
+  #sidenav {padding: 0 1rem 0;}
+  #sidenav>ul, #sidenav>li {margin: 1rem 0;}
+  #sidenav>ul {gap: 1rem;}
+}
 
 @media screen and (min-width: 35rem) {
   #sidenav>ul {flex-direction: column;}

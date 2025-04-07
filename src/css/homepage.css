@@ -19,7 +19,7 @@ main {
   border-radius: 0 0 1rem 1rem;
   flex-grow: 1;
 }
-#sidenav { flex-basis: 5rem; flex-shrink: 0; order: 1; }
+#sidenav { flex-basis: 4rem; flex-shrink: 0; order: 1; }
 
 /* Tablet/Desktop */
 @media screen and (min-width: 35rem) {
