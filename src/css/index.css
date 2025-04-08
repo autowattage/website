@@ -10,7 +10,7 @@ h1 {
 }
 #intro {
   background-color: var(--light-gray);
-  background-image: url("../assets/paper-2.png");
+  background-image: url("../assets/paper.png");
   width: auto; padding: .5rem;
   padding-right: 2.5rem; box-sizing: border-box;
   clip-path: polygon(0 0, calc(100% - 2.5rem) 0, 100% 2.5rem, 100% 100%, 0 100%);
