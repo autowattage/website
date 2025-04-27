@@ -17,8 +17,7 @@
   background-color: var(--gray);
   background-image: url("../assets/cardboard.png");
 }
-#sidenav li>a:hover {background-color: var(--light-gray);}
-#sidenav li>a:active {background-color: var(--light-gray);}
+#sidenav li>a:hover, #sidenav li>a:active {background-color: #A28C81;}
 #sidenav i {display: block; font-size: 1.5rem;}
 #sidenav li:first-child i {color: var(--red);}
 #sidenav li:nth-child(2) i {color: var(--yellow);}
