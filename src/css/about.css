@@ -14,15 +14,16 @@ h1 {
   position: absolute; top: 0; right: 0;
 }
 
-#main {}
 #social-links {
   margin: 0; padding: 0; list-style: none;
   display: flex; gap: .5rem; flex-wrap: wrap;
 }
-#social-links>li {
-  background-color: var(--red);
+#social-links>li { flex-grow: 1; }
+#social-links>li>a {
+  display: block;
+  background-color: var(--light-gray);
   padding: .5rem 1rem; border-radius: 1rem;
-  text-align: center; flex-grow: 1;
+  text-align: center;
 }
 /* Tablet */
 @media screen and (min-width: 35rem) {
