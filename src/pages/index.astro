@@ -1,16 +1,20 @@
 ---
+import Head from '../components/Head.astro';
+import Footer from '../components/Footer.astro';
 
+import '../styles/global.scss';
+import '../styles/footer.scss';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
+	<Head/>
 	<body>
-		<h1>Astro</h1>
+		<header>
+			<h1>15v 3a</h1>
+		</header>
+		<main>
+			<p>Hello world</p>
+		</main>
+		<Footer/>
 	</body>
 </html>
