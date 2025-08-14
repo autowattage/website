@@ -4,14 +4,14 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.scss';
 import '../styles/footer.scss';
+
+import { Image } from 'astro:assets';
+const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 
 <html lang="en">
 	<Head/>
 	<body>
-		<header>
-			<h1>15v 3a</h1>
-		</header>
 		<main>
 			<p>Hello world</p>
 		</main>
