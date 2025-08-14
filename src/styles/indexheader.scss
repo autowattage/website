@@ -1,0 +1,25 @@
+$mp3-height: 3rem;
+$header-height: 15rem;
+header {
+  border: 1px solid black;
+  height: $header-height;
+
+  img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - $mp3-height) calc(100% - $mp3-height), 0 calc(100% - $mp3-height));
+  }
+
+  button {
+    position: absolute; top: 0; right: 0;
+    width: $mp3-height; height: $mp3-height; border: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    svg {
+      position: absolute; top: .5rem; right: .5rem;
+    }
+  }
+  h1 {
+    margin: 0; color: white; font-size: 3rem;
+    position: absolute; top: $header-height - 6.5rem; left: .25rem;
+  }
+}
+/* Tablet view */
+/* Desktop view */

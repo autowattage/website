@@ -1,8 +1,13 @@
 ---
+import '../styles/indexheader.scss';
+import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 <header>
-	<Image>
+	<Image src={images["../assets/indexheader.jpg"]()} alt="Header photo"/>
 	<h1>15v 3a</h1>
+	<button type="button" onClick="console.log(1)">
+		<Icon name="tdesign:music-filled"/>
+	</button>
 </header>
