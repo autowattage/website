@@ -7,7 +7,13 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 <header>
 	<Image src={images["../assets/indexheader.jpg"]()} alt="Header photo"/>
 	<h1>15v 3a</h1>
-	<button type="button" onClick="console.log(1)">
-		<Icon name="tdesign:music-filled"/>
+	<div id="musicplayer">
+    <button type="button"><Icon name="tdesign:backward-filled"/></button>
+    <button type="button"><Icon name="tdesign:play"/></button>
+    <button type="button"><Icon name="tdesign:forward-filled"/></button>
+    <marquee>Song title - Artistlksd flsdkfjldklk</marquee>
+	</div>
+	<button id="audioenable" type="button" onClick="console.log(1)">
+		<Icon name="tdesign:notification"/>
 	</button>
 </header>
