@@ -34,27 +34,5 @@ main {
         &:hover p {display: inline-block;}
       }
     }
-    div {
-      img {
-        height: $header-height/1.5;
-        clip-path: polygon(
-          0 0,
-          100% 0,
-          100% calc(100% - $mp3-height - $padding),
-          calc(100% - $mp3-height*2.5) calc(100% - $mp3-height - $padding),
-          calc(100% - $mp3-height*2.5) 100%,
-          0 100%
-        );
-      }
-      div {
-        display: flex; gap: $padding; justify-content: flex-end;
-        position: relative; bottom: $mp3-height;
-        button { 
-          width: $mp3-height; height: $mp3-height;
-          background-color: red; border: none;
-          svg {height: 100%;}
-        }
-      }
-    }
   }
 }

@@ -1,6 +1,7 @@
 ---
 import Head from '../components/Head.astro';
 import IndexHeader from '../components/IndexHeader.astro';
+import ImageGallery from '../components/ImageGallery.astro';
 import Footer from '../components/Footer.astro';
 
 import '../styles/global.scss';
@@ -31,21 +32,21 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href=""><Icon name="tdesign:home-filled"/><p>Characters</p></a>
           <a href=""><Icon name="tdesign:work-filled"/><p>Portfolio</p></a>
         </nav>
-        <div>
-          <Image src={images["../assets/indexheader.jpg"]()} alt="Featured photo"/>
-          <div>
-            <button type="button"><Icon name="tdesign:arrow-left"/></button>
-            <button type="button"><Icon name="tdesign:arrow-right"/></button>
-          </div>
-        </div>
-      </section>
-      <section id="code">
-        <a href="">software</a>
-        <a href="">hardware</a>
-      </section>
-      <section id="personal">
+        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=1 ydir=-1 />
+     </section>
+      <section id="blog">
         <a href="">txt blog</a>
         <a href="">pix blog</a>
+      </section>
+      <section id="code">
+        <nav>
+          <a href="">software</a>
+          <a href="">hardware</a>
+          <a href="">misc</a>
+        </nav>
+        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=-1 ydir=1 />
+      </section>
+      <section id="personal">
         <a href="">shrines</a>
       </section>
 		</main>
