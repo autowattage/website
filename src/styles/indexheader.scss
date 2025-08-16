@@ -5,12 +5,12 @@ header {
   height: $header-height;
 
   img {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - $mp3-height - $padding) calc(100% - $mp3-height - $padding), 0 calc(100% - $mp3-height - $padding));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - $header-offset) 100%, calc(100% - $mp3-height - $padding - $header-offset) calc(100% - $mp3-height - $padding), 0 calc(100% - $mp3-height - $padding));
   }
   aside {
-    position: relative; bottom: $mp3-height; left: 0;
+    position: relative; bottom: $mp3-height; margin-left: $padding;
     background-color: gray; height: $mp3-height;
-    clip-path: polygon(0 0, calc(100% - $mp3-height - $padding*1.5) 0, calc(100% - $padding*1.5) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - $mp3-height - $padding*1.5 - $header-offset) 0, calc(100% - $padding*1.5 - $header-offset) 100%, 0 100%);
     display: flex;
     button {
       aspect-ratio: 1/1; border: 0;
@@ -23,7 +23,7 @@ header {
   }
   #audioenable {
     position: absolute; top: 0; right: 0;
-    width: $mp3-height + $padding*1.5; height: $mp3-height + $padding*1.5; border: none;
+    width: $mp3-height + $padding*1.5; aspect-ratio: 1/1; border: none;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     svg {
       position: absolute; top: $padding/2; right: $padding/2;

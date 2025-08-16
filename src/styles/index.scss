@@ -23,16 +23,68 @@ main {
     display: flex; flex-direction: column; gap: $padding;
     nav {
       display: flex; gap: $padding;
+      justify-content: center;
       a {
-        flex-basis: 1rem; flex-grow: 1; display:flex;
+        height: 4rem; aspect-ratio: 1/1; flex-grow: 0; display:flex;
         background-color: red; padding: $padding;
         svg {width: 2rem; height: 2rem; margin: auto;}
         p {
           flex-grow: 1; margin: auto $padding;
           display: none;
         }
-        &:hover p {display: inline-block;}
+        &:hover {
+          flex-grow: .5;
+          p {display: inline-block;}
+        }
+
       }
+    }
+  }
+
+  #blog {
+    display: flex; gap: $padding;
+    width: 90%; margin: auto;
+    nav {
+      display: flex; gap: $padding; flex-direction: column;
+      flex-shrink: 0; margin-left: $padding;
+      transform: skew(10deg);
+      a {
+        position: relative;
+        background-color: red; padding: $padding/2 $padding*1.5;
+        &:hover {
+          right:$padding/2;
+          top:$padding/2;
+          &::before {
+            width: $padding/2;
+            left: -$padding/2; top: $padding/4;
+          }
+          &::after {
+          height: $padding/2;
+          top: 100%; left: -$padding/4;
+          }
+        }
+      }
+      a::before {
+        content: ""; display: block; position: absolute;
+        background-color: blue; left: -$padding; top: $padding/2;
+        width: $padding; height: 100%;
+        transform: skew(0, -45deg);
+      }
+      a::after {
+        content: ""; display: block; position: absolute;
+        background-color: green; right: $padding/2; top:100%; 
+        height: $padding; width: 100%;
+        transform: skew(-45deg, 0);
+      }
+    }
+    #statuscafe {
+      background-color: gray; padding: $padding $padding $padding*2.5;
+      transform: skew(10deg);
+      clip-path: polygon(
+        0 0, 100% 0, 100% 100%,
+        calc(100% - $padding*2) calc(100% - $padding*2),
+        0 calc(100% - $padding*2),
+      )
     }
   }
 }

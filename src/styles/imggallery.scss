@@ -1,0 +1,26 @@
+@import '../styles/varsindex';
+
+div.imggallery {
+  position: relative;
+  img {
+    height: $header-height/1.5;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - $mp3-height - $padding),
+      calc(100% - $mp3-height*2.5) calc(100% - $mp3-height - $padding),
+      calc(100% - $mp3-height*2.5) 100%,
+      0 100%
+    );
+  }
+  div {
+    display: flex; gap: $padding; 
+    position: absolute; bottom: 0; right: 0;
+    justify-content: flex-end;
+    button { 
+      width: $mp3-height; height: $mp3-height;
+      background-color: red; border: none;
+      svg {height: 100%;}
+    }
+  }
+}

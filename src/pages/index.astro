@@ -32,11 +32,15 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href=""><Icon name="tdesign:home-filled"/><p>Characters</p></a>
           <a href=""><Icon name="tdesign:work-filled"/><p>Portfolio</p></a>
         </nav>
-        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=1 ydir=-1 />
+        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=true ydir=false />
      </section>
       <section id="blog">
-        <a href="">txt blog</a>
-        <a href="">pix blog</a>
+        <nav>
+          <a href="">txt blog</a>
+          <a href="">pix blog</a>
+          <a href="">statuscafe</a>
+        </nav>
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=snipchu" defer></script>
       </section>
       <section id="code">
         <nav>
@@ -44,7 +48,7 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href="">hardware</a>
           <a href="">misc</a>
         </nav>
-        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=-1 ydir=1 />
+        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=false ydir=true />
       </section>
       <section id="personal">
         <a href="">shrines</a>
