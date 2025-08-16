@@ -1,6 +1,4 @@
-$mp3-height: 2rem;
-$header-height: 15rem;
-$padding: .5rem;
+@import 'varsindex';
 
 header {
   border: 1px solid black;
@@ -9,7 +7,7 @@ header {
   img {
     clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - $mp3-height - $padding) calc(100% - $mp3-height - $padding), 0 calc(100% - $mp3-height - $padding));
   }
-  #musicplayer {
+  aside {
     position: relative; bottom: $mp3-height; left: 0;
     background-color: gray; height: $mp3-height;
     clip-path: polygon(0 0, calc(100% - $mp3-height - $padding*1.5) 0, calc(100% - $padding*1.5) 100%, 0 100%);
@@ -34,7 +32,7 @@ header {
   }
   h1 {
     margin: 0; color: white; font-size: 3rem;
-    position: absolute; top: $header-height - 6.5rem - $padding; left: .25rem;
+    position: absolute; top: $header-height - 5.5rem - $padding; left: .25rem;
   }
 }
 /* Tablet view */

@@ -1,0 +1,60 @@
+@import 'varsindex';
+
+main {
+  margin: $padding auto;
+  display: flex; flex-direction: column; gap: $padding;
+
+  #landing {
+    display: flex;
+    > a {
+      background-color: pink; flex-grow: 1; margin-right: -$landing-gap + $padding*1.5;
+      clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap) 100%, 100% 0);
+    }
+    nav {
+      display: flex; flex-direction: column;
+      text-align: right; background-color: gray;
+      width: $sitenav-width;
+      clip-path: polygon($landing-gap 0, 0 100%, 100% 100%, 100% 0);
+      a {padding: $padding;}
+    }
+  }
+
+  #art {
+    display: flex; flex-direction: column; gap: $padding;
+    nav {
+      display: flex; gap: $padding;
+      a {
+        flex-basis: 1rem; flex-grow: 1; display:flex;
+        background-color: red; padding: $padding;
+        svg {width: 2rem; height: 2rem; margin: auto;}
+        p {
+          flex-grow: 1; margin: auto $padding;
+          display: none;
+        }
+        &:hover p {display: inline-block;}
+      }
+    }
+    div {
+      img {
+        height: $header-height/1.5;
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% calc(100% - $mp3-height - $padding),
+          calc(100% - $mp3-height*2.5) calc(100% - $mp3-height - $padding),
+          calc(100% - $mp3-height*2.5) 100%,
+          0 100%
+        );
+      }
+      div {
+        display: flex; gap: $padding; justify-content: flex-end;
+        position: relative; bottom: $mp3-height;
+        button { 
+          width: $mp3-height; height: $mp3-height;
+          background-color: red; border: none;
+          svg {height: 100%;}
+        }
+      }
+    }
+  }
+}

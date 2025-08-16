@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.scss';
 import '../styles/footer.scss';
+import '../styles/index.scss';
 
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
@@ -15,8 +16,38 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 	<Head/>
 	<IndexHeader/>
 	<body>
-		<main>
-			<p>Hello world</p>
+    <main>
+      <section id="landing">
+        <a href="">whoami</a>
+        <nav>
+          <a href="">site</a>
+          <a href="">sitemap</a>
+          <a href="">resources</a>
+        </nav>
+      </section>
+      <section id="art">
+        <nav>
+          <a href=""><Icon name="tdesign:edit-filled"/><p>Artwork</p></a>
+          <a href=""><Icon name="tdesign:home-filled"/><p>Characters</p></a>
+          <a href=""><Icon name="tdesign:work-filled"/><p>Portfolio</p></a>
+        </nav>
+        <div>
+          <Image src={images["../assets/indexheader.jpg"]()} alt="Featured photo"/>
+          <div>
+            <button type="button"><Icon name="tdesign:arrow-left"/></button>
+            <button type="button"><Icon name="tdesign:arrow-right"/></button>
+          </div>
+        </div>
+      </section>
+      <section id="code">
+        <a href="">software</a>
+        <a href="">hardware</a>
+      </section>
+      <section id="personal">
+        <a href="">txt blog</a>
+        <a href="">pix blog</a>
+        <a href="">shrines</a>
+      </section>
 		</main>
 		<Footer/>
 	</body>
