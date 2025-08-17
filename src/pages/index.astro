@@ -32,7 +32,7 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href=""><Icon name="tdesign:home-filled"/><p>Characters</p></a>
           <a href=""><Icon name="tdesign:work-filled"/><p>Portfolio</p></a>
         </nav>
-        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=true ydir=false />
+        <ImageGallery imgsrc="../assets/indexheader.jpg"/>
      </section>
       <section id="blog">
         <nav>
@@ -48,10 +48,16 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href="">hardware</a>
           <a href="">misc</a>
         </nav>
-        <ImageGallery imgsrc="../assets/indexheader.jpg" xdir=false ydir=true />
+        <div>
+          <Image src={images["../assets/bunnyguy-index.jpg"]()} alt="bunnyguy"/>
+          <ImageGallery imgsrc="../assets/indexheader.jpg"/>
+        </div>
       </section>
       <section id="personal">
-        <a href="">shrines</a>
+        <h2>shrines</h2>
+        <a href="">TMGC</a>
+        <a href="">Portal2</a>
+        <a href="">Mirror's Edge</a>
       </section>
 		</main>
 		<Footer/>
