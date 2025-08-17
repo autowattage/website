@@ -1,16 +1,12 @@
-$white: #dce5e6;
-$light-gray: #a2afb0;
-$dark-gray: #32484d;
-$black: #0b2024;
-$orange: #db3704;
-$yellow: #f0ae13;
-$green: #85ab0a;
-$blue: #038f9e;
+@import 'colors';
 
 html {
-  background-color: $white;
+  background-color: $white; color: $black;
   font-family: sans-serif;
-  img { object-fit: cover; display: block; width: 100%; height: 100%; }
   body { margin: 0; }
+  a {color: $blue;}
+  a:visited, a:hover {color: $purple;}
+  a:active {color: $red;}
+  img { object-fit: cover; display: block; width: 100%; height: 100%; }
   svg {width: 100%; height: auto; aspect-ratio: 1 / 1;}
 }

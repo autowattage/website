@@ -1,7 +1,7 @@
 @import 'varsindex';
+@import 'colors';
 
 header {
-  border: 1px solid black;
   height: $header-height;
 
   img {
@@ -9,29 +9,29 @@ header {
   }
   aside {
     position: relative; bottom: $mp3-height; margin-left: $padding;
-    background-color: gray; height: $mp3-height;
+    background-color: $lightgray; height: $mp3-height;
     clip-path: polygon(0 0, calc(100% - $mp3-height - $padding*1.5 - $header-offset) 0, calc(100% - $padding*1.5 - $header-offset) 100%, 0 100%);
     display: flex;
     button {
       aspect-ratio: 1/1; border: 0;
-      svg {height: 100%;}
-      &:nth-child(1) {background-color: blue;}
-      &:nth-child(2) {background-color: red;}
-      &:nth-child(3) {background-color: purple;}
+      svg {height: 100%; color: $black;}
+      &:nth-child(1) {background-color: $blue;}
+      &:nth-child(2) {background-color: $yellow;}
+      &:nth-child(3) {background-color: $green;}
     }
     marquee {margin: auto 0 auto $padding; flex-grow: 1; text-wrap:nowrap;}
   }
   #audioenable {
     position: absolute; top: 0; right: 0;
     width: $mp3-height + $padding*1.5; aspect-ratio: 1/1; border: none;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%); background-color: $white;
     svg {
       position: absolute; top: $padding/2; right: $padding/2;
-      width: $mp3-height/2;
+      width: $mp3-height/2; color: $blue;
     }
   }
   h1 {
-    margin: 0; color: white; font-size: 3rem;
+    margin: 0; color: $white; font-size: 3rem;
     position: absolute; top: $header-height - 5.5rem - $padding; left: .25rem;
   }
 }

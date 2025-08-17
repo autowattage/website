@@ -1,22 +1,29 @@
 @use 'sass:math';
 @import 'varsindex';
+@import 'colors';
 
 main {
-  margin: $padding auto;
+  margin: $padding auto 0; padding: $padding 0;
   display: flex; flex-direction: column; gap: $padding;
+  background-color: $black; color: $white;
 
   #landing {
     display: flex;
     > a {
-      background-color: pink; flex-grow: 1; margin-right: -$landing-gap + $padding*1.5;
+      background-color: $red; flex-grow: 1; margin-right: -$landing-gap + $padding;
       clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap) 100%, 100% 0);
     }
     nav {
       display: flex; flex-direction: column;
-      text-align: right; background-color: gray;
+      text-align: right;
       width: $sitenav-width;
       clip-path: polygon($landing-gap 0, 0 100%, 100% 100%, 100% 0);
-      a {padding: $padding;}
+      a {
+        padding: $padding; color: $black;
+        &:nth-child(1) {background-color: $yellow;}
+        &:nth-child(2) {background-color: $green;}
+        &:nth-child(3) {background-color: $blue;}
+      }
     }
   }
 
@@ -28,7 +35,7 @@ main {
       justify-content: center;
       a {
         height: 4rem; aspect-ratio: 1/1; flex-grow: 0; display:flex;
-        background-color: red; padding: $padding;
+        background-color: $lightgray; color: $black; padding: $padding;
         svg {width: 2rem; height: 2rem; margin: auto;}
         p {
           flex-grow: 1; margin: auto $padding;
@@ -38,7 +45,9 @@ main {
           flex-grow: .5;
           p {display: inline-block;}
         }
-
+        &:nth-child(1) {background-color: $yellow;}
+        &:nth-child(2) {background-color: $green;}
+        &:nth-child(3) {background-color: $blue;}
       }
     }
   }
@@ -48,12 +57,20 @@ main {
     max-width: 90%; margin: auto;
     transform: skew(5deg);
     nav {
-      display: flex; gap: $padding;
+      display: flex; gap: $padding*1.5;
       margin-left: $padding; flex-wrap: wrap;
       a {
         position: relative;
-        flex-basis: 42%; flex-grow: 1;
-        background-color: red; padding: $padding/2 $padding;
+        flex-basis: 42%; flex-grow: 1; color: $black;
+        background-color: $green; padding: $padding/2 $padding;
+        &:nth-child(1) {
+          background-color: $yellow;
+          &::after, &::before {background-color: $green;}
+        }
+        &:nth-child(3) {
+          background-color: $blue;
+          &::after, &::before {background-color: $purple;}
+        }
         &:hover {
           right: $padding/3;
           top: $padding/3;
@@ -79,21 +96,24 @@ main {
           }
         }
       }
+      a::before, a::after {
+        content:""; display: block; position: absolute;
+        background-color: $blue;
+      }
       a::before {
-        content: ""; display: block; position: absolute;
-        background-color: blue; left: -$padding; top: $padding/2;
+        left: -$padding; top: $padding/2;
         width: $padding; height: 100%;
         transform: skew(0, -45deg);
       }
       a::after {
-        content: ""; display: block; position: absolute;
-        background-color: green; right: $padding/2; top:100%; 
+        right: $padding/2; top:100%; 
         height: $padding; width: 100%;
         transform: skew(-45deg, 0);
       }
     }
     #statuscafe {
-      background-color: gray; padding: $padding $padding $padding*3;
+      background-color: $white; color: $black;
+      padding: $padding $padding $padding*3;
       clip-path: polygon(
         0 0,
         0 calc(100% - $padding*2),
@@ -134,8 +154,10 @@ main {
       width: 100%; height: 100%;
     }
     h2 {grid-area: 1/2/1/2;}
-    a:nth-child(2) {grid-area: 1/1/span 2/2;}
-    a:nth-child(3) {grid-area: 2/2/2/2;}
-    a:nth-child(4) {grid-area: 1/3/span 2/3;}
+    a {
+      &:nth-child(2) {grid-area: 1/1/span 2/2;}
+      &:nth-child(3) {grid-area: 2/2/2/2;}
+      &:nth-child(4) {grid-area: 1/3/span 2/3;}
+    }
   }
 }

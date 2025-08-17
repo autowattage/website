@@ -1,4 +1,5 @@
-@import '../styles/varsindex';
+@import 'varsindex';
+@import 'colors';
 
 div.imggallery {
   position: relative;
@@ -19,8 +20,9 @@ div.imggallery {
     justify-content: flex-end;
     button { 
       width: $mp3-height; height: $mp3-height;
-      background-color: red; border: none;
+      background-color: $red; border: none;
       svg {height: 100%;}
+      &:nth-child(2) {background-color: $green;}
     }
   }
 }
