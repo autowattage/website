@@ -3,14 +3,15 @@
 @import 'colors';
 
 main {
-  margin: $padding auto 0; padding: $padding 0;
-  display: flex; flex-direction: column; gap: $padding;
+  margin: auto 0;
+  display: flex; flex-direction: column;
   background-color: $black; color: $white;
 
   #landing {
-    display: flex;
+    display: flex; padding: $padding 0;
+    background-color: $white; color: $black;
     > a {
-      background-color: $red; flex-grow: 1; margin-right: -$landing-gap + $padding;
+      background-color: $red; flex-grow: 1; margin-right: -$landing-gap + $padding*1.25;
       clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap) 100%, 100% 0);
     }
     nav {
@@ -29,32 +30,13 @@ main {
 
   #art {
     display: flex; flex-direction: column; gap: $padding;
+    background-color: $white; color: $black; padding-bottom: $padding;
     .imggallery img {height: 10rem;}
-    nav {
-      display: flex; gap: $padding;
-      justify-content: center;
-      a {
-        height: 4rem; aspect-ratio: 1/1; flex-grow: 0; display:flex;
-        background-color: $lightgray; color: $black; padding: $padding;
-        svg {width: 2rem; height: 2rem; margin: auto;}
-        p {
-          flex-grow: 1; margin: auto $padding;
-          display: none;
-        }
-        &:hover {
-          flex-grow: .5;
-          p {display: inline-block;}
-        }
-        &:nth-child(1) {background-color: $yellow;}
-        &:nth-child(2) {background-color: $green;}
-        &:nth-child(3) {background-color: $blue;}
-      }
-    }
-  }
+   }
 
   #blog {
     display: flex; gap: $padding*2; flex-direction: column;
-    max-width: 90%; margin: auto;
+    max-width: 90%; margin: $padding auto;
     transform: skew(5deg);
     nav {
       display: flex; gap: $padding*1.5;
@@ -128,26 +110,17 @@ main {
 
   #code {
     display: flex; gap: $padding;
-    width: 100%; aspect-ratio: 1/1;
-    nav {
-      flex-basis: 25%; flex-grow: 0; flex-shrink: 0;
-      display: flex; gap: $padding; flex-direction: column;
-      a {
-        width: 100%; aspect-ratio: 1/1;
-        background-color: red;
-      }
-    }
+    padding-bottom: $padding; flex-direction: column;
+    .btnexpand { order: 2; }
     > div {
       display: flex; gap: $padding; flex-direction: column;
-      > img {flex-basis: 30%; flex-grow: 0; flex-shrink: 0;}
-      .imggallery {
-        min-height: 0;
-      }
+      img {flex-basis: 10rem;}
+      .imggallery {min-height: 0; flex-basis: 10rem;}
     }
   }
   #personal {
-    display: grid; grid-gap: $padding;
-    height: 15rem;
+    display: grid; grid-gap: $padding; height: 15rem;
+    background-color: $white; color: $black; padding: $padding 0;
     grid: 1fr 2fr / 1fr 1.75fr 1fr;
     > * {
       background-color: red; margin: 0;

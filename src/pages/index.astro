@@ -2,6 +2,7 @@
 import Head from '../components/Head.astro';
 import IndexHeader from '../components/IndexHeader.astro';
 import ImageGallery from '../components/ImageGallery.astro';
+import ButtonExpand from '../components/ButtonExpand.astro';
 import Footer from '../components/Footer.astro';
 
 import '../styles/global.scss';
@@ -10,6 +11,7 @@ import '../styles/index.scss';
 
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
+import type ButtonExpand from '../components/ButtonExpand.astro';
 const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 
@@ -27,11 +29,11 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
         </nav>
       </section>
       <section id="art">
-        <nav>
-          <a href=""><Icon name="tdesign:edit-filled"/><p>Artwork</p></a>
-          <a href=""><Icon name="tdesign:home-filled"/><p>Characters</p></a>
-          <a href=""><Icon name="tdesign:work-filled"/><p>Portfolio</p></a>
-        </nav>
+        <ButtonExpand
+          icon1="tdesign:edit-filled" text1="Artwork"
+          icon2="tdesign:home-filled" text2="Characters"
+          icon3="tdesign:work-filled" text3="Porfolio"
+        />
         <ImageGallery imgsrc="../assets/indexheader.jpg"/>
      </section>
       <section id="blog">
@@ -43,11 +45,11 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
         <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=snipchu" defer></script>
       </section>
       <section id="code">
-        <nav>
-          <a href="">software</a>
-          <a href="">hardware</a>
-          <a href="">misc</a>
-        </nav>
+        <ButtonExpand
+          icon1="tdesign:code" text1="Software"
+          icon2="tdesign:data" text2="Hardware"
+          icon3="tdesign:chat-heart-filled" text3="Misc"
+        />
         <div>
           <Image src={images["../assets/bunnyguy-index.jpg"]()} alt="bunnyguy"/>
           <ImageGallery imgsrc="../assets/indexheader.jpg"/>
