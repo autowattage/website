@@ -4,22 +4,34 @@
 .btnexpand {
   display: flex; gap: $padding;
   justify-content: center;
+  margin: 0 $padding; height: 4rem;
   a {
-    height: 4rem; flex-grow: 0; display:flex;
+    flex-grow: 0; display:flex;
     text-align: center; justify-content: center;
     flex-direction: column; aspect-ratio: 1/1;
     background-color: $lightgray; color: $black; padding: $padding;
-    svg {width: 2rem; height: 2rem; margin: 0 auto;}
+
+    svg {width: 2rem; height: 2rem; flex-shrink: 0; margin: 0 auto;}
     p {
       flex-grow: 0; margin: 0;
       display: none;
     }
     &:hover {
-      flex-grow: .5;
+      flex-grow: 0.75;
       p {display: inline-block;}
     }
     &:nth-child(1) {background-color: $yellow;}
     &:nth-child(2) {background-color: $green;}
     &:nth-child(3) {background-color: $blue;}
+  }
+}
+
+// Tablet view
+@media screen and (min-width: 25rem) {
+  .btnexpand {
+    a:hover {
+      flex-grow: 0;
+      padding: 0 $padding*3.5;
+    }
   }
 }

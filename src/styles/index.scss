@@ -36,15 +36,15 @@ main {
 
   #blog {
     display: flex; gap: $padding*2; flex-direction: column;
-    max-width: 90%; margin: $padding auto;
-    transform: skew(5deg);
+    width: 85%; margin: $padding auto;
     nav {
+      transform: skew(5deg);
       display: flex; gap: $padding*1.5;
       margin-left: $padding; flex-wrap: wrap;
       a {
         position: relative;
         flex-basis: 42%; flex-grow: 1; color: $black;
-        background-color: $green; padding: $padding/2 $padding;
+        background-color: $green; padding: $padding;
         &:nth-child(1) {
           background-color: $yellow;
           &::after, &::before {background-color: $green;}
@@ -53,31 +53,8 @@ main {
           background-color: $blue;
           &::after, &::before {background-color: $purple;}
         }
-        &:hover {
-          right: $padding/3;
-          top: $padding/3;
-          &::before {
-            width: $padding/1.5;
-            left: -$padding/1.5; top: $padding/3;
-          }
-          &::after {
-          height: $padding/1.5;
-          top: 100%; left: -$padding/3;
-          }
-        }
-        &:active {
-          right: $padding/math.hypot(1,1);
-          top: $padding/math.hypot(1,1);
-          &::before {
-            width: $padding/4;
-            left: -$padding/4; top: $padding/8;
-          }
-          &::after {
-          height: $padding/4;
-          top: 100%; left: -$padding/8;
-          }
-        }
       }
+      
       a::before, a::after {
         content:""; display: block; position: absolute;
         background-color: $blue;
@@ -94,6 +71,7 @@ main {
       }
     }
     #statuscafe {
+      transform: skew(5deg);
       background-color: $white; color: $black;
       padding: $padding $padding $padding*3;
       clip-path: polygon(
@@ -114,7 +92,7 @@ main {
     .btnexpand { order: 2; }
     > div {
       display: flex; gap: $padding; flex-direction: column;
-      img {flex-basis: 10rem;}
+      img {flex-basis: 8rem;}
       .imggallery {min-height: 0; flex-basis: 10rem;}
     }
   }
@@ -131,6 +109,66 @@ main {
       &:nth-child(2) {grid-area: 1/1/span 2/2;}
       &:nth-child(3) {grid-area: 2/2/2/2;}
       &:nth-child(4) {grid-area: 1/3/span 2/3;}
+    }
+  }
+}
+
+// Tablet view
+@media screen and (min-width: 25rem) {
+  main {
+    .btnexpand {height: 5rem;}
+    #landing {
+      > a { 
+        clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap*2) 100%, 100% 0);
+        margin-right: -$landing-gap*2 + $padding*1.25;
+      }
+      nav {
+        width: calc($sitenav-width + $landing-gap/2);
+        clip-path: polygon($landing-gap*2 0, 0 100%, 100% 100%, 100% 0);
+        a {padding: $padding*2;}
+      }
+    }
+    #art {
+      .imggallery img {height: 12rem;}
+    }
+    #blog {
+      flex-direction: row; width: 90%;
+      margin: $padding auto $padding*2;
+      #statuscafe { flex-basis: 55%; flex-shrink: 0; }
+    }
+  }
+}
+// Desktop view
+@media screen and (min-width: 50rem) {
+  header h1 {color: $green;}
+  main {
+    #blog {
+      nav {
+        a:hover {
+          right: $padding/3;
+          top: $padding/3;
+          &::before {
+            width: $padding/1.5;
+            left: -$padding/1.5; top: $padding/3;
+          }
+          &::after {
+          height: $padding/1.5;
+          top: 100%; left: -$padding/3;
+          }
+        }
+        a:active {
+          right: $padding/2;
+          top: $padding/2;
+          &::before {
+            width: $padding/2;
+            left: -$padding/2; top: $padding/4;
+          }
+          &::after {
+          height: $padding/2;
+          top: 100%; left: -$padding/4;
+          }
+        }
+      }
     }
   }
 }

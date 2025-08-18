@@ -36,4 +36,19 @@ header {
   }
 }
 /* Tablet view */
+@media screen and (min-width: 25rem) {
+  $header-offset: $padding*2;
+  $mp3-height: $mp3-height*1.25;
+  header {
+    h1 {color: $red;}
+    img {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, calc(100% - $header-offset*2) 100%, calc(100% - $mp3-height - $padding - $header-offset*2) calc(100% - $mp3-height - $padding), 0 calc(100% - $mp3-height - $padding));
+    }
+    aside {
+      height: $mp3-height; bottom: $mp3-height;
+      clip-path: polygon(0 0, calc(100% - $mp3-height - $padding*1.5 - $header-offset*2) 0, calc(100% - $padding*1.5 - $header-offset*2) 100%, 0 100%);
+
+    }
+  }
+}
 /* Desktop view */
