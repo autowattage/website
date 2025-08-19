@@ -2,24 +2,17 @@
 @import 'colors';
 
 .btnexpand {
-  display: flex; gap: $padding;
+  display: flex; gap: var(--padding);
   justify-content: center;
-  margin: 0 $padding; height: 4rem;
+  margin: 0 var(--padding); height: 4rem;
   a {
     flex-grow: 0; display:flex;
     text-align: center; justify-content: center;
     flex-direction: column; aspect-ratio: 1/1;
-    background-color: $lightgray; color: $black; padding: $padding;
+    background-color: $lightgray; color: $black; padding: var(--padding);
 
     svg {width: 2rem; height: 2rem; flex-shrink: 0; margin: 0 auto;}
-    p {
-      flex-grow: 0; margin: 0;
-      display: none;
-    }
-    &:hover {
-      flex-grow: 0.75;
-      p {display: inline-block;}
-    }
+    p {flex-grow: 0; margin: 0;}
     &:nth-child(1) {background-color: $yellow;}
     &:nth-child(2) {background-color: $green;}
     &:nth-child(3) {background-color: $blue;}
@@ -28,10 +21,17 @@
 
 // Tablet view
 @media screen and (min-width: 25rem) {
+  .btnexpand a { padding: calc(var(--padding) * 2); }
+}
+// Desktop view
+@media screen and (min-width: 50rem) {
   .btnexpand {
-    a:hover {
-      flex-grow: 0;
-      padding: 0 $padding*3.5;
+    a {
+      p { display: none; }
+      &:hover {
+        padding: 0 calc(var(--padding) * 5.5);
+        p {display: inline-block;}
+      }
     }
   }
 }

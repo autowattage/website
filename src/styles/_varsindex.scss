@@ -1,10 +1,33 @@
-$padding: .5rem;
+:root {
+  --padding: .5rem;
+  // Header variables
+  --header-height: 15rem;
+  --mp3-height: 2rem;
+  --header-offset: 2rem;
 
-// Header variables
-$header-height: 15rem;
-$mp3-height: 2rem;
-$header-offset: 2rem;
+  // Landing variables
+  --landing-gap: 4rem;
+  --sitenav-width: 55%;
+}
 
-// Landing variables
-$landing-gap: 3rem;
-$sitenav-width: 50%;
+// Tablet view
+@media screen and (min-width: 25rem) {
+  :root {
+    --header-height: 18rem;
+    --mp3-height: 2.5rem;
+    --header-offset: 4.5rem;
+
+    --landing-gap: 3.5rem;
+    --sitenav-width: 46%;
+  }
+}
+// Laptop view
+@media screen and (min-width: 50rem) {
+  :root {
+    --header-height: 20rem;
+    --mp3-height: 3rem;
+    --header-offset: 12rem;
+
+    --landing-gap: 4rem;
+  }
+}

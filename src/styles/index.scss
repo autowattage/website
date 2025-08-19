@@ -8,19 +8,19 @@ main {
   background-color: $black; color: $white;
 
   #landing {
-    display: flex; padding: $padding 0;
+    display: flex; padding: var(--padding) 0;
     background-color: $white; color: $black;
     > a {
-      background-color: $red; flex-grow: 1; margin-right: -$landing-gap + $padding*1.25;
-      clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap) 100%, 100% 0);
+      background-color: $red; flex-grow: 1; margin-right: calc(var(--padding) * 1.25 - var(--landing-gap));
+      clip-path: polygon(0 0, 0 100%, calc(100% - var(--landing-gap)) 100%, 100% 0);
     }
     nav {
       display: flex; flex-direction: column;
       text-align: right;
-      width: $sitenav-width;
-      clip-path: polygon($landing-gap 0, 0 100%, 100% 100%, 100% 0);
+      width: var(--sitenav-width);
+      clip-path: polygon(var(--landing-gap) 0, 0 100%, 100% 100%, 100% 0);
       a {
-        padding: $padding; color: $black;
+        padding: var(--padding); color: $black;
         &:nth-child(1) {background-color: $yellow;}
         &:nth-child(2) {background-color: $green;}
         &:nth-child(3) {background-color: $blue;}
@@ -29,28 +29,31 @@ main {
   }
 
   #art {
-    display: flex; flex-direction: column; gap: $padding;
-    background-color: $white; color: $black; padding-bottom: $padding;
+    display: flex; flex-direction: column; gap: var(--padding);
+    background-color: $white; color: $black; padding-bottom: var(--padding);
     .imggallery img {height: 10rem;}
    }
 
   #blog {
-    display: flex; gap: $padding*2; flex-direction: column;
-    width: 85%; margin: $padding auto;
+    display: flex; gap: calc(var(--padding) * 2); flex-direction: column;
+    width: 90%; margin: var(--padding) auto;
     nav {
       transform: skew(5deg);
-      display: flex; gap: $padding*1.5;
-      margin-left: $padding; flex-wrap: wrap;
+      display: flex; gap: calc(var(--padding) * 2);
+      margin-left: var(--padding); flex-wrap: wrap;
       a {
         position: relative;
         flex-basis: 42%; flex-grow: 1; color: $black;
-        background-color: $green; padding: $padding;
+        background-color: $green; padding: var(--padding);
+        box-shadow: calc(var(--padding)*-1) var(--padding) $blue;
         &:nth-child(1) {
           background-color: $yellow;
+          box-shadow: calc(var(--padding)*-1) var(--padding) $green;
           &::after, &::before {background-color: $green;}
         }
         &:nth-child(3) {
           background-color: $blue;
+          box-shadow: calc(var(--padding)*-1) var(--padding) $purple;
           &::after, &::before {background-color: $purple;}
         }
       }
@@ -60,45 +63,45 @@ main {
         background-color: $blue;
       }
       a::before {
-        left: -$padding; top: $padding/2;
-        width: $padding; height: 100%;
+        left: calc(var(--padding) * -1); top: calc(var(--padding) / 2);
+        width: var(--padding); height: 100%;
         transform: skew(0, -45deg);
       }
       a::after {
-        right: $padding/2; top:100%; 
-        height: $padding; width: 100%;
+        right: calc(var(--padding) / 2); top:100%; 
+        height: var(--padding); width: 100%;
         transform: skew(-45deg, 0);
       }
     }
     #statuscafe {
       transform: skew(5deg);
       background-color: $white; color: $black;
-      padding: $padding $padding $padding*3;
+      padding: var(--padding) var(--padding) calc(var(--padding) * 3);
       clip-path: polygon(
         0 0,
-        0 calc(100% - $padding*2),
-        calc(100% - $padding*4) calc(100% - $padding*2),
-        calc(100% - $padding*3) 100%,
-        calc(100% - $padding*2) calc(100% - $padding*2),
-        100% calc(100% - $padding*2),
+        0 calc(100% - var(--padding)*2),
+        calc(100% - var(--padding)*4) calc(100% - calc(var(--padding) * 2)),
+        calc(100% - var(--padding)*3) 100%,
+        calc(100% - var(--padding)*2) calc(100% - calc(var(--padding) * 2)),
+        100% calc(100% - var(--padding)*2),
         100% 0
       )
     }
   }
 
   #code {
-    display: flex; gap: $padding;
-    padding-bottom: $padding; flex-direction: column;
+    display: flex; gap: var(--padding);
+    padding-bottom: var(--padding); flex-direction: column;
     .btnexpand { order: 2; }
     > div {
-      display: flex; gap: $padding; flex-direction: column;
+      display: flex; gap: var(--padding); flex-direction: column;
       img {flex-basis: 8rem;}
       .imggallery {min-height: 0; flex-basis: 10rem;}
     }
   }
   #personal {
-    display: grid; grid-gap: $padding; height: 15rem;
-    background-color: $white; color: $black; padding: $padding 0;
+    display: grid; grid-gap: var(--padding); height: 15rem;
+    background-color: $white; color: $black; padding: var(--padding) 0;
     grid: 1fr 2fr / 1fr 1.75fr 1fr;
     > * {
       background-color: red; margin: 0;
@@ -115,57 +118,64 @@ main {
 
 // Tablet view
 @media screen and (min-width: 25rem) {
+  header h1 {color: $red !important;}
   main {
     .btnexpand {height: 5rem;}
     #landing {
       > a { 
-        clip-path: polygon(0 0, 0 100%, calc(100% - $landing-gap*2) 100%, 100% 0);
-        margin-right: -$landing-gap*2 + $padding*1.25;
+        clip-path: polygon(0 0, 0 100%, calc(100% - var(--landing-gap)*2) 100%, 100% 0);
+        margin-right: calc(var(--landing-gap) * -2 + var(--padding) * 1.25);
       }
       nav {
-        width: calc($sitenav-width + $landing-gap/2);
-        clip-path: polygon($landing-gap*2 0, 0 100%, 100% 100%, 100% 0);
-        a {padding: $padding*2;}
+        width: calc(var(--sitenav-width) + var(--landing-gap)/2);
+        clip-path: polygon(calc(var(--landing-gap) * 2) 0, 0 100%, 100% 100%, 100% 0);
+        a {padding: calc(var(--padding) * 2);}
       }
     }
     #art {
       .imggallery img {height: 12rem;}
     }
     #blog {
-      flex-direction: row; width: 90%;
-      margin: $padding auto $padding*2;
+      flex-direction: row; width: 95%;
+      margin: var(--padding) auto calc(var(--padding) * 2);
       #statuscafe { flex-basis: 55%; flex-shrink: 0; }
     }
   }
 }
 // Desktop view
 @media screen and (min-width: 50rem) {
-  header h1 {color: $green;}
+  header h1 {color: $green !important;}
   main {
     #blog {
       nav {
         a:hover {
-          right: $padding/3;
-          top: $padding/3;
+          right: calc(var(--padding) / 3);
+          top: calc(var(--padding) / 3);
+          box-shadow: calc(var(--padding)*-1/1.5) calc(var(--padding)/1.5) $blue;
+          &:nth-child(1) { box-shadow: calc(var(--padding)*-1/1.5) calc(var(--padding)/1.5) $green;}
+          &:nth-child(3) { box-shadow: calc(var(--padding)*-1/1.5) calc(var(--padding)/1.5) $purple;}
           &::before {
-            width: $padding/1.5;
-            left: -$padding/1.5; top: $padding/3;
+            width: calc(var(--padding) / 1.5);
+            left: calc(var(--padding) / -1.5); top: calc(var(--padding) / 3);
           }
           &::after {
-          height: $padding/1.5;
-          top: 100%; left: -$padding/3;
+            height: calc(var(--padding) / 1.5);
+            top: 100%; left: calc(var(--padding) / -3);
           }
         }
         a:active {
-          right: $padding/2;
-          top: $padding/2;
+          right: calc(var(--padding) / 2);
+          top: calc(var(--padding) / 2);
+          box-shadow: calc(var(--padding)*-.5) calc(var(--padding)/2) $blue;
+          &:nth-child(1) { box-shadow: calc(var(--padding)*-.5) calc(var(--padding)/2) $green;}
+          &:nth-child(3) { box-shadow: calc(var(--padding)*-.5) calc(var(--padding)/2) $purple;}
           &::before {
-            width: $padding/2;
-            left: -$padding/2; top: $padding/4;
+            width: calc(var(--padding) / 2);
+            left: calc(var(--padding) / -2); top: calc(var(--padding) / 4);
           }
           &::after {
-          height: $padding/2;
-          top: 100%; left: -$padding/4;
+            height: calc(var(--padding) / 2);
+            top: 100%; left: calc(var(--padding) / -4);
           }
         }
       }
