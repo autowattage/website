@@ -3,7 +3,7 @@
 
 .btnexpand {
   display: flex; gap: var(--padding);
-  justify-content: center; height: 4rem;
+  justify-content: center; height: 5rem;
   a {
     flex-grow: 0; display:flex;
     text-align: center; justify-content: center;
@@ -34,3 +34,8 @@
     }
   }
 }
+// Desktop view
+@media screen and (min-width: 50rem) { .btnexpand {height: 6rem;} }
+
+// Desktop Extended view
+@media screen and (min-width: 65rem) { .btnexpand {height: 7rem;} }

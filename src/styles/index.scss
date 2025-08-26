@@ -4,11 +4,14 @@
 
 main {
   display: flex; flex-direction: column; width: 100%;
-  background-color: $black; color: $white;
-  section>div {margin: var(--padding) auto;}
-  #landing>div, #blog>div {margin-bottom: 0;}
+  background-color: $black; color: $white; gap: var(--padding);
+  >div {
+    display: flex; flex-direction: column; gap: var(--padding);
+    >section {width: 100%; margin: auto;}
+    &:nth-child(odd) {background-color: $white; color: $black; padding: var(--padding) 0;}
+  }
 
-  #landing { background-color: $white; color: $black; >div {
+  #landing {
     display: flex;
     > a {
       background-color: $red; flex-grow: 1; margin-right: calc(var(--padding) * 1.25 - var(--landing-gap));
@@ -26,16 +29,16 @@ main {
         &:nth-child(3) {background-color: $blue;}
       }
     }
-  }}
+  }
 
-  #art { background-color: $white; color: $black; >div {
+  #art {
     display: flex; flex-direction: column; gap: var(--padding);
     .imggallery img {height: 10rem;}
-   }}
+   }
 
-  #blog { margin: 0 calc(var(--padding) * 2); >div {
+  #blog {
     display: flex; gap: calc(var(--padding) * 2); flex-direction: column;
-    justify-content: center;
+    justify-content: center; width: 90%;
     nav {
       transform: skew(5deg);
       display: flex; gap: calc(var(--padding) * 2);
@@ -86,9 +89,9 @@ main {
         100% 0
       )
     }
-  }}
+  }
 
-  #code>div {
+  #code {
     display: flex; gap: var(--padding);
     flex-direction: column;
     .btnexpand { order: 2; }
@@ -98,7 +101,7 @@ main {
       .imggallery {min-height: 0; flex-basis: 10rem;}
     }
   }
-  #personal { background-color: $white; color: $black; >div {
+  #personal {
     display: flex; flex-direction: column; gap: var(--padding); height: 15rem;
     h2 {
       text-align: center; margin: var(--padding);
@@ -107,14 +110,13 @@ main {
       background-color: red; margin: 0;
       width: 100%; height: 100%;
     }
-  }}
+  }
 }
 
 // Tablet view
 @media screen and (min-width: 25rem) {
   main {
-    .btnexpand {height: 5rem;}
-    #landing>div {
+    #landing {
       > a { 
         clip-path: polygon(0 0, 0 100%, calc(100% - var(--landing-gap)*2) 100%, 100% 0);
         margin-right: calc(var(--landing-gap) * -2 + var(--padding) * 1.25);
@@ -124,14 +126,14 @@ main {
         clip-path: polygon(calc(var(--landing-gap) * 2) 0, 0 100%, 100% 100%, 100% 0);
       }
     }
-    #art>div {
+    #art {
       .imggallery img {height: 12rem;}
     }
-    #blog>div {
-      flex-direction: row; gap: var(--padding); margin-bottom: var(--padding);
+    #blog {
+      flex-direction: row; gap: var(--padding); padding-bottom: var(--padding);
       #statuscafe { flex-basis: 55%; flex-shrink: 0; }
     }
-    #personal>div {
+    #personal {
       display: grid; grid-gap: var(--padding); height: 15rem;
       background-color: $white; color: $black;
       grid: auto 1fr / 1fr 1.75fr 1fr;
@@ -151,12 +153,13 @@ main {
 // Desktop view
 @media screen and (min-width: 50rem) {
   main {
-    section>div {width: var(--desktopwidth);}
-    #landing>div {
+    >div>section {width: var(--desktopwidth);}
+    #landing {
       nav>a {padding: calc(var(--padding) * 2); color: $black;}
     }
-    #art>div .imggallery img {height: 15rem;}
-    #blog>div {
+    #art .imggallery img {height: 15rem;}
+    #blog {
+      width: calc(var(--desktopwidth) - var(--padding)*2);
       nav {
         a:hover {
           right: calc(var(--padding) / 3);
@@ -190,7 +193,7 @@ main {
         }
       }
     }
-    #code>div {
+    #code {
       flex-direction: row-reverse;
       .btnexpand {
         flex-direction: column; flex-shrink: 0;
@@ -207,7 +210,7 @@ main {
 // Desktop extended view
 @media screen and (min-width: 65rem) {
   main {
-    #landing>div {
+    #landing {
       nav {
         width: calc(var(--sitenav-width) + var(--landing-gap));
         a {padding: calc(var(--padding) * 3); color: $black;}

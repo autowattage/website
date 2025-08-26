@@ -1,6 +1,6 @@
 :root {
   --padding: .5rem;
-  --desktopwidth: 60%;
+  --desktopwidth: 100%;
   // Header variables
   --h1size: 3.5rem;
   --header-height: 15rem;
@@ -15,6 +15,8 @@
 // Tablet view
 @media screen and (min-width: 25rem) {
   :root {
+    --desktopwidth: 60%;
+
     --h1size: 4rem;
     --header-height: 18rem;
     --mp3-height: 2.5rem;
@@ -27,6 +29,7 @@
 // Laptop view
 @media screen and (min-width: 50rem) {
   :root {
+    --padding: .75rem;
     --desktopwidth: 75%;
 
     --h1size: 5rem;
@@ -41,7 +44,7 @@
 // Laptop view
 @media screen and (min-width: 65rem) {
   :root {
-    --desktopwidth: 55%;
+    --desktopwidth: 60%;
 
     --landing-gap: 5rem;
   }
