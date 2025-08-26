@@ -1,18 +1,21 @@
 :root {
   --padding: .5rem;
+  --desktopwidth: 60%;
   // Header variables
+  --h1size: 3.5rem;
   --header-height: 15rem;
   --mp3-height: 2rem;
   --header-offset: 2rem;
 
   // Landing variables
-  --landing-gap: 4rem;
+  --landing-gap: 5rem;
   --sitenav-width: 55%;
 }
 
 // Tablet view
 @media screen and (min-width: 25rem) {
   :root {
+    --h1size: 4rem;
     --header-height: 18rem;
     --mp3-height: 2.5rem;
     --header-offset: 4.5rem;
@@ -24,10 +27,22 @@
 // Laptop view
 @media screen and (min-width: 50rem) {
   :root {
+    --desktopwidth: 75%;
+
+    --h1size: 5rem;
     --header-height: 22rem;
     --mp3-height: 3rem;
-    --header-offset: 12rem;
+    --header-offset: 10%;
 
     --landing-gap: 4rem;
+  }
+}
+
+// Laptop view
+@media screen and (min-width: 65rem) {
+  :root {
+    --desktopwidth: 55%;
+
+    --landing-gap: 5rem;
   }
 }

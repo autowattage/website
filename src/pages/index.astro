@@ -20,23 +20,23 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 	<IndexHeader/>
 	<body>
     <main>
-      <section id="landing">
+      <section id="landing"><div>
         <a href="">whoami</a>
         <nav>
           <a href="">site</a>
           <a href="">sitemap</a>
           <a href="">resources</a>
         </nav>
-      </section>
-      <section id="art">
+      </div></section>
+      <section id="art"><div>
         <ButtonExpand
           icon1="tdesign:edit-filled" text1="Artwork"
           icon2="tdesign:home-filled" text2="Characters"
           icon3="tdesign:work-filled" text3="Porfolio"
         />
         <ImageGallery imgsrc="../assets/indexheader.jpg"/>
-     </section>
-      <section id="blog">
+      </div></section>
+      <section id="blog"><div>
         <nav>
           <a href="">txt blog</a>
           <a href="">pix blog</a>
@@ -44,8 +44,8 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
         </nav>
         <!--<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=snipchu" defer></script>-->
         <div id="statuscafe"><p>Filler text</p></div>
-      </section>
-      <section id="code">
+      </div></section>
+      <section id="code"><div>
         <ButtonExpand
           icon1="tdesign:code" text1="Software"
           icon2="tdesign:data" text2="Hardware"
@@ -55,13 +55,13 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <Image src={images["../assets/bunnyguy-index.jpg"]()} alt="bunnyguy"/>
           <ImageGallery imgsrc="../assets/indexheader.jpg"/>
         </div>
-      </section>
-      <section id="personal">
+      </div></section>
+      <section id="personal"><div>
         <h2>shrines</h2>
         <a href="">TMGC</a>
         <a href="">Portal2</a>
         <a href="">Mirror's Edge</a>
-      </section>
+      </div></section>
 		</main>
 		<Footer/>
 	</body>
