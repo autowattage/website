@@ -17,8 +17,22 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 
 <html lang="en">
 	<Head/>
-	<IndexHeader/>
-	<body>
+  <body>
+
+    <header>
+      <Image src={images["../assets/indexheader.jpg"]()} alt="Header photo"/>
+      <h1>15v 3a</h1>
+      <aside>
+        <button type="button"><Icon name="tdesign:backward-filled"/></button>
+        <button type="button"><Icon name="tdesign:play"/></button>
+        <button type="button"><Icon name="tdesign:forward-filled"/></button>
+        <marquee>Song title - Artistlksd flsdkfjldklk</marquee>
+      </aside>
+      <button id="audioenable" type="button" onClick="console.log(1)">
+        <Icon name="tdesign:notification"/>
+      </button>
+    </header>
+
     <main>
       <div><section id="landing">
         <a href="">whoami</a>
@@ -42,8 +56,8 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
           <a href="">pix blog</a>
           <a href="">statuscafe</a>
         </nav>
-        <!--<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=snipchu" defer></script>-->
-        <div id="statuscafe"><p>Filler text</p></div>
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=snipchu" defer></script>
+        <!--<div id="statuscafe"><p>Filler text</p></div>-->
       </section>
       <section id="code">
         <ButtonExpand
@@ -62,7 +76,9 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
         <a href="">Portal2</a>
         <a href="">Mirror's Edge</a>
       </section></div>
-		</main>
-		<Footer/>
+    </main>
+
+    <Footer/>
+
 	</body>
 </html>

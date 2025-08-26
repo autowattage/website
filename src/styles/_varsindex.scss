@@ -1,7 +1,5 @@
 :root {
-  --padding: .5rem;
   --desktopwidth: 100%;
-  // Header variables
   --h1size: 3.5rem;
   --header-height: 15rem;
   --mp3-height: 2rem;
@@ -17,35 +15,39 @@
   :root {
     --desktopwidth: 60%;
 
+    // Header variables
     --h1size: 4rem;
     --header-height: 18rem;
     --mp3-height: 2.5rem;
     --header-offset: 4.5rem;
 
+    // Landing variables
     --landing-gap: 3.5rem;
     --sitenav-width: 46%;
   }
 }
 // Laptop view
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 40rem) {
   :root {
-    --padding: .75rem;
-    --desktopwidth: 75%;
+    --desktopwidth: 85%;
 
+    // Header variables
     --h1size: 5rem;
     --header-height: 22rem;
     --mp3-height: 3rem;
     --header-offset: 10%;
 
+    // Landing variables
     --landing-gap: 4rem;
   }
 }
 
 // Laptop view
-@media screen and (min-width: 65rem) {
+@media screen and (min-width: 55rem) {
   :root {
     --desktopwidth: 60%;
 
+    // Landing variables
     --landing-gap: 5rem;
   }
 }

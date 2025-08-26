@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'varsglobal';
 
 html {
   background-color: $white; color: $black;
@@ -7,6 +8,7 @@ html {
   a {color: $blue;}
   a:visited, a:hover {color: $purple;}
   a:active {color: $red;}
+  button {cursor:pointer;}
   img { object-fit: cover; display: block; width: 100%; height: 100%; }
   svg {width: 100%; height: auto; aspect-ratio: 1 / 1;}
 }
