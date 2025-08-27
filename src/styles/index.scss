@@ -31,15 +31,6 @@ header {
       flex-grow: 1; text-wrap:nowrap;
     }
   }
-  #audioenable {
-    position: absolute; top: 0; right: 0;
-    width: calc(var(--mp3-height) + var(--padding) * 2.5); aspect-ratio: 1/1; border: none;
-    clip-path: polygon(0 0, 100% 0, 100% 100%); background-color: $white;
-    svg {
-      position: absolute; top: calc(var(--padding) / 2); right: calc(var(--padding) / 2);
-      width: calc(var(--mp3-height) / 2); color: $blue;
-    }
-  }
   h1 {
     margin: 0; color: $white; font-size: var(--h1size);
     position: absolute; top: calc(var(--header-height) - var(--h1size) - var(--mp3-height) - var(--padding) * 2); left: .25rem;
@@ -156,6 +147,16 @@ main {
     }
   }
 }
+#audioenable {
+  position: fixed; top: 0; right: 0;
+  width: calc(var(--mp3-height) + var(--padding) * 2.5); aspect-ratio: 1/1; border: none;
+  clip-path: polygon(0 0, 100% 0, 100% 100%); background-color: $white;
+  svg {
+    position: absolute; top: calc(var(--padding) / 2); right: calc(var(--padding) / 2);
+    width: calc(var(--mp3-height) / 2); color: $blue;
+  }
+}
+
 
 // Tablet view
 @media screen and (min-width: 25rem) {
