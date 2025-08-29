@@ -252,10 +252,10 @@ main {
       }
     }
     #code {
-      flex-direction: row-reverse;
+      flex-direction: row-reverse; height: 25rem;
       .btnexpand {
         flex-direction: column; flex-shrink: 0;
-        height: 100%; flex-basis: 7rem;
+        height: 100%; flex-basis: 7rem; justify-content: flex-start;
         a:hover {
           padding: calc(var(--padding)*4) calc(var(--padding)*2);
         }

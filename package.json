@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/ts-plugin": "^1.10.4",
     "astro": "^5.13.4",
     "astro-icon": "^1.1.5"
   },

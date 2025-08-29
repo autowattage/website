@@ -1,6 +1,5 @@
 ---
 import Head from '../components/Head.astro';
-import IndexHeader from '../components/IndexHeader.astro';
 import ImageGallery from '../components/ImageGallery.astro';
 import ButtonExpand from '../components/ButtonExpand.astro';
 import Footer from '../components/Footer.astro';
@@ -11,7 +10,6 @@ import '../styles/index.scss';
 
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
-import type ButtonExpand from '../components/ButtonExpand.astro';
 const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 
@@ -22,7 +20,7 @@ const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
     <header>
       <Image src={images["../assets/indexheader.jpg"]()} alt="Header photo"/>
       <h1>15v 3a</h1>
-      <aside>
+      <aside id="mp3player">
         <button type="button"><Icon name="tdesign:backward-filled"/></button>
         <button type="button"><Icon name="tdesign:play"/></button>
         <button type="button"><Icon name="tdesign:forward-filled"/></button>
