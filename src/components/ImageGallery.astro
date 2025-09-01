@@ -4,6 +4,7 @@ import '../styles/imggallery.scss';
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
+interface Props { imgsrc: string; };
 const { imgsrc = "../assets/indexheader.jpg" } = Astro.props;
 ---
 <div class="imggallery">
