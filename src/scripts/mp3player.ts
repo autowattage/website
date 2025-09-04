@@ -8,34 +8,52 @@ interface MusicTrack {
     filepath: string;
 }
 
+var currentplaying: number = 0;
 var tracklist: MusicTrack[] = [
+    {trackname: "Artists Parade 1", artist: "Bob Vessin", filepath: "/src/assets/audio/index/ap1.mp3"},
     {trackname: "Serenade", artist: "Pop Up!", filepath: "/src/assets/audio/index/serenade.mp3"},
     {trackname: "Casin", artist: "glue70", filepath: "/src/assets/audio/index/casin.mp3"},
     {trackname: "You Are Now Legally A Bird", artist: "Pascal Micheal Stiefel", filepath: "/src/assets/audio/index/yanlab.mp3"},
     {trackname: "Caterpillar Cake Club", artist: "PROTODOME", filepath: "/src/assets/audio/index/ccc.mp3"},
-    {trackname: "Crystal Dolphin", artist: "Engelwood", filepath: "/src/assets/audio/index/crystaldolphin.mp3"},
-    {trackname: "Artists Parade 1", artist: "Bob Vessin", filepath: "/src/assets/audio/index/ap1.mp3"}
+    {trackname: "Crystal Dolphin", artist: "Engelwood", filepath: "/src/assets/audio/index/crystaldolphin.mp3"}
 ];
 var tracklist_night: MusicTrack[] = [
-    {trackname: "", artist: "", filepath: ""}
+    {trackname: "You're Mine", artist: "Carpenter Brut", filepath: "/src/assets/audio/index/youremine.mp3"},
+    {trackname: "READ BY THE BOOK", artist: "boggio, Crablooshi", filepath: "/src/assets/audio/index/rbtb.mp3"},
+    {trackname: "Spunky (Makoto Stage)", artist: "Capcom Sound Team", filepath: "../assets/audio/index/spunky.mp3"},
+    {trackname: "STAGER", artist: "Ras", filepath: "/src/assets/audio/index/stager.mp3"},
+    {trackname: "song that plays when you encounter a caterpillar", artist: "Cat bus", filepath: "/src/assets/audio/index/stpwyeac.mp3"},
+    {trackname: "Resonance", artist: "Home", filepath: "/src/assets/audio/index/resonance.mp3"}
 ];
 
-var currentplaying: number = 0;
-
 function updatemusic(): void {
-    mp3player.querySelector("marquee").innerHTML = `${tracklist[currentplaying].trackname} - ${tracklist[currentplaying].artist}`;
-    mp3audio.firstElementChild?.setAttribute("src", tracklist[currentplaying].filepath);
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        // dark mode
+        mp3player.querySelector("marquee").innerHTML = `${tracklist_night[currentplaying].trackname} - ${tracklist_night[currentplaying].artist}`;
+        mp3audio.firstElementChild?.setAttribute("src", tracklist_night[currentplaying].filepath);
+    } else {
+        // light mode
+        mp3player.querySelector("marquee").innerHTML = `${tracklist[currentplaying].trackname} - ${tracklist[currentplaying].artist}`;
+        mp3audio.firstElementChild?.setAttribute("src", tracklist[currentplaying].filepath);
+    }
     mp3audio.load();
 }
+window.onload = function() {updatemusic();}
+
 mp3children[0].addEventListener('click', () => {
     currentplaying = currentplaying > 0 ? --currentplaying : tracklist.length-1;
     updatemusic();
+    mp3audio.play();
 });
+
 mp3children[1].addEventListener('click', () => {
     mp3audio.paused ? mp3audio.play() : mp3audio.pause();
 });
-mp3children[2].addEventListener('click', () => {
+
+function mp3next() {
     currentplaying = ++currentplaying % tracklist.length;
     updatemusic();
-});
-window.onload = function() {updatemusic();}
+    mp3audio.play();
+}
+mp3children[2].addEventListener('click', () => {mp3next()});
+mp3audio.onended = function() {mp3next();}

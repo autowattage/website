@@ -12,13 +12,13 @@ header {
   }
   aside {
     position: relative; bottom: var(--mp3-height); margin-left: var(--padding);
-    background-color: $lightgray; height: var(--mp3-height); width: calc(100% - var(--header-offset));
+    height: var(--mp3-height); width: calc(100% - var(--header-offset));
     clip-path: polygon(
       0 0,
       calc(100% - var(--mp3-height) - var(--padding)*2.5) 0,
       calc(100% - var(--padding)*2.5) 100%,
       0 100%);
-    display: flex;
+    display: flex; gap: var(--padding);
     button {
       aspect-ratio: 1/1; border: 0;
       svg {height: 100%; color: $black;}
@@ -27,7 +27,8 @@ header {
       &:nth-child(3) {background-color: $green;}
     }
     marquee {
-      margin: auto 0 auto var(--padding);
+      background-color: $black; color: $white;
+      align-content: center;
       flex-grow: 1; text-wrap:nowrap;
     }
   }
@@ -152,11 +153,16 @@ main {
   width: calc(var(--mp3-height) + var(--padding) * 2.5); aspect-ratio: 1/1; border: none;
   clip-path: polygon(0 0, 100% 0, 100% 100%); background-color: $white;
   svg {
-    position: absolute; top: calc(var(--padding) / 2); right: calc(var(--padding) / 2);
+    position: absolute; top: calc(var(--padding)); right: calc(var(--padding));
     width: calc(var(--mp3-height) / 2); color: $blue;
   }
 }
 
+// Dark/light color modifications
+@media (prefers-color-scheme: dark) {
+  header aside marquee, footer { background-color: $white; color: $black;}
+  main div:nth-child(odd) {background-color: $black; color: $white;}
+}
 
 // Tablet view
 @media screen and (min-width: 25rem) {
@@ -180,7 +186,6 @@ main {
     }
     #personal {
       display: grid; grid-gap: var(--padding); height: 15rem;
-      background-color: $white; color: $black;
       grid: auto 1fr / 1fr 1.75fr 1fr;
       h2 {margin: var(--padding) 0; grid-area: 1/2/1/2;}
       > a {

@@ -2,7 +2,7 @@
   --desktopwidth: 100%;
   --h1size: 3.5rem;
   --header-height: 15rem;
-  --mp3-height: 2rem;
+  --mp3-height: 2.5rem;
   --header-offset: 2rem;
 
   // Landing variables
@@ -18,7 +18,6 @@
     // Header variables
     --h1size: 4rem;
     --header-height: 18rem;
-    --mp3-height: 2.5rem;
     --header-offset: 4.5rem;
 
     // Landing variables
@@ -26,6 +25,7 @@
     --sitenav-width: 46%;
   }
 }
+
 // Laptop view
 @media screen and (min-width: 40rem) {
   :root {
@@ -47,6 +47,8 @@
   :root {
     --desktopwidth: 60%;
 
+    // Header variables
+    --mp3-height: 3.5rem;
     // Landing variables
     --landing-gap: 5rem;
   }
