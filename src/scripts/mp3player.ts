@@ -1,6 +1,6 @@
-const mp3player = document.getElementById("mp3player");
+const mp3player = document.getElementById("mp3player") as HTMLElement;
 const mp3children = mp3player.querySelectorAll<HTMLButtonElement>("button");
-const mp3audio = mp3player.querySelector("audio");
+const mp3audio = mp3player.querySelector("audio") as HTMLAudioElement;
 
 interface MusicTrack {
     trackname: string;
@@ -9,27 +9,33 @@ interface MusicTrack {
 }
 
 var tracklist: MusicTrack[] = [
-    {trackname: "You Are Now Legally A Bird", artist: "Pascal Micheal Stiefel", filepath: "../assets/audio/index/yanlab.mp3"},
-    {trackname: "Foo", artist: "Bob", filepath: "foo"},
-    {trackname: "Foo", artist: "Bob", filepath: "foo"},
-    {trackname: "Foo", artist: "Bob", filepath: "foo"}
+    {trackname: "Serenade", artist: "Pop Up!", filepath: "/src/assets/audio/index/serenade.mp3"},
+    {trackname: "Casin", artist: "glue70", filepath: "/src/assets/audio/index/casin.mp3"},
+    {trackname: "You Are Now Legally A Bird", artist: "Pascal Micheal Stiefel", filepath: "/src/assets/audio/index/yanlab.mp3"},
+    {trackname: "Caterpillar Cake Club", artist: "PROTODOME", filepath: "/src/assets/audio/index/ccc.mp3"},
+    {trackname: "Crystal Dolphin", artist: "Engelwood", filepath: "/src/assets/audio/index/crystaldolphin.mp3"},
+    {trackname: "Artists Parade 1", artist: "Bob Vessin", filepath: "/src/assets/audio/index/ap1.mp3"}
 ];
+var tracklist_night: MusicTrack[] = [
+    {trackname: "", artist: "", filepath: ""}
+];
+
 var currentplaying: number = 0;
 
-function updatemusic(index: number): void {
-    mp3player.querySelector("marquee").innerHTML = `${tracklist[index].trackname} - ${tracklist[index].artist}`;
-    mp3audio.firstElementChild?.setAttribute("src", tracklist[index].filepath);
+function updatemusic(): void {
+    mp3player.querySelector("marquee").innerHTML = `${tracklist[currentplaying].trackname} - ${tracklist[currentplaying].artist}`;
+    mp3audio.firstElementChild?.setAttribute("src", tracklist[currentplaying].filepath);
+    mp3audio.load();
 }
-mp3children[0].onclick = function() {
+mp3children[0].addEventListener('click', () => {
     currentplaying = currentplaying > 0 ? --currentplaying : tracklist.length-1;
-    updatemusic(currentplaying);
-}
-
-mp3children[1].onclick = function() {
+    updatemusic();
+});
+mp3children[1].addEventListener('click', () => {
     mp3audio.paused ? mp3audio.play() : mp3audio.pause();
-}
-
-mp3children[2].onclick = function() {
+});
+mp3children[2].addEventListener('click', () => {
     currentplaying = ++currentplaying % tracklist.length;
-    updatemusic(currentplaying);
-}
+    updatemusic();
+});
+window.onload = function() {updatemusic();}
