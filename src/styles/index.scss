@@ -21,7 +21,7 @@ header {
     display: flex; gap: var(--padding);
     button {
       aspect-ratio: 1/1; border: 0;
-      svg {height: 100%; color: $black;}
+      svg {height: 100%; color: $black; width: calc(var(--padding)*3.5);}
       &:nth-child(1) {background-color: $blue;}
       &:nth-child(2) {background-color: $yellow;}
       &:nth-child(3) {background-color: $green;}
@@ -59,7 +59,7 @@ main {
       width: var(--sitenav-width);
       clip-path: polygon(var(--landing-gap) 0, 0 100%, 100% 100%, 100% 0);
       a {
-        padding: calc(var(--padding) * 1.5); color: $black;
+        padding: calc(var(--padding) * 1.5); color: $black; position: relative;
         &:nth-child(1) {background-color: $yellow;}
         &:nth-child(2) {background-color: $green;}
         &:nth-child(3) {background-color: $blue;}
@@ -139,9 +139,7 @@ main {
   }
   #personal {
     display: flex; flex-direction: column; gap: var(--padding); height: 15rem;
-    h2 {
-      text-align: center; margin: var(--padding);
-    }
+    h2 { font-size: calc(var(--h1size) - 2rem); text-align: center; margin: var(--padding); }
     > a {
       background-color: red; margin: 0;
       width: 100%; height: 100%;
@@ -161,7 +159,7 @@ main {
 // Dark/light color modifications
 @media (prefers-color-scheme: dark) {
   header aside marquee, footer { background-color: $white; color: $black;}
-  main div:nth-child(odd) {background-color: $black; color: $white;}
+  main>div:nth-child(odd) {background-color: $black; color: $white;}
 }
 
 // Tablet view
@@ -213,12 +211,28 @@ main {
     aside {
       width: calc(var(--desktopwidth) - var(--header-offset) + var(--padding));
       left: calc((100% - var(--desktopwidth))/2 - var(--padding));
+      button svg { width: calc(100% - var(--padding)); }
     }
   }
   main {
     >div>section {width: var(--desktopwidth);}
     #landing {
-      nav>a {padding: calc(var(--padding) * 2); color: $black;}
+      nav>a {
+        padding: calc(var(--padding) * 2); color: $black;
+        @keyframes landhover1 { 0% {width: 0; opacity: 75%;} 100% {width: 90%; opacity: 0;}} 
+        @keyframes landhover2 { 0% {width: 0; opacity: 75%;} 100% {width: 102%; opacity: 0;}} 
+        @keyframes landhover3 { 0% {width: 0; opacity: 75%;} 100% {width: 115%; opacity: 0;}}
+        &::before {
+          content:""; display: block; position: absolute; right: 0; top: 0;
+          background-color: $green; height: 100%; width: 0;
+          clip-path: polygon( 2rem 0, 100% 0, 100% 100%, 2rem 100%, 0 50%);
+        }
+        &:nth-child(2)::before {background-color: $blue;}
+        &:nth-child(3)::before {background-color: $purple;}
+        &:hover::before {animation: landhover1 3s cubic-bezier(0.05, 0.75, 0.1, 1);}
+        &:nth-child(2):hover::before {animation-name: landhover2;}
+        &:nth-child(3):hover::before {animation-name: landhover3;}
+      }
     }
     #art .imggallery img {height: 15rem;}
     #blog {
@@ -268,6 +282,7 @@ main {
       > img { flex-basis: 15rem;}
       .imggallery {flex-grow: 1;} 
     }
+    #personal h2 { font-size: calc(var(--h1size) - 3rem);}
   }
 }
 // Desktop extended view
