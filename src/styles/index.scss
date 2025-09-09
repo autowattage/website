@@ -33,8 +33,15 @@ header {
     }
   }
   h1 {
-    margin: 0; color: $white; font-size: var(--h1size);
-    position: absolute; top: calc(var(--header-height) - var(--h1size) - var(--mp3-height) - var(--padding) * 2); left: .25rem;
+    margin: 0; font-size: var(--h1size); color: $white;
+    position: absolute; left: var(--padding); transform-style: preserve-3d;
+    top: calc(var(--header-height) - var(--h1size) - var(--mp3-height) - var(--padding) * 2.5);
+    &::before {
+      content:'b4g.foo';position: absolute; left: 0; top: 0;
+      /* I am sorry. Forgive my sins. */
+      transform: translateZ(-1px);
+      -webkit-text-stroke: calc(var(--padding)*2) $black;
+    }
   }
 }
 
@@ -52,6 +59,7 @@ main {
     > a {
       background-color: $red; flex-grow: 1; margin-right: calc(var(--padding) * 1.25 - var(--landing-gap));
       clip-path: polygon(0 0, 0 100%, calc(100% - var(--landing-gap)) 100%, 100% 0);
+      background-image: url("../assets/construction.png"); background-size: cover;
     }
     nav {
       display: flex; flex-direction: column;
@@ -189,6 +197,7 @@ main {
       > a {
         background-color: red; margin: 0;
         width: 100%; height: 100%;
+        background-image: url("../assets/construction.png"); background-size: cover;
       }
       a {
         &:nth-child(2) {grid-area: 1/1/span 2/2;}

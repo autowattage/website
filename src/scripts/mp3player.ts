@@ -10,20 +10,20 @@ interface MusicTrack {
 
 var currentplaying: number = 0;
 var tracklist: MusicTrack[] = [
-    {trackname: "Artists Parade 1", artist: "Bob Vessin", filepath: "/src/assets/audio/index/ap1.mp3"},
-    {trackname: "Serenade", artist: "Pop Up!", filepath: "/src/assets/audio/index/serenade.mp3"},
-    {trackname: "Casin", artist: "glue70", filepath: "/src/assets/audio/index/casin.mp3"},
-    {trackname: "You Are Now Legally A Bird", artist: "Pascal Micheal Stiefel", filepath: "/src/assets/audio/index/yanlab.mp3"},
-    {trackname: "Caterpillar Cake Club", artist: "PROTODOME", filepath: "/src/assets/audio/index/ccc.mp3"},
-    {trackname: "Crystal Dolphin", artist: "Engelwood", filepath: "/src/assets/audio/index/crystaldolphin.mp3"}
+    {trackname: "Artists Parade 1", artist: "Bob Vessin", filepath: "/audio/index/ap1.mp3"},
+    {trackname: "Serenade", artist: "Pop Up!", filepath: "/audio/index/serenade.mp3"},
+    {trackname: "Casin", artist: "glue70", filepath: "/audio/index/casin.mp3"},
+    {trackname: "You Are Now Legally A Bird", artist: "Pascal Micheal Stiefel", filepath: "/audio/index/yanlab.mp3"},
+    {trackname: "Caterpillar Cake Club", artist: "PROTODOME", filepath: "/audio/index/ccc.mp3"},
+    {trackname: "Crystal Dolphin", artist: "Engelwood", filepath: "/audio/index/crystaldolphin.mp3"}
 ];
 var tracklist_night: MusicTrack[] = [
-    {trackname: "You're Mine", artist: "Carpenter Brut", filepath: "/src/assets/audio/index/youremine.mp3"},
-    {trackname: "READ BY THE BOOK", artist: "boggio, Crablooshi", filepath: "/src/assets/audio/index/rbtb.mp3"},
-    {trackname: "Spunky (Makoto Stage)", artist: "Capcom Sound Team", filepath: "../assets/audio/index/spunky.mp3"},
-    {trackname: "STAGER", artist: "Ras", filepath: "/src/assets/audio/index/stager.mp3"},
-    {trackname: "song that plays when you encounter a caterpillar", artist: "Cat bus", filepath: "/src/assets/audio/index/stpwyeac.mp3"},
-    {trackname: "Resonance", artist: "Home", filepath: "/src/assets/audio/index/resonance.mp3"}
+    {trackname: "You're Mine", artist: "Carpenter Brut", filepath: "/audio/index/youremine.mp3"},
+    {trackname: "READ BY THE BOOK", artist: "boggio, Crablooshi", filepath: "/audio/index/rbtb.mp3"},
+    {trackname: "Spunky (Makoto Stage)", artist: "Capcom Sound Team", filepath: "audio/index/spunky.mp3"},
+    {trackname: "STAGER", artist: "Ras", filepath: "/audio/index/stager.mp3"},
+    {trackname: "song that plays when you encounter a caterpillar", artist: "Cat bus", filepath: "/audio/index/stpwyeac.mp3"},
+    {trackname: "Resonance", artist: "Home", filepath: "/audio/index/resonance.mp3"}
 ];
 
 function updatemusic(): void {
