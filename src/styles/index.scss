@@ -53,7 +53,10 @@ main {
     >section {width: 100%; margin: auto;}
     &:nth-child(odd) {background-color: $white; color: $black; padding: var(--padding) 0;}
   }
-
+  >div:first-child>section:first-child {
+    background-color: $black; color: $white;
+    padding: var(--padding) calc(var(--padding)*2); box-sizing: border-box;
+  }
   #landing {
     display: flex;
     > a {
@@ -166,7 +169,7 @@ main {
 
 // Dark/light color modifications
 @media (prefers-color-scheme: dark) {
-  header aside marquee, footer { background-color: $white; color: $black;}
+  header aside marquee, main>div:first-child>section:first-child, footer { background-color: $white; color: $black;}
   main>div:nth-child(odd) {background-color: $black; color: $white;}
 }
 
@@ -238,7 +241,7 @@ main {
         }
         &:nth-child(2)::before {background-color: $blue;}
         &:nth-child(3)::before {background-color: $purple;}
-        &:hover::before {animation: landhover1 3s cubic-bezier(0.05, 0.75, 0.1, 1);}
+        &:hover::before {animation: landhover1 2s cubic-bezier(0.05, 0.75, 0.1, 1);}
         &:nth-child(2):hover::before {animation-name: landhover2;}
         &:nth-child(3):hover::before {animation-name: landhover3;}
       }
