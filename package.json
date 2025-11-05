@@ -9,11 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/ts-plugin": "^1.10.4",
+    "@astrojs/ts-plugin": "^1.10.5",
     "astro": "^5.13.5",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {
+    "@iconify-json/ri": "^1.2.6",
     "@iconify-json/tdesign": "^1.2.8",
     "sass-embedded": "^1.89.2"
   }

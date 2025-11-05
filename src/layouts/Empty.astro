@@ -1,9 +1,11 @@
 ---
 import Head from '../components/Head.astro';
+import '../styles/global.scss';
+
 const {title} = Astro.props;
 ---
 <html lang="en">
-  <Head title="{title}"/>
+  <Head title={title}/>
   <body>
     <slot/>
   </body>
