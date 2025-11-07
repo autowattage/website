@@ -1,0 +1,50 @@
+/* Color palette: POSYDOTS */
+:root {
+  --black: #1D1235;
+  --gray-dark: #3D405C;
+  --gray-light: #9499A4;
+  --white: #E8E4E2;
+  --link: #412687;
+  --link-active: #801B85;
+  --accent-1: #229DAA;
+  --accent-2: #EDC345;
+  --accent-3: #D8226E;
+}
+
+/* Fonts */
+/* hack font: the Compute Zone */
+@font-face {
+  font-family: 'Hack';
+  src: url('/public/fonts/Hack-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/public/fonts/Hack-Bold.ttf') format('ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/public/fonts/Hack-BoldItalic.ttf') format('ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/public/fonts/Hack-Italic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+html {
+  background-color: var(--white);
+  color: var(--black);
+  a {
+    color: var(--link);
+  }
+}
