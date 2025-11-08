@@ -1,7 +1,10 @@
 ---
 import Empty from '../layouts/Empty.astro';
 import '../styles/index.scss';
+
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+const images = import.meta.glob("../assets/**/*.{png,jpg,jpeg,gif}");
 ---
 <Empty title="index">
   <!-- Did somebody say paint buckets? -->
