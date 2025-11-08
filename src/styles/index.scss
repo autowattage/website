@@ -1,0 +1,13 @@
+body {
+  display: flex; flex-direction: column;
+  margin: 1rem auto; width: 80%;
+  border: 1px solid black;
+}
+
+
+/* Tablet use */
+@media screen and (min-width: 50rem) {
+  body {
+    border: 1px solid red;
+  }
+}

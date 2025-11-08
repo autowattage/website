@@ -1,14 +1,33 @@
 /* Color palette: POSYDOTS */
 :root {
-  --black: #1D1235;
-  --gray-dark: #3D405C;
-  --gray-light: #9499A4;
-  --white: #E8E4E2;
-  --link: #412687;
-  --link-active: #801B85;
-  --accent-1: #229DAA;
-  --accent-2: #EDC345;
-  --accent-3: #D8226E;
+  &.cmyk {
+    --black: #1D1235;
+    --gray-dark: #3D405C;
+    --gray-light: #9499A4;
+    --white: #E8E4E2;
+    --link: #412687;
+    --link-active: #801B85;
+    --accent-1: #229DAA;
+    --accent-2: #EDC345;
+    --accent-3: #D8226E;
+    --accent-4: #E8E4E2;
+    --font: sans-serif;
+  }
+
+  &.jnd {
+    --black: #00052D;
+    --gray-dark: ;
+    --gray-light:;
+    --white: #ECE9C5;
+    --link: #004264;
+    --link-active: #6F0044;
+    --accent-1: #81D71E;
+    --accent-2: #00BCAC;
+    --accent-3: #0076B2;
+    --accent-3: #F53F76;
+    --font: 'Hack';
+  }
+  &.tswp {}
 }
 
 /* Fonts */
@@ -40,11 +59,22 @@
   font-weight: normal;
   font-style: italic;
 }
+/* Paper Mono: craft center */
+@font-face {
+  font-family: 'Paper Mono';
+  src: url('/public/fonts/PaperMono-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 html {
   background-color: var(--white);
   color: var(--black);
+  font-family: var(--font);
   a {
     color: var(--link);
+    &:active { color: var(--link-active);}
+    &:hover, &:active {text-decoration: wavy underline;}
   }
 }
