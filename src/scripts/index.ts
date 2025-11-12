@@ -1,5 +1,6 @@
 const root = document.querySelector(":root");
 const accentlist: string[] = ["--accent-1", "--accent-2", "--accent-3"];
+const cmykbglist: string[] = ['url("/src/assets/cmyk-tile-1.png")', 'url("/src/assets/cmyk-tile-2.png")', 'url("/src/assets/cmyk-tile-3.png")',]
 function setpalette(i: string): void {
   console.log("Yay");
   root.classList = i;
@@ -8,6 +9,9 @@ function setpalette(i: string): void {
 function setsystem(i: number): void {
   console.log("Yaycool");
   root.style.setProperty('--accent-current', 'var(' + accentlist[i] + ')');
+  if (root.className == "cmyk") {
+    root.style.setProperty('--bg-current', cmykbglist[i]);
+  }
 }
 
 document.getElementById("palettecymk")!.addEventListener('click', function() { setpalette('cmyk'); });

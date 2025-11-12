@@ -11,6 +11,7 @@
     --accent-2: #EDC345;
     --accent-3: #D8226E;
     --accent-current: var(--accent-2);
+    --bg-current: url("/src/assets/cmyk-tile-2.png")
     /* media (prefers-color-scheme: dark) { */
       /* --black: #E8E4E2; */
       /* --gray-dark: #9499A4; */
@@ -30,6 +31,7 @@
     --accent-2: #63AB11;
     --accent-3: #0A6D9F;
     --accent-current: var(--accent-2);
+    --bg-current: url("/src/assets/cmyk-tile-1.png");
     /* media (prefers-color-scheme: dark) { */
       /* --black: #ECEAE4; */
       /* --gray-dark: #C2B6B1; */
@@ -78,7 +80,7 @@
 }
 
 html {
-  background-color: var(--white);
+  background-image: var(--bg-current);
   color: var(--black);
   font-family: sans-serif;
   a {
