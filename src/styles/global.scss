@@ -10,33 +10,32 @@
     --accent-1: #229DAA;
     --accent-2: #EDC345;
     --accent-3: #D8226E;
-    --font: sans-serif;
+    --accent-current: var(--accent-2);
+    /* media (prefers-color-scheme: dark) { */
+      /* --black: #E8E4E2; */
+      /* --gray-dark: #9499A4; */
+      /* --gray-light: #3D405C; */
+      /* --white: #1D1235; */
+    /* } */
   }
 
-  &.jnd {
-    --black: #00052D;
-    --gray-dark: #3D405C;
-    --gray-light: #9499A4;
-    --white: #ECE9C5;
-    --link: #004264;
-    --link-active: #6F0044;
-    --accent-1: #81D71E;
-    --accent-2: #00BCAC;
-    --accent-3: #0076B2;
-    --accent-4: #F53F76;
-    --font: 'Hack';
-  }
   &.b4g {
-    --black: #00052D;
-    --gray-dark: #3D405C;
-    --gray-light: #9499A4;
-    --white: #ece9c5;
-    --link: #004264;
-    --link-active: #6F0044;
-    --accent-1: #e7ae4e;
-    --accent-2: #81d71e;
-    --accent-3: #0076b2;
-    --font: 'Paper Mono';
+    --black: #000928;
+    --gray-dark: #2F4369;
+    --gray-light: #C2B6B1;
+    --white: #ECEAE4;
+    --link: #092E74;
+    --link-active: #780158;
+    --accent-1: #E8BB41;
+    --accent-2: #63AB11;
+    --accent-3: #0A6D9F;
+    --accent-current: var(--accent-2);
+    /* media (prefers-color-scheme: dark) { */
+      /* --black: #ECEAE4; */
+      /* --gray-dark: #C2B6B1; */
+      /* --gray-light: #2F4369; */
+      /* --white: #000928; */
+    /* } */
   }
 }
 
@@ -81,7 +80,7 @@
 html {
   background-color: var(--white);
   color: var(--black);
-  font-family: var(--font);
+  font-family: sans-serif;
   a {
     color: var(--link);
     &:active { color: var(--link-active);}
