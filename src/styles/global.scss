@@ -10,31 +10,41 @@
     --accent-1: #229DAA;
     --accent-2: #EDC345;
     --accent-3: #D8226E;
-    --accent-4: #E8E4E2;
     --font: sans-serif;
   }
 
   &.jnd {
     --black: #00052D;
-    --gray-dark: ;
-    --gray-light:;
+    --gray-dark: #3D405C;
+    --gray-light: #9499A4;
     --white: #ECE9C5;
     --link: #004264;
     --link-active: #6F0044;
     --accent-1: #81D71E;
     --accent-2: #00BCAC;
     --accent-3: #0076B2;
-    --accent-3: #F53F76;
+    --accent-4: #F53F76;
     --font: 'Hack';
   }
-  &.tswp {}
+  &.b4g {
+    --black: #00052D;
+    --gray-dark: #3D405C;
+    --gray-light: #9499A4;
+    --white: #ece9c5;
+    --link: #004264;
+    --link-active: #6F0044;
+    --accent-1: #e7ae4e;
+    --accent-2: #81d71e;
+    --accent-3: #0076b2;
+    --font: 'Paper Mono';
+  }
 }
 
 /* Fonts */
 /* hack font: the Compute Zone */
 @font-face {
   font-family: 'Hack';
-  src: url('/public/fonts/Hack-Regular.ttf') format('ttf');
+  src: url('/fonts/Hack-Regular.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,27 +52,27 @@
 
 @font-face {
   font-family: 'Hack';
-  src: url('/public/fonts/Hack-Bold.ttf') format('ttf');
+  src: url('/fonts/Hack-Bold.ttf');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Hack';
-  src: url('/public/fonts/Hack-BoldItalic.ttf') format('ttf');
+  src: url('/fonts/Hack-BoldItalic.ttf');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Hack';
-  src: url('/public/fonts/Hack-Italic.ttf') format('ttf');
+  src: url('/fonts/Hack-Italic.ttf');
   font-weight: normal;
   font-style: italic;
 }
 /* Paper Mono: craft center */
 @font-face {
   font-family: 'Paper Mono';
-  src: url('/public/fonts/PaperMono-Regular.ttf') format('ttf');
+  src: url('/fonts/PaperMono-Regular.ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
