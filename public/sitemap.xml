@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/foo/</loc>
+    <lastmod>2025-11-24T18:06:55-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-24T18:06:55-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/personal/</loc>
+    <lastmod>2025-11-24T18:06:55-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-24T18:06:55-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/autobiography/</loc>
+    <lastmod>2025-11-24T18:04:36-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/iltg/</loc>
+    <lastmod>2025-11-24T18:04:36-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2025-11-24T18:04:02-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/updates/</loc>
+    <lastmod>2025-11-24T18:04:02-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url>
+</urlset>
