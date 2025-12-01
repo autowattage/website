@@ -1,0 +1,17 @@
+:root {
+  --black: #1D1235;
+  --gray1: #3D405C;
+  --gray2: #9499A4;
+  --white: #E8E4E2;
+  --link-active: #801B85;
+  --link: #412687;
+  --accent-1: #229DAA;
+  --accent-2: #EDC345;
+  --accent-3: #D8226E;
+}
+
+html {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: sans-serif;
+}
