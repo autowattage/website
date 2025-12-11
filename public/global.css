@@ -14,4 +14,14 @@ html {
   background-color: var(--white);
   color: var(--black);
   font-family: sans-serif;
+  p { margin: 0;}
+}
+
+body { margin: 0; padding: 0;}
+
+footer {
+  background-color: var(--accent-1);
+  padding: 1rem 0.5rem;
+  display: flex; flex-direction: row;
+  *:first-child { flex-grow: 1; }
 }
