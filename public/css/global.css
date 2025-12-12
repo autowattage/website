@@ -5,9 +5,17 @@
   --white: #E8E4E2;
   --link-active: #801B85;
   --link: #412687;
-  --accent-1: #229DAA; /* 207295 */
-  --accent-2: #EDC345; /* d4b858 */
-  --accent-3: #D8226E; /* 7fb238 */
+
+  &.cmyk {
+    --accent-1: #229DAA;
+    --accent-2: #EDC345;
+    --accent-3: #D8226E;
+  }
+  &.b4g {
+    --accent-1: #207295;
+    --accent-2: #d4b858;
+    --accent-3: #7fb238;
+  }
 }
 
 html {
