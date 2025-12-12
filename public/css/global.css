@@ -1,0 +1,27 @@
+:root {
+  --black: #1D1235;
+  --gray-1: #3D405C;
+  --gray-2: #9499A4;
+  --white: #E8E4E2;
+  --link-active: #801B85;
+  --link: #412687;
+  --accent-1: #229DAA; /* 207295 */
+  --accent-2: #EDC345; /* d4b858 */
+  --accent-3: #D8226E; /* 7fb238 */
+}
+
+html {
+  background-color: var(--white); color: var(--black);
+  font-family: sans-serif;
+  body { margin:0; }
+}
+p { margin: 0; }
+a { color: var(--link); }
+a:visited, a:active { color: var(--link-active); }
+
+footer {
+  background-color: var(--accent-1);
+  display: flex; flex-direction: row;
+  padding: 0.5rem 0.5rem; gap: 0.5rem;
+  & > p:first-child { flex-grow: 1; }
+}

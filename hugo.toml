@@ -1,6 +1,0 @@
-baseURL = 'https://sundial.city/'
-languageCode = 'en-us'
-title = 'Sundial city'
-
-[markup.goldmark.renderer]
-  unsafe = true # Allow HTML in md files
