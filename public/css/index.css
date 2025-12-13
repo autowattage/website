@@ -1,6 +1,10 @@
 header {
-  background-image:
-    linear-gradient(to bottom, #365B8F, #4F91B8);
+  background-image: url("../img/2x/sky.webp");
+  background-repeat: repeat-x; background-size: contain;
   height: 80vh; display: flex;
   h1 { margin: 0;}
+}
+
+main {
+  background-image: url("../img/2x/grass.webp");
 }
