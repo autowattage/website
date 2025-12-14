@@ -31,6 +31,21 @@ footer {
   background-image: url("../img/2x/footer.webp");
   background-repeat: repeat-x; background-size: contain;
   display: flex; flex-direction: row;
-  padding: 0.75rem 0.5rem .5rem; gap: 0.5rem;
+  &::before {
+    content: ''; display: block; position: absolute;
+    top: -1rem; left: -0.5rem;
+    width: calc(100% + 0.5rem); height: 1rem;
+    background-image: url("../img/2x/footer-wave.webp");
+    background-repeat: repeat-x; background-size: contain;
+  }
+  padding: 1rem; position: relative; gap: 0.5rem;
+  p { color: var(--white); }
   & > p:first-child { flex-grow: 1; }
+}
+
+ @media screen and (max-width: 22rem) {
+  footer {
+    flex-direction: column;
+    & > p:first-child { margin-bottom: 1rem; }
+   }
 }

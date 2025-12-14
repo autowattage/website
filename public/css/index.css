@@ -1,7 +1,6 @@
 header {
   background-image: url("../img/2x/sky.webp");
-  background-repeat: repeat-x; background-size: cover;
-  @media screen and (min-width: 10rem) { background-size: contain; }
+  background-repeat: repeat-x; background-size:auto 100%;
   height: 40rem; display: flex;
   h1 { margin: 0;}
 }
@@ -19,10 +18,7 @@ main {
 }
 
 #beach {
-  margin-bottom: -1rem; padding-bottom: 1rem; width: 100%; height: 5rem;
-  background-image: url("../img/2x/sand.webp");
-  background-size: contain;
-}
-@media screen and (min-width: 10rem) {
-  header { background-size: contain; }
+  margin-bottom: -1.5rem; padding-bottom: 1rem; width: 100%; height: 20rem;
+  background-image: url("../img/2x/shore.webp");
+  background-repeat: repeat-x; background-size:auto 100%;
 }
