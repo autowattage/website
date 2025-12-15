@@ -2,45 +2,58 @@
   --black: #0D1E2C;
   --gray-1: #376FA0;
   --gray-2: #5CB3BE;
-  --white: #F2CF9F;
+  --gray-3: #F2CF9F;
+  --white: #EDE6E3;
   --link-active: #7C1581;
   --link: #243C85;
-  --accent-1: #E4C44A;
-  --accent-2: #759F3B;
+  --accent-1: #D5B63B;
+  --accent-2: #6F9B32;
   --accent-3: #376FA0;
 }
 
 html {
   background-color: var(--white); color: var(--black);
   font-family: sans-serif;
-  body { margin:0; }
+  &, body { margin:0; min-height: 100%; height: 100vh; }
 }
 p { margin: 0; }
-q {
-  display: block; margin: 1rem 0 1rem 2rem;
-}
+q { display: block; margin: 1rem 0 1rem 2rem; }
+img { display: block; width: 100%; height: auto;}
 a { color: var(--link); }
+a:hover, a:active { text-decoration-style: wavy; font-weight:bold;}
 a:visited, a:active { color: var(--link-active); }
+h1 { margin: 0; padding: 1rem 0;}
 
-footer {
-  background-image: url("../img/2x/footer.webp");
-  background-repeat: repeat-x; background-size: contain;
-  display: flex; flex-direction: row;
-  &::before {
-    content: ''; display: block; position: absolute;
-    top: -1rem; left: -0.5rem;
-    width: calc(100% + 0.5rem); height: 1rem;
-    background-image: url("../img/2x/footer-wave.webp");
+body {
+  display: flex; flex-direction: column;
+  main { padding-bottom: 1rem; flex-grow: 1;}
+  footer {
+    background-image: url("../img/footer.webp");
     background-repeat: repeat-x; background-size: contain;
+    display: flex; flex-direction: row; width: 100%; box-sizing: border-box;
+    padding: 1rem; position: relative; gap: 0.5rem;
+    &::before {
+      content: ''; display: block; position: absolute;
+      top: -1rem; left: -0.5rem;
+      width: calc(100% + 0.5rem); height: 1rem;
+      background-image: url("../img/footer-wave.webp");
+      background-repeat: repeat-x; background-size: contain;
+    }
+    p { color: var(--white); }
+    & > p:first-child { flex-grow: 1; }
+    a, a:visited, a:active { color: var(--white); }
   }
-  padding: 1rem; position: relative; gap: 0.5rem;
-  p { color: var(--white); }
-  & > p:first-child { flex-grow: 1; }
 }
 
  @media screen and (max-width: 22rem) {
-  footer {
+  body > footer {
     flex-direction: column;
     & > p:first-child { margin-bottom: 1rem; }
    }
+}
+ @media screen and (min-width: 40rem) {
+  footer { padding: 1rem 25%; }
+}
+ @media screen and (min-width: 65rem) {
+  footer { padding: 1rem 50%; }
 }
