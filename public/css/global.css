@@ -1,21 +1,13 @@
 :root {
-  --black: #1D1235;
-  --gray-1: #3D405C;
-  --gray-2: #9499A4;
-  --white: #E8E4E2;
-  --link-active: #801B85;
-  --link: #412687;
-
-  &.cmyk {
-    --accent-1: #229DAA;
-    --accent-2: #EDC345;
-    --accent-3: #D8226E;
-  }
-  &.b4g {
-    --accent-1: #207295;
-    --accent-2: #d4b858;
-    --accent-3: #7fb238;
-  }
+  --black: #0D1E2C;
+  --gray-1: #376FA0;
+  --gray-2: #5CB3BE;
+  --white: #F2CF9F;
+  --link-active: #7C1581;
+  --link: #243C85;
+  --accent-1: #E4C44A;
+  --accent-2: #759F3B;
+  --accent-3: #376FA0;
 }
 
 html {
@@ -24,6 +16,9 @@ html {
   body { margin:0; }
 }
 p { margin: 0; }
+q {
+  display: block; margin: 1rem 0 1rem 2rem;
+}
 a { color: var(--link); }
 a:visited, a:active { color: var(--link-active); }
 
