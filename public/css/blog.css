@@ -1,0 +1,34 @@
+body {
+  background-image: url("../img/blog/background.webp");
+}
+header {
+  h1 { font-size: 2.5rem; padding: 0.5rem; color: var(--link); }
+  h2 { font-size: 1rem; margin: 0.5rem; color: var(--accent-3); }
+  background-image: url("../img/sky.webp");
+  padding: 1rem; margin-bottom: -1rem; text-align: center; position: relative;
+  &::after {
+    content: ''; display: block; position: absolute;
+    bottom: -1rem; left: -0.5rem;
+    width: calc(100% + 0.5rem); height: 1rem;
+    background-image: url("../img/blog/header-sky.webp");
+    background-repeat: repeat-x; background-size: contain;
+  }
+}
+
+main {
+  padding: 2rem 1rem; margin: 1rem 1rem 0;
+  background-image: url("../img/white.webp");
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    padding: 1.25rem;
+    h1 { font-size: 3rem; }
+    h2 { font-size: 1.25rem; }
+  }
+  main {margin: 1rem 8% 0;}
+}
+@media screen and (min-width: 67rem) {
+  header { padding: 1.5rem; }
+  main {margin: 1rem 18% 0;}
+}
