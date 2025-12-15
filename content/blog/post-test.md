@@ -1,5 +1,7 @@
 ---
 title: First blog post
+date: 2025-12-14
+tag: posts
 ---
 Hello world  
 Foo bar baz.  

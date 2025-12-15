@@ -3,7 +3,7 @@ export default async function(eleventyConfig) {
 
   eleventyConfig.setNunjucksEnvironmentOptions({
 		throwOnUndefined: true,
-		autoescape: false, // warning: don’t do this!
+		autoescape: false, // warning: don’t do this! <- NEVER!
 	});
 };
 

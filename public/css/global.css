@@ -1,5 +1,5 @@
 :root {
-  --black: #0D1E2C;
+  --black: #0B173E;
   --gray-1: #376FA0;
   --gray-2: #5CB3BE;
   --gray-3: #F2CF9F;
@@ -11,9 +11,13 @@
   --accent-3: #376FA0;
 }
 
+@font-face {
+  font-family: Geologica;
+  src: url("../fonts/Geologica.ttf")
+}
 html {
-  background-color: var(--white); color: var(--black);
-  font-family: sans-serif;
+  background-image: url("../img/white.webp");
+  color: var(--black); font-family: Geologica, Arial, Helvetica, sans-serif;
   &, body { margin:0; min-height: 100%; height: 100vh; }
 }
 p { margin: 0; }
@@ -26,7 +30,7 @@ h1 { margin: 0; padding: 1rem 0;}
 
 body {
   display: flex; flex-direction: column;
-  main { padding-bottom: 1rem; flex-grow: 1;}
+  main { flex-grow: 1;}
   footer {
     background-image: url("../img/footer.webp");
     background-repeat: repeat-x; background-size: contain;
@@ -52,8 +56,8 @@ body {
    }
 }
  @media screen and (min-width: 40rem) {
-  footer { padding: 1rem 25%; }
+  body > footer { padding: 1rem 10%; }
 }
- @media screen and (min-width: 65rem) {
-  footer { padding: 1rem 50%; }
+ @media screen and (min-width: 67rem) {
+  body > footer { padding: 1rem 20%; }
 }
