@@ -1,11 +1,11 @@
 #headerwrapper {
-  background-image: url("../img/2x/sky.webp");
+  background-image: url("../img/index/sky.webp");
   background-repeat: repeat-x; background-size:auto 85%;
   min-height: 30rem; padding: 5rem 5rem 17rem; position: relative;
   display: flex; align-items: center; justify-content: center;
   &::after {
     content: ''; display: block; width: 100%; height: 15rem;
-    background-image: url("../img/2x/mountains.webp");
+    background-image: url("../img/index/mountains.webp");
     background-repeat: repeat-x; background-size:auto 100%;
     position: absolute; bottom: 0;
   }
@@ -19,8 +19,8 @@
       &:nth-child(3) { height: 4rem; width: 4rem; top: 10rem; right: 2rem; rotate: -10deg;}
       &:nth-child(4) { height: 2rem; width: 2rem; top: 18rem; right: 2rem; }
       &:nth-child(5) { height: 4rem; width: 4rem; bottom: 22rem; left: 1rem; rotate: 10deg;}
-      &:nth-child(6) { height: 2rem; width: 2rem; bottom: 9rem; right: 10rem;}
-      &:nth-child(7) { height: 5rem; width: 5rem; bottom: 8rem; right: 1rem;}
+      &:nth-child(6) { height: 2rem; width: 2rem; bottom: 8rem; right: 10rem;}
+      &:nth-child(7) { height: 5rem; width: 5rem; bottom: 9rem; right: 1rem;}
     }
   }
   header {
@@ -29,16 +29,17 @@
     img { height: 8rem; width: 8rem; margin: auto; }
     h1 {
       margin: 0 0 0.5rem; text-align: center;
-      font-size: 3rem; color: var(--white);
+      font-size: 3rem; color: var(--gray-3);
+      text-shadow: -1px -1px 0 var(--link), 1px -1px 0 var(--link), -1px 1px 0 var(--link), 1px 1px 0 var(--link);
     }
     nav {
       display: flex; flex-direction: column; gap: 1rem;
       a {
-        background-image: url("../img/2x/sand.webp");
+        background-image: url("../img/sand.webp");
         background-size:cover; display: block;
         padding: 0.5rem 1rem; border-radius: 0.5rem;
         &:hover {
-          background-image: url("../img/2x/black.webp");
+          background-image: url("../img/black.webp");
           color: var(--white);
         }
       }
@@ -47,21 +48,24 @@
 }
 
 main {
-  background-image: url("../img/2x/grass.webp");
-  background-size: contain; padding: 1rem 1rem 1rem;
+  background-image: url("../img/grass.webp");
+  background-size: contain; padding: 2rem 2rem 2rem;
   & > *:first-child { margin-top: 0; }
   section {
-    background-image: url("../img/2x/sand.webp");
+    background-image: url("../img/sand.webp");
     background-size: contain; border-radius: 1rem;
     margin: 1rem 0; padding: 1rem;
     &#landing {
       display: flex; flex-direction: column; gap: 1rem;
+      div { flex-shrink: 1; }
       div:first-child { text-align: center;
+        img { width: 12rem; margin: auto; }
         p {
-          background-image: url("../img/2x/black.webp"); color: var(--white);
-          border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem; 
+          background-image: url("../img/black.webp");
+          background-size: contain; color: var(--white);
+          border-radius: 0.5rem; padding: 1rem;
           em {
-            color: var(--accent-3); font-size: 2rem; font-weight: bold;
+            color: var(--accent-1); font-size: 2rem; font-weight: bold;
             display:block; width: 100%;
           }
         }
@@ -72,7 +76,8 @@ main {
 
 #beach {
   margin-bottom: -1.5rem; padding-bottom: 1rem; width: 100%; height: 20rem;
-  background-image: url("../img/2x/shore.webp");
+  flex-shrink: 0;
+  background-image: url("../img/index/shore.webp");
   background-repeat: repeat-x; background-size:auto 100%;
 }
 
@@ -87,7 +92,7 @@ main {
       &:nth-child(4) { height: 3rem; width: 3rem; }
       &:nth-child(5) { height: 4rem; width: 4rem; bottom: 15rem; left: 2rem; rotate: 10deg;}
       &:nth-child(6) { height: 3rem; width: 3rem; bottom: 8rem; right: 20rem;}
-      &:nth-child(7) { height: 6rem; width: 6rem; bottom: 10rem; right: 2rem;}
+      &:nth-child(7) { height: 6rem; width: 6rem; bottom: 9rem; right: 2rem;}
     }
     header {
       flex-direction: row;
@@ -95,16 +100,13 @@ main {
     }
   }
   main {
-    padding: 1rem 15%;
-    section#landing {
-      flex-direction: row;
-      div:first-child { flex-basis: 40%; flex-shrink: 0;}
-    }
+    padding: 2rem 15%;
+    section#landing div:first-child img { width: 15rem; }
   }
 }
 
 /* Desktop view */
-@media screen and (min-width: 70rem) {
+@media screen and (min-width: 67rem) {
   #headerwrapper {
     #headerstars > img {
       &:first-child { height: 12rem; width: 12rem; top: 11rem; left: 4rem;}
@@ -114,5 +116,14 @@ main {
       img { width: 12rem; height: 12rem;}
     }
   }
-  main { padding: 1rem 20%;}
+  main {
+    padding: 2rem 20%;
+    section#landing { flex-direction: row;
+      div:first-child {
+        flex-basis: 40%; flex-shrink: 0;
+        height: 100%; margin: auto;
+        img { width: 80%; }
+      }
+    }
+  }
 }
