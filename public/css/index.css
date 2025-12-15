@@ -1,0 +1,73 @@
+#headerwrapper {
+  background-image: url("../img/2x/sky.webp");
+  background-repeat: repeat-x; background-size:auto 85%;
+  min-height: 30rem; padding: 5rem 5rem 17rem; position: relative;
+  display: flex; align-items: center; justify-content: center;
+  &::after {
+    content: ''; display: block; width: 100%; height: 15rem;
+    background-image: url("../img/2x/mountains.webp");
+    background-repeat: repeat-x; background-size:auto 100%;
+    position: absolute; bottom: 0;
+  }
+  /*&::before{
+    content: ''; display: block; width: 6rem; height: 6rem;
+    background-image: url("../img/2x/moon.webp");
+    background-size: cover; background-repeat:no-repeat;
+    position: absolute; top: 2rem; left: 2.5rem;
+  }*/
+  header {
+    display: flex; flex-direction: column; gap: 1rem;
+    img { height: 8rem; width: 8rem; margin: auto; }
+    h1 {
+      margin: 0 0 0.5rem; text-align: center;
+      font-size: 3rem; color: var(--white);
+    }
+    nav {
+      display: flex; flex-direction: column; gap: 0.5rem;
+      a {
+        background-image: url("../img/2x/sand.webp");
+        background-size:cover; display: block;
+        padding: 0.5rem 1rem; border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+main {
+  background-image: url("../img/2x/grass.webp");
+  background-size: contain; padding: 1rem 1rem 1rem;
+  & > *:first-child { margin-top: 0; }
+  section {
+    background-image: url("../img/2x/sand.webp");
+    background-size: contain; border-radius: 1rem;
+    margin: 1rem 0; padding: 1rem;
+  }
+}
+
+#beach {
+  margin-bottom: -1.5rem; padding-bottom: 1rem; width: 100%; height: 20rem;
+  background-image: url("../img/2x/shore.webp");
+  background-repeat: repeat-x; background-size:auto 100%;
+}
+
+/* Tablet view */
+@media screen and (min-width: 40rem) {
+  #headerwrapper {
+    /*&::before { width: 8rem; height: 8rem; top: 3rem; left: 4rem; }*/
+    header {
+      flex-direction: row;
+      img { width: 10rem; height: 10rem;}
+    }
+  }
+}
+
+/* Desktop view */
+@media screen and (min-width: 60rem) {
+  #headerwrapper {
+    /*&::before { width: 10rem; height: 19rem;*/
+    header {
+      flex-direction: row;
+      img { width: 12rem; height: 12rem;}
+    }
+  }
+}
