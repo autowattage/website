@@ -35,7 +35,9 @@ body {
     background-image: url("../img/footer.webp");
     background-repeat: repeat-x; background-size: contain;
     display: flex; flex-direction: row; width: 100%; box-sizing: border-box;
-    padding: 1rem; position: relative; gap: 0.5rem;
+    padding: 1rem; position: relative; gap: 1rem;
+    color: var(--white);
+    & * {align-content: center;}
     &::before {
       content: ''; display: block; position: absolute;
       top: -1rem; left: -0.5rem;
@@ -43,15 +45,15 @@ body {
       background-image: url("../img/footer-wave.webp");
       background-repeat: repeat-x; background-size: contain;
     }
-    p { color: var(--white); }
     & > p:first-child { flex-grow: 1; }
     a, a:visited, a:active { color: var(--white); }
+    & > img { height: 100%; width: auto; margin: auto; }
   }
 }
 
- @media screen and (max-width: 22rem) {
+ @media screen and (max-width: 30rem) {
   body > footer {
-    flex-direction: column;
+    flex-direction: column; text-align: center;
     & > p:first-child { margin-bottom: 1rem; }
    }
 }
