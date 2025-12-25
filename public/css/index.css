@@ -79,6 +79,7 @@ main {
   }
 }
 
+body footer { margin-top: 0;}
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   #headerwrapper {
