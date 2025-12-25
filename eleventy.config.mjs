@@ -1,5 +1,5 @@
 export default async function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({"public": "."});
+  eleventyConfig.addPassthroughCopy({"public": "public"});
 
   eleventyConfig.setNunjucksEnvironmentOptions({
 		throwOnUndefined: true,
