@@ -1,70 +1,18 @@
 #headerwrapper {
   background-image: url("../img/index/sky.webp");
-  background-repeat: repeat-x; background-size:auto 85%;
-  min-height: 30rem; padding: 5rem 5rem 17rem; position: relative;
+  background-repeat: repeat-x; background-size:auto 90%;
+  min-height: 30rem; padding: 2rem 2rem 13rem; position: relative;
   display: flex; align-items: center; justify-content: center;
   &::after {
-    content: ''; display: block; width: 100%; height: 15rem;
+    content: ''; display: block; width: 100%; height: 11rem;
     background-image: url("../img/index/mountains.webp");
     position: absolute; bottom: 0;
-  }
-  #headerstars {
-    position: absolute; pointer-events: none;
-    width: 100%; height: 100%;
-    img {
-      position: absolute; mix-blend-mode: soft-light;
-      &:first-child { height: 7rem; width: 7rem; top: 8rem; left: 2rem; }
-      &:nth-child(2) { height: 3rem; width: 3rem; top: 8rem; left: 7rem; }
-      &:nth-child(3) { height: 4rem; width: 4rem; top: 10rem; right: 2rem; rotate: -10deg;}
-      &:nth-child(4) { height: 2rem; width: 2rem; top: 18rem; right: 2rem; }
-      &:nth-child(5) { height: 4rem; width: 4rem; bottom: 22rem; left: 1rem; rotate: 10deg;}
-      &:nth-child(6) { height: 2rem; width: 2rem; bottom: 8rem; right: 10rem;}
-      &:nth-child(7) { height: 5rem; width: 5rem; bottom: 9rem; right: 1rem;}
-    }
-  }
-  header {
-    display: flex; flex-direction: column; gap: 1rem;
-    img { height: 8rem; width: auto; margin: auto; }
-    h1 {
-      text-align: center; font-size: 3rem; color: var(--gray-3);
-      text-shadow: -1px -1px 0 var(--link), 1px -1px 0 var(--link), -1px 1px 0 var(--link), 1px 1px 0 var(--link);
-    }
-    nav {
-      display: flex; flex-direction: column; gap: 1rem;
-      a {
-        background-image: url("../img/sand.webp");
-        background-size:cover;
-        padding: 0.5rem 1rem; border-radius: 0.5rem;
-        &:hover {
-          background-image: url("../img/black.webp");
-          color: var(--white);
-        }
-      }
-    }
   }
 }
 
 main {
   background-image: url("../img/grass.webp");
   padding: 2rem 2rem 4rem; display: flex; flex-direction: column; gap: 1rem;
-  section {
-    background-image: url("../img/sand.webp");
-    background-size: contain; border-radius: 1rem; padding: 1rem;
-    &#landing {
-      display: flex; flex-direction: column; gap: 1rem;
-      div:first-child { text-align: center;
-        img { width: 12rem; margin: auto; }
-        p {
-          background-image: url("../img/black.webp");
-          color: var(--white); border-radius: 0.5rem; padding: 1rem;
-          em {
-            color: var(--accent-1); font-size: 2rem;
-            font-weight: bold; display:block;
-          }
-        }
-      }
-    }
-  }
 }
 
 #beach {
@@ -82,46 +30,10 @@ main {
 body footer { margin-top: 0;}
 /* Tablet view */
 @media screen and (min-width: 40rem) {
-  #headerwrapper {
-    #headerstars > img {
-      mix-blend-mode: normal;
-      &:first-child { height: 9rem; width: 9rem; top: 11rem; left: 3rem;}
-      &:nth-child(2) { height: 3rem; width: 3rem; top: 10rem; left: 14rem; }
-      &:nth-child(3) { height: 6rem; width: 6rem; top: 8rem; right: 4rem; rotate: -10deg;}
-      &:nth-child(4) { height: 3rem; width: 3rem; }
-      &:nth-child(5) { height: 4rem; width: 4rem; bottom: 15rem; left: 2rem; rotate: 10deg;}
-      &:nth-child(6) { height: 3rem; width: 3rem; bottom: 8rem; right: 20rem;}
-      &:nth-child(7) { height: 6rem; width: 6rem; bottom: 9rem; right: 2rem;}
-    }
-    header {
-      flex-direction: row;
-      img { width: 10rem; height: 10rem;}
-    }
-  }
-  main {
-    padding: 2rem calc(10% - 1rem) 4rem;
-    section#landing div:first-child img { width: 15rem; }
-  }
+  main { padding: 2rem calc(10% - 1rem) 4rem; }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
-  #headerwrapper {
-    #headerstars > img {
-      &:first-child { height: 12rem; width: 12rem; top: 11rem; left: 4rem;}
-    }
-    header {
-      flex-direction: row;
-      img { width: 12rem; height: 12rem;}
-    }
-  }
-  main {
-    padding: 2rem calc(20% - 1rem) 5rem;
-    section#landing { flex-direction: row;
-      div:first-child {
-        flex-basis: 40%; flex-shrink: 0;
-        img { width: auto; }
-      }
-    }
-  }
+  main { padding: 2rem calc(20% - 1rem) 5rem; }
 }
