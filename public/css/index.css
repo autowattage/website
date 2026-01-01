@@ -16,7 +16,7 @@ main {
 }
 
 #beach {
-  max-height: 25rem; flex-shrink: 0; position: relative;
+  max-height: 30rem; flex-shrink: 0; position: relative;
   background-image: url("../img/index/shore.webp");
   background-repeat: repeat-x; background-size:auto 100%;
   &::before {
@@ -25,22 +25,27 @@ main {
     background-repeat: repeat-x; background-size:auto 100%;
     position: absolute; top: -4rem;
   }
-  &>a { height: auto; max-width: 16rem; display: block; position: relative;}
+  &>a {
+    height: auto; max-width: 16rem;
+    display: block; position: relative;
+    padding: 0 1rem;
+  }
   #fishing { margin-left: auto; top: -2.5rem; }
-  #liferaft { max-width: 10rem; left: calc(1rem + 5%); top: -2rem;}
+  #liferaft { max-width: 8rem; left: 1rem; top: -2rem; padding-right: 2rem;}
 }
 
 body footer { margin-top: 0;}
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   main { padding: 2rem calc(10% - 1rem) 4rem; }
-  #beach > #fishing { max-width: 18rem; right: 10%; }
-  #beach > #liferaft { max-width: 12rem; left: 10%; top: -12rem;}
+  #beach { max-height: 25rem; }
+  #beach > #fishing { max-width: 20rem; right: 8%; top: -3rem;}
+  #beach > #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
   main { padding: 2rem calc(20% - 1rem) 5rem; }
-  #beach > #fishing { max-width: 20rem; right: 22%; }
-  #beach > #liferaft { max-width: 14rem; left: 22%; top: -15rem;}
+  #beach > #fishing { max-width: 22rem; right: 20%;}
+  #beach > #liferaft { max-width: 12rem; left: 20%; top: -15rem;}
 }
