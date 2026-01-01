@@ -25,27 +25,37 @@ main {
     background-repeat: repeat-x; background-size:auto 100%;
     position: absolute; top: -4rem;
   }
-  &>a {
+  &>a, .fish {
     height: auto; max-width: 16rem;
     display: block; position: relative;
     padding: 0 1rem;
   }
+  .fish { box-sizing: border-box; padding: 0 2rem; max-width: 8rem;}
   #fishing { margin-left: auto; top: -2.5rem; }
   #liferaft { max-width: 8rem; left: 1rem; top: -2rem; padding-right: 2rem;}
+  #fish-1 { top: -1.5rem; margin-left: auto;}
+  #fish-2 { display: none;}
 }
 
 body footer { margin-top: 0;}
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   main { padding: 2rem calc(10% - 1rem) 4rem; }
-  #beach { max-height: 25rem; }
-  #beach > #fishing { max-width: 20rem; right: 8%; top: -3rem;}
-  #beach > #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
+  #beach { max-height: 25rem;
+    #fishing { max-width: 20rem; right: 8%; top: -3rem;}
+    #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
+    #fish-1 { max-width: 9rem; right: 45%; top: -12rem; }
+    #fish-2 { display: block; max-width: 10rem; top: -27rem; left: 25%;}
+  }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
   main { padding: 2rem calc(20% - 1rem) 5rem; }
-  #beach > #fishing { max-width: 22rem; right: 20%;}
-  #beach > #liferaft { max-width: 12rem; left: 20%; top: -15rem;}
+  #beach { max-height: 25rem;
+    #fishing { max-width: 22rem; right: 15%;}
+    #liferaft { max-width: 12rem; left: 15%; top: -15rem;}
+    #fish-1 { right: 45%; right: 48%; top: -17rem; }
+    #fish-2 { max-width: 10rem; top: -30rem; left: 30%;}
+  }
 }
