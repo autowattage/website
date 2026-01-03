@@ -1,6 +1,6 @@
 #headerwrapper {
   background-image: url("../img/index/sky.webp");
-  background-repeat: repeat-x; background-size:auto 90%;
+  background-repeat: repeat-x; background-size:auto 100%;
   padding: 0 0 13rem; position: relative;
   display: flex; flex-direction: column;
   &::after {
@@ -16,12 +16,13 @@
     padding: 1rem; padding-top: 0; margin: 0 5%; position: relative;
     border: 1rem solid transparent; background-clip: padding-box;
     border-image: url("../img/index/cloud.webp") 50 round;
-    display: flex; gap: 1rem; flex-direction: column;
     background-color: var(--white);
-    h1 {padding: 1rem 0 0;}
-    a {
-      background-color: var(--black); color: var(--white);
-      border-radius: 1rem; display: block; padding: 1rem 2rem;
+    nav {
+      display: flex; flex-direction: column; gap: 1rem;
+      a {
+        background-color: var(--black); color: var(--white);
+        border-radius: 1rem; padding: 1rem 2rem;
+      }
     }
   }
 }
@@ -56,6 +57,13 @@ main {
 body footer { margin-top: 0;}
 /* Tablet view */
 @media screen and (min-width: 40rem) {
+  #headerwrapper > header {
+    margin: auto 15%; border-width: 1.5rem;
+    nav {
+      flex-direction: row; flex-wrap: wrap;
+      a { margin: 0; flex-basis: 30%; flex-grow: 1;}
+    }
+  }
   main { padding: 2rem calc(10% - 1rem) 4rem; }
   #beach { max-height: 25rem;
     #fishing { max-width: 20rem; right: 8%; top: -3rem;}
@@ -67,6 +75,9 @@ body footer { margin-top: 0;}
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
+  #headerwrapper > header {
+    margin: auto 25%; border-width: 2rem;
+  }
   main { padding: 2rem calc(20% - 1rem) 5rem; }
   #beach { max-height: 25rem;
     #fishing { max-width: 22rem; right: 15%;}
