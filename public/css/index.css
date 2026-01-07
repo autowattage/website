@@ -45,8 +45,10 @@
       nav {
         display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
         a {
-          background-color: var(--accent-1); color: var(--black); flex-grow: 1;
+          background-color: var(--accent-2); color: var(--white); flex-grow: 1;
           padding: 0.5rem 2rem; border-radius: 0.5rem; text-align: center;
+          &:first-child, &:nth-child(2), &:nth-child(3){background-color: var(--accent-1); color: var(--black)}
+          &:nth-child(6), &:last-child {background-color: var(--accent-3);}
           &:hover {
             background-image: url("/public/img/black.webp");
             color: var(--white);
@@ -58,8 +60,26 @@
 }
 
 main {
-  background-image: url("../img/grass.webp");
-  padding: 2rem 2rem 4rem; display: flex; flex-direction: column; gap: 1rem;
+  background-image: url("/public/img/grass.webp");
+  padding: 2rem 2rem 5rem; display: flex; flex-direction: column; gap: 1rem;
+  >section {
+    background-image: url("/public/img/sand.webp");
+    padding: 1rem; border-radius: 1rem;
+    &#landing {
+      display: flex; flex-direction: column; gap: 1rem;
+      div:first-child { text-align: center;
+        img { width: 12rem; margin: auto; }
+        p {
+          background-image: url("../img/black.webp");
+          color: var(--white); border-radius: 0.5rem; padding: 1rem;
+          em {
+            color: var(--accent-1); font-size: 2rem;
+            font-weight: bold; display:block;
+          }
+        }
+      }
+    }
+  }
 }
 
 #beach {
@@ -103,7 +123,10 @@ body footer { margin-top: 0;}
       div>h1>img { width: 100%; max-width: 30rem; height: auto; margin: auto;}
     }
   }
-  main { padding: 2rem calc(10% - 1rem) 4rem; }
+  main {
+    padding: 2rem calc(10% - 1rem) 5rem;
+    section#landing div:first-child img { width: 15rem; }
+  }
   #beach { max-height: 25rem;
     #fishing { max-width: 20rem; right: 8%; top: -3rem;}
     #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
@@ -138,7 +161,15 @@ body footer { margin-top: 0;}
       }
     }
   }
-  main { padding: 2rem calc(20% - 1rem) 5rem; }
+  main {
+    padding: 2rem calc(20% - 1rem) 5rem;
+    section#landing { flex-direction: row;
+      div:first-child {
+        flex-basis: 40%; flex-shrink: 0;
+        img { width: auto; }
+      }
+    }
+  }
   #beach { max-height: 25rem;
     #fishing { max-width: 22rem; right: 15%;}
     #liferaft { max-width: 12rem; left: 15%; top: -15rem;}

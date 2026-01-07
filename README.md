@@ -1,7 +1,12 @@
 # Sundial city
-![A screenshot of the header on Sundial city's index page.](https://hc-cdn.hel1.your-objectstorage.com/s/v3/b90d9940f7475ff3_image.png)
+you're on version 11 of my website, made for hack club's [page](https://page.hackclub.com) YSWS program.
+the goal of sundial city is to:
+- serve as a web-based personal digital assistant
+- archive/track my life over time
+- express myself
+- become my strongest internet presence in lieu of social media
 
-This is version 11 of my website, which introduces the new domain 'sundial.city'.
+![A screenshot of the header on Sundial city's index page.](https://hc-cdn.hel1.your-objectstorage.com/s/v3/2b8686ad1bcdac26_screenshot_from_2026-01-06_19-51-08.png)
 
-Everything is made with 11ty and raw html (rendered with nunjucks), css, and markdown (rendered with liquid).
-The paper texture was made by scanning constrution paper and apply color filters (HSL adjustment) on krita!
+sundial city is made with 11ty and html (rendered as nunjucks), css, and markdown (rendered with liquid).
+artwork, assets, and paper textures are made by scanning constrution paper and applying color filters (HSL adjustment) on krita.
