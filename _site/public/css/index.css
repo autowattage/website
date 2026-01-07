@@ -65,20 +65,6 @@ main {
   >section {
     background-image: url("/public/img/sand.webp");
     padding: 1rem; border-radius: 1rem;
-    &#landing {
-      display: flex; flex-direction: column; gap: 1rem;
-      div:first-child { text-align: center;
-        img { width: 12rem; margin: auto; }
-        p {
-          background-image: url("../img/black.webp");
-          color: var(--white); border-radius: 0.5rem; padding: 1rem;
-          em {
-            color: var(--accent-1); font-size: 2rem;
-            font-weight: bold; display:block;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -101,10 +87,15 @@ main {
   #fishing { margin-left: auto; top: -2.5rem; }
   #liferaft { max-width: 8rem; left: 1rem; top: -2rem; padding-right: 2rem;}
   #fish-1 { top: -1.5rem; margin-left: auto;}
-  #fish-2 { display: none;}
+  #fish-2 { max-width: 10rem; bottom: 65%; left: 10%;}
 }
 
 body footer { margin-top: 0;}
+/* Tablet view */
+@media screen and (max-width: 30rem) {
+  #beach>#fish-2 { display: none;}
+}
+
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   #headerwrapper {
@@ -125,13 +116,12 @@ body footer { margin-top: 0;}
   }
   main {
     padding: 2rem calc(10% - 1rem) 5rem;
-    section#landing div:first-child img { width: 15rem; }
   }
   #beach { max-height: 25rem;
     #fishing { max-width: 20rem; right: 8%; top: -3rem;}
     #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
     #fish-1 { max-width: 9rem; right: 45%; top: -12rem; }
-    #fish-2 { display: block; max-width: 10rem; top: -27rem; left: 25%;}
+    #fish-2 { max-width: 10rem; bottom: 115%; left: 25%;}
   }
 }
 
@@ -163,12 +153,6 @@ body footer { margin-top: 0;}
   }
   main {
     padding: 2rem calc(20% - 1rem) 5rem;
-    section#landing { flex-direction: row;
-      div:first-child {
-        flex-basis: 40%; flex-shrink: 0;
-        img { width: auto; }
-      }
-    }
   }
   #beach { max-height: 25rem;
     #fishing { max-width: 22rem; right: 15%;}
