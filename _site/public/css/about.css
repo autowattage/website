@@ -1,0 +1,28 @@
+body>div {
+  margin: auto; width: 100%;
+  header {
+    background-image: url("/public/img/about/header.webp");
+    background-repeat: no-repeat; background-size: cover;
+    background-position: right bottom;
+    height: calc(100vw * 0.6); max-height: 15rem; 
+  }
+}
+/* Tiny-mobile */
+@media screen and (max-width: 30rem) {
+}
+
+/* Tablet view */
+@media screen and (min-width: 40rem) {
+  body>div {
+    width: 80%; margin: auto;
+    header {max-height: 20rem;}
+  }
+}
+
+/* Desktop view */
+@media screen and (min-width: 67rem) {
+  body>div {
+    width: 60%;
+    header {max-height: 25rem;}
+  }
+}
