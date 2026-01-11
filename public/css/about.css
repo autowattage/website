@@ -1,28 +1,45 @@
 body>div {
-  margin: auto; width: 100%;
+  margin: 0 3rem;
   header {
     background-image: url("/public/img/about/header.webp");
     background-repeat: no-repeat; background-size: cover;
     background-position: right bottom;
-    height: calc(100vw * 0.6); max-height: 15rem; 
+    height: calc(100vw * 0.6); max-height: 20rem; 
+    h1 {
+      font-size: 4rem;
+      rotate: -5deg; position: relative; top: 0.5rem;
+      color: var(--gray-3); text-align: center;
+    }
   }
 }
 /* Tiny-mobile */
 @media screen and (max-width: 30rem) {
+  body>div {
+    margin: 0; max-width: 100%;
+    header>h1 {
+      font-size: 15vw;
+      right: .5rem; top: -0.25rem;
+    }
+  }
 }
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   body>div {
-    width: 80%; margin: auto;
-    header {max-height: 20rem;}
+    width: 35rem; margin: auto;
+    header {
+      max-height: 20rem;
+      h1 {font-size: 5rem; top: 0;}
+    }
   }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
   body>div {
-    width: 60%;
-    header {max-height: 25rem;}
+    width: 40rem;
+    header {max-height: 25rem;
+      h1 {font-size: 6rem; top: 0.5rem;}
+    }
   }
 }
