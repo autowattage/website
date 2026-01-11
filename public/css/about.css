@@ -1,5 +1,5 @@
 body>div {
-  margin: 0 3rem;
+  margin: auto; width: 100%; max-width: 35rem;
   header {
     background-image: url("/public/img/about/header.webp");
     background-repeat: no-repeat; background-size: cover;
@@ -11,26 +11,39 @@ body>div {
       color: var(--gray-3); text-align: center;
     }
   }
+  main {
+    padding: 0 1rem; display: flex; flex-direction: column; gap: 1rem;
+    section {
+      border: 2rem solid transparent;
+      border-image: url("/public/img/about/border.webp") 50 round;
+      background-clip: padding-box; padding: 1rem;
+      background-image: url("/public/img/about/cardboard.webp");
+      background-size: contain;
+    }
+  }
 }
 /* Tiny-mobile */
 @media screen and (max-width: 30rem) {
   body>div {
-    margin: 0; max-width: 100%;
+    max-width: 100%;
     header>h1 {
       font-size: 15vw;
       right: .5rem; top: -0.25rem;
+      h1 {font-size: 5rem; top: 0;}
     }
+    main { padding: 0 0.5rem;}
   }
 }
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
   body>div {
-    width: 35rem; margin: auto;
-    header {
-      max-height: 20rem;
-      h1 {font-size: 5rem; top: 0;}
-    }
+    width: 35rem; max-width: 100%;
+    header { max-height: 20rem; }
+  }
+  main>section:first-child {
+    width: 50%; position: relative; bottom: 6rem;
+    margin-bottom: -6rem;
   }
 }
 
