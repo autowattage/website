@@ -10,13 +10,15 @@
   </head>
 
   <body>
-    <header>
-      <h1>{{ title }}</h1>
-      <h2>{{ page.date }}</h2>
-    </header>
-    <main>
-      {{ content }}
-    </main>
+    <div>
+      <header>
+        <h1>{{ title }}</h1>
+        <h2>{{ page.date }}</h2>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+    </div>
     {% include "./partials/footer.html" %}
   </body>
 </html>
