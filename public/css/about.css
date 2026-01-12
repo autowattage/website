@@ -1,25 +1,42 @@
-body>div {
-  margin: auto; width: 100%; max-width: 35rem;
-  header {
-    background-image: url("/public/img/about/header.webp");
-    background-repeat: no-repeat; background-size: cover;
-    background-position: right bottom;
-    height: calc(100vw * 0.6); max-height: 20rem; 
-    h1 {
-      font-size: 4rem;
-      rotate: -5deg; position: relative; top: 0.5rem;
-      color: var(--gray-3); text-align: center;
+body {
+  >div {
+    margin: auto; width: 100%; max-width: 35rem;
+    header {
+      background-image: url("/public/img/about/header.webp");
+      background-repeat: no-repeat; background-size: cover;
+      background-position: right bottom;
+      height: calc(100vw * 0.6); max-height: 20rem; 
+      h1 {
+        font-size: 4rem;
+        rotate: -5deg; position: relative; top: 0.5rem;
+        color: var(--black); text-align: center;
+      }
+    }
+    main {
+      padding: 0 1rem; display: flex; flex-direction: column; gap: 1rem;
+      section {
+        color: var(--black);
+        border: 1rem solid transparent;
+        border-image: url("/public/img/about/border.webp") 25 round;
+        background-clip: padding-box; padding: 1rem;
+        background-image: url("/public/img/about/cardboard.webp");
+        background-size: contain;
+        h2 { margin: 1rem 0; padding: 0; font-size: 2rem;}
+      }
+      >div {
+        display: flex; flex-direction: column; gap: 1rem;
+        margin: 0; width: 100%;
+      }
+      *>:first-child {margin-top: 0; padding-top: 0;}
     }
   }
-  main {
-    padding: 0 1rem; display: flex; flex-direction: column; gap: 1rem;
-    section {
-      border: 2rem solid transparent;
-      border-image: url("/public/img/about/border.webp") 50 round;
-      background-clip: padding-box; padding: 1rem;
-      background-image: url("/public/img/about/cardboard.webp");
-      background-size: contain;
-    }
+  footer {
+    background-image: url("/public/img/about/cardboard.webp");
+    border-top: 1rem solid transparent; background-clip: padding-box;
+    border-image: url("/public/img/about/border.webp") 25 round;
+    padding-top: 0.5rem; color: var(--black);
+    p, a {color: var(--black);}
+    &::before { display: none;}
   }
 }
 /* Tiny-mobile */
@@ -37,22 +54,36 @@ body>div {
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
-  body>div {
-    width: 35rem; max-width: 100%;
-    header { max-height: 20rem; }
-  }
-  main>section:first-child {
-    width: 50%; position: relative; bottom: 6rem;
-    margin-bottom: -6rem;
+  body {
+    div {
+      width: 40rem; max-width: 100%;
+      header { max-height: 21rem; }
+      main {
+        padding: 0;
+        >section:first-child {
+          width: 55%; position: relative; bottom: 6rem;
+          margin-bottom: -6rem;
+        }
+        >div {
+          flex-direction: row;
+          section { flex-grow: 1;}
+        }
+      }
+    }
+    footer { padding: 0.5rem calc(50% - 18rem) 1rem calc(50% - 18rem);}
   }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
-  body>div {
-    width: 40rem;
-    header {max-height: 25rem;
-      h1 {font-size: 6rem; top: 0.5rem;}
+  body {
+    div {
+      width: 50rem;
+      header {max-height: 26rem;
+        h1 {font-size: 6rem; top: 0;}
+      }
+      main>section:first-child { width: 60%; }
     }
+    footer { padding: 0.5rem calc(50% - 23rem) 1rem calc(50% - 23rem);}
   }
 }
