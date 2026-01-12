@@ -1,3 +1,8 @@
+:root {
+  --link: #051F6B;
+  --link-active: #540149;
+}
+
 body {
   >div {
     margin: auto; width: 100%; max-width: 35rem;
@@ -22,20 +27,28 @@ body {
         background-image: url("/public/img/about/cardboard.webp");
         background-size: contain;
         h2 { margin: 1rem 0; padding: 0; font-size: 2rem;}
+        >:first-child {margin-top: 0; padding-top: 0;}
+      }
+      #contact>a, button {
+        background-image: url("/public/img/sand.webp");
+        padding: 0.5rem 1rem; margin: 0 0.5rem 0.5rem 0;
+        border-radius: 0.5rem; display: inline-block;
+        border: 0; align-content: center;
       }
       >div {
         display: flex; flex-direction: column; gap: 1rem;
         margin: 0; width: 100%;
       }
-      *>:first-child {margin-top: 0; padding-top: 0;}
     }
   }
-  footer {
+  >footer {
     background-image: url("/public/img/about/cardboard.webp");
     border-top: 1rem solid transparent; background-clip: padding-box;
     border-image: url("/public/img/about/border.webp") 25 round;
     padding-top: 0.5rem; color: var(--black);
-    p, a {color: var(--black);}
+    p {color: var(--black);}
+    nav > a { color: var(--link);}
+    nav > a:visited { color: var(--link-active);}
     &::before { display: none;}
   }
 }

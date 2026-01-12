@@ -1,3 +1,8 @@
+:root {
+  --link: #051F6B;
+  --link-active: #540149;
+}
+
 body {
   header, footer, main>aside {
     background-image: url("/public/img/about/cardboard.webp");
@@ -5,7 +10,6 @@ body {
     border-image: url("/public/img/about/border.webp") 25 round;
     padding-top: 0.5rem; color: var(--black);
     p, a {color: var(--black);}
-    &::before { display: none;}
   }
   header {
     border-top: 0; border-bottom: 1rem solid transparent;
@@ -26,6 +30,11 @@ body {
         dd, label { margin: 0; &::after { content: "\A"; white-space: pre; } }
       }
     }
+  }
+  footer {
+    nav > a { color: var(--link);}
+    nav > a:visited { color: var(--link-active);}
+    &::before { display: none;}
   }
 }
 /* Tiny-mobile */
