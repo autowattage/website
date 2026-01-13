@@ -43,7 +43,7 @@ html>body>div {padding: 0;}
           background-color: var(--green); color: var(--white); flex-grow: 1;
           padding: 0.5rem 2rem; border-radius: 0.5rem; text-align: center;
           &:first-child, &:nth-child(2), &:nth-child(3){background-color: var(--yellow); color: var(--black)}
-          &:nth-child(6), &:last-child {background-color: var(--blue);}
+          &:nth-child(7), &:last-child {background-color: var(--blue);}
           &:hover {
             background-image: url("../img/black.webp");
             color: var(--white);
