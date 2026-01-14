@@ -47,8 +47,8 @@ body {
     border-image: url("/public/img/about/border.webp") 25 round;
     padding-top: 0.5rem; color: var(--black);
     p {color: var(--black);}
-    nav > a { color: var(--link);}
-    nav > a:visited { color: var(--link-active);}
+    p>a, nav > a { color: var(--link);}
+    p>a:visited, nav > a:visited { color: var(--link-active);}
     &::before { display: none;}
   }
 }
