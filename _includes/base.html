@@ -6,7 +6,14 @@
     <meta name="description" content="">
     <title>{{ title }} | sundial.city</title>
     <link rel="stylesheet" href="/public/css/global.css">
+    {% if style %}
     <link rel="stylesheet" href="/public/css/{{ style }}">
+    {% endif %}
+    {% if page.url == "/" %}
+    <link href="https://github.com/autowattage" rel="me"/>
+    <link href="https://twitter.com/autowattage" rel="me"/>
+    {% endif %}
+
   </head>
 
   <body>
