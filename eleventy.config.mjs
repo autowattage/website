@@ -10,7 +10,9 @@ export default async function(eleventyConfig) {
 export const config = {
 	dir: {
 		input: "content",
-		includes: "../_includes"
+		includes: "../_includes",
+		data: "../_data"
 	},
+	markdownTemplateEngine: 'njk',
   htmlTemplateEngine: "njk"
 };

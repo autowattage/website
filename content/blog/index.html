@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: base.html
-style: blogindex.css
+style: blog/index.css
 ---
 <header>
   <h1>the blog</h1>
@@ -9,8 +9,14 @@ style: blogindex.css
 </header>
 
 <main>
-  <p>Hello world</p>
-  <ol>
-    <li>Title with a link probably..</li>
-  </ol>
+  {% for year, zodiac in blog.index.years | dictsort | reverse %}
+  <section>
+    <h2><a href="{{ blog.index.url }}{{ year }}/"><img src="{{blog.index.icon}}{{year}}.webp" alt="{{ year }}: year of the {{ zodiac }}"></a></h2>
+    <nav>
+      {% for i in range(1,13) %}
+      <a href="{{ blog.index.url }}{{ year }}/{{ i }}/">{{ i }}</a>
+      {% endfor %}
+    </nav>
+  </section>
+  {% endfor %}
 </main>
