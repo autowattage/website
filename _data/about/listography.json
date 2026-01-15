@@ -1,5 +1,5 @@
 {
-  "favorites": {
+  "Favorites": {
     "meta": {
       "created": "01/12/2026",
       "updated": "01/12/2026",
@@ -16,12 +16,14 @@
   "Hobbies": [
     {
       "created": "01/12/2026",
-      "updated": "01/12/2026"
+      "updated": "01/15/2026"
     },
     "2D Art",
     "2D Animation",
-    "Software",
-    "Hardware"
+    "Programming",
+    "Hardware",
+    "Sewing/patterning",
+    "Embroidery"
   ],
   "2026 Goals": {
     "meta": {
@@ -38,5 +40,19 @@
     "Get a job/internship": false,
     "Make swatchbox": false,
     "Ship out twoswap": false
+  },
+  "Tools": {
+    "meta": {
+      "created": "01/15/2026",
+      "updated": "01/15/2026",
+      "type": "dictionary"
+    },
+    "Text editor": "Helix",
+    "Drawing software": "Krita",
+    "Pixel art": "Aseprite",
+    "Animation": "Krita/Blender Grease Pencil",
+    "Linux distro": "Fedora",
+    "Password manager": "KeePassXC",
+    "IRC Client": "Weechat"
   }
 }
