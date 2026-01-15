@@ -1,0 +1,39 @@
+{
+  "favorites": {
+    "meta": {
+      "created": "01/12/2026",
+      "updated": "01/12/2026"
+    },
+    "Color": "Yellow",
+    "Number": 153,
+    "Video game": "Portal 2",
+    "Board game": "Catan",
+    "Movie": "A Penguin's Memory",
+    "Book": "Mrs. Frsiby and the Rats of NIMH",
+    "Programming language": "Forth"
+  },
+  "Hobbies": [
+    {
+      "created": "01/12/2026",
+      "updated": "01/12/2026"
+    },
+    "2D Art",
+    "2D Animation",
+    "Software",
+    "Hardware"
+  ],
+  "2026 Goals": {
+    "meta": {
+      "created": "01/12/2026",
+      "updated": "01/12/2026"
+    },
+    "Learn Forth": false,
+    "Learn Golang": false,
+    "Learn Rust": false,
+    "Learn C": false,
+    "Learn Parkour": true,
+    "Get General Ham Radio License": false,
+    "Get a job/internship": false,
+    "Make swatchbox": false
+  }
+}
