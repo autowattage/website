@@ -9,53 +9,27 @@ style: about/listography.css
 </header>
 
 <main>
+  {{ about.listography | dump }}
+  {% for list in about.listography %}
+  <p>{{ list }}</p>
+  {% endfor %}
   <aside>
     <h2>Favorites</h2>
     <dl>
       <dt>Color</dt>
       <dd>Yellow</dd>
-      <dt>Number</dt>
-      <dd>153</dd>
-      <dt>Video game</dt>
-      <dd>Portal 2</dd>
-      <dt>Board game</dt>
-      <dd>Catan</dd>
-      <dt>Movie</dt>
-      <dd>A Penguin's Memory</dd>
-      <dt>Book</dt>
-      <dd>Mrs. Frisby and the Rats of NIMH</dd>
-      <dt>Programming language</dt>
-      <dd>Forth</dd>
     </dl>
   </aside>
   <aside>
     <h2>Hobbies</h2>
     <ul>
       <li>2D art</li>
-      <li>2D animation</li>
-      <li>Software</li>
-      <li>Hardware</li>
     </ul>
   </aside>
-  <aside id="2026goals">
+  <aside>
     <h2>2026 goals</h2>
     <form>
-      <input type="checkbox" name="2026bulist-forth" disabled=true>
-      <label for="2026goals-forth">Learn forth</label>
-      <input type="checkbox" name="2026bulist-golang" disabled=true>
-      <label for="2026goals-golang">Learn Golang</label>
-      <input type="checkbox" name="2026bulist-rust" disabled=true>
-      <label for="2026goals-rust">Learn Rust</label>
-      <input type="checkbox" name="2026bulist-c" disabled=true>
-      <label for="2026goals-c">Learn C</label>
-      <input type="checkbox" name="2026bulist-parkour" disabled=true checked>
-      <label for="2026goals-parkour">Learn parkour</label>
-      <input type="checkbox" name="2026bulist-ham" disabled=true>
-      <label for="2026goals-ham">Get Ham Radio General License</label>
-      <input type="checkbox" name="2026bulist-job" disabled=true>
-      <label for="2026goals-job">Get a job</label>
-      <input type="checkbox" name="2026bulist-swatch" disabled=true>
-      <label for="2026goals-swatch">Build/ship swatchbox</label>
+      <label><input type="checkbox" disabled=true>Learn Forth</label>
     </form>
   </aside>
 </main>

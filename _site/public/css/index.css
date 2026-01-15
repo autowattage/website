@@ -33,17 +33,16 @@ html>body>div {padding: 0;}
         background-size: 10rem 10rem; background-position: center; background-repeat: no-repeat;
         position: absolute; top: -11rem; left: .75rem;
       }
-      h1 {
-        padding-top: 0;
-        img {width: 100%; height: auto; max-height: 5rem;}
+      >img {
+        width: 100%; height: auto; max-height: 5rem; margin: 0 0 1rem;
       }
       nav {
         display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
         a {
-          background-color: var(--green); color: var(--white); flex-grow: 1;
+          background-color: var(--green); color: var(--black); flex-grow: 1;
           padding: 0.5rem 2rem; border-radius: 0.5rem; text-align: center;
-          &:first-child, &:nth-child(2), &:nth-child(3){background-color: var(--yellow); color: var(--black)}
-          &:nth-child(7), &:last-child {background-color: var(--blue);}
+          &:first-child, &:nth-child(2), &:nth-child(3){background-color: var(--yellow);}
+          &:nth-child(7), &:last-child {background-color: var(--blue); color: var(--white);}
           &:hover {
             background-image: url("../img/black.webp");
             color: var(--white);
@@ -59,7 +58,18 @@ main {
   padding: 2rem 2rem 5rem; display: flex; flex-direction: column; gap: 1rem;
   >section {
     background-image: url("../img/sand.webp");
-    padding: 1rem; border-radius: 1rem;
+    padding: 1rem; border-radius: 1rem; text-align: center;
+    &#landing {
+      h1 { padding: 0; em { color: var(--link); display: block; }}
+      figure {
+        margin: 1rem auto; break-inside: avoid-column;
+        figcaption {
+          background-image: url("../img/black.webp"); color: var(--white);
+          padding: 1rem; border-radius: 1rem;
+        }
+        img { max-width: 12rem; margin: auto; }
+      }
+    }
   }
 }
 
@@ -104,10 +114,21 @@ body footer { margin-top: 0;}
     }
     header {
       min-width: 0; max-width: 100%; width: 60%;
-      div>h1>img { width: 100%; max-width: 30rem; height: auto; margin: auto;}
+      div>img { width: 100%; max-width: 30rem; height: auto; margin: 0 auto 1rem;}
     }
   }
-  main {padding: 2rem calc(10% - 1rem) 5rem;}
+  main {
+    padding: 2rem calc(10% - 1rem) 5rem;
+    section#landing {
+      columns: 2;
+      figure {
+        margin: 1rem 10%;
+        img {max-width: 12rem;}
+      }
+      aside {display: block;}
+      p {text-align: left;}
+    }
+  }
   #beach { max-height: 25rem;
     #fishing { max-width: 20rem; right: 8%; top: -3rem;}
     #liferaft { max-width: 10rem; left: 8%; top: -12rem;}
