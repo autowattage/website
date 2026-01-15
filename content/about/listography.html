@@ -9,27 +9,31 @@ style: about/listography.css
 </header>
 
 <main>
-  {{ about.listography | dump }}
-  {% for list in about.listography %}
-  <p>{{ list }}</p>
-  {% endfor %}
+  {% for listname, content in about.listography %}
   <aside>
-    <h2>Favorites</h2>
-    <dl>
-      <dt>Color</dt>
-      <dd>Yellow</dd>
-    </dl>
-  </aside>
-  <aside>
-    <h2>Hobbies</h2>
+    <h2>{{ listname }}</h2>
+    <p>Created: {{ content[0].created or content.meta.created }}</p>
+    <p>Updated: {{ content[0].updated or content.meta.updated }}</p>
+    {% if content[0] %} {# if regular list #}
     <ul>
-      <li>2D art</li>
+      {% for i in range(1, content.length) %}
+      <li>{{ content[i] }}</li>
+      {% endfor %}
     </ul>
-  </aside>
-  <aside>
-    <h2>2026 goals</h2>
+    {% elif content.meta.type == "dictionary" %} {# if dictionary #}
+    <dl>
+      {% for key, value in content %}{% if key != "meta" %}
+      <dt>{{ key }}</dt>
+      <dd>{{ value }}</dd>
+      {% endif %}{% endfor %}
+    </dl>
+    {% else %} {# else, checklist #}
     <form>
-      <label><input type="checkbox" disabled=true>Learn Forth</label>
+      {% for key, value in content %}{% if key != "meta" %}
+      <label><input type="checkbox" disabled=true {% if value %}checked{% endif %}>{{ key }}</label>
+      {% endif %}{% endfor %}
     </form>
+    {% endif %}
   </aside>
+  {% endfor %}
 </main>
