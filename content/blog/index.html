@@ -11,7 +11,7 @@ style: blog/index.css
 <main>
   {% for year, zodiac in blog.index.years | dictsort | reverse %}
   <section>
-    <h2><a href="{{ blog.index.url }}{{ year }}/"><img src="{{blog.index.icon}}{{year}}.webp" alt="{{ year }}: year of the {{ zodiac }}"></a></h2>
+    <h2><a href="{{ blog.index.url }}{{ year }}/"><img src="{{blog.index.icon}}{{year}}.webp" alt="The {{ zodiac }}, zodiac animal of {{ year }}"></a></h2>
     <nav>
       {% for i in range(1,13) %}
       <a href="{{ blog.index.url }}{{ year }}/{{ i }}/">{{ i }}</a>

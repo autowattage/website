@@ -1,6 +1,26 @@
 body {
   >div {
-    
+    padding: 0 1rem 1.5rem;
+    header {text-align: center;}
+    main {
+      display: flex; flex-direction: column; gap: 2rem; margin: auto;
+      >section {
+        display: flex; flex-direction: column; gap: 1rem;
+        h2 {
+          text-align: center; margin: 0;
+          img {max-height: 16rem; max-width: 100%; width: auto; margin: auto;}
+        }
+        nav {
+          display: flex; flex-wrap: wrap; gap: 0.5rem;
+          max-width: 16rem; margin: 0 auto;
+          a {
+            flex-basis: 1rem; flex-grow: 1;
+            text-align: center; align-content: center;
+            padding: 1rem; background-color: red; border-radius: 1rem;
+          }
+        }
+      }
+    }
   }
 }
 /* Tiny-mobile */
@@ -9,8 +29,27 @@ body {
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
+  body {
+    >div>main {
+      width: calc(85% - 1rem);
+      section {
+        flex-direction: row; max-height: 15rem; width: 100%;
+        h2 { aspect-ratio: 1/1;
+          img {max-height: 100%; height: auto; width: auto;}
+        }
+        nav {
+          max-width: 100%; flex-grow: 1; margin: 0; gap: 1rem;
+        }
+      }
+    }
+  }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
+  body {
+    >div>main {
+      width: calc(60% + 1rem);
+    }
+  }
 }
