@@ -2,7 +2,8 @@
   "favorites": {
     "meta": {
       "created": "01/12/2026",
-      "updated": "01/12/2026"
+      "updated": "01/12/2026",
+      "type": "dictionary"
     },
     "Color": "Yellow",
     "Number": 153,
@@ -25,7 +26,8 @@
   "2026 Goals": {
     "meta": {
       "created": "01/12/2026",
-      "updated": "01/12/2026"
+      "updated": "01/14/2026",
+      "type": "checklist"
     },
     "Learn Forth": false,
     "Learn Golang": false,
@@ -34,6 +36,7 @@
     "Learn Parkour": true,
     "Get General Ham Radio License": false,
     "Get a job/internship": false,
-    "Make swatchbox": false
+    "Make swatchbox": false,
+    "Ship out twoswap": false
   }
 }
