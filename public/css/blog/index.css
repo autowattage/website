@@ -8,11 +8,11 @@ body {
         display: flex; flex-direction: column; gap: 1rem;
         h2 {
           text-align: center; margin: 0;
-          img {max-height: 16rem; max-width: 100%; width: auto; margin: auto;}
+          img { max-width: 90%; max-height: 14rem; width: auto; margin: auto;}
         }
         nav {
-          display: flex; flex-wrap: wrap; gap: 0.5rem;
-          max-width: 16rem; margin: 0 auto;
+          display: flex; flex-wrap: wrap; gap: 1rem;
+          width: 75%; margin: 0 auto;
           a {
             flex-basis: 1rem; flex-grow: 1;
             text-align: center; align-content: center;
@@ -29,19 +29,9 @@ body {
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
-  body {
-    >div>main {
-      width: calc(85% - 1rem);
-      section {
-        flex-direction: row; max-height: 15rem; width: 100%;
-        h2 { aspect-ratio: 1/1;
-          img {max-height: 100%; height: auto; width: auto;}
-        }
-        nav {
-          max-width: 100%; flex-grow: 1; margin: 0; gap: 1rem;
-        }
-      }
-    }
+  body>div>main>section {
+    >nav {width: 60%;}
+    >h2>a>img {max-height: 18rem;}
   }
 }
 
@@ -49,7 +39,15 @@ body {
 @media screen and (min-width: 67rem) {
   body {
     >div>main {
-      width: calc(60% + 1rem);
+      width: 65%;
+      >section {
+        flex-direction: row; max-height: 18rem;
+        h2 {
+          aspect-ratio: 1/1;
+          >a>img {max-height: 100%; max-width: 100%;}
+        }
+        nav {margin: 0;}
+      }
     }
   }
 }
