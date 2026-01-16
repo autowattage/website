@@ -28,7 +28,7 @@
   "2026 Goals": {
     "meta": {
       "created": "01/12/2026",
-      "updated": "01/14/2026",
+      "updated": "01/16/2026",
       "type": "checklist"
     },
     "Learn Forth": false,
@@ -37,9 +37,12 @@
     "Learn C": false,
     "Learn Parkour": true,
     "Get General Ham Radio License": false,
+    "Get CompTIA": false,
+    "Get CCNA Networking": false,
     "Get a job/internship": false,
     "Make swatchbox": false,
-    "Ship out twoswap": false
+    "Ship out twoswap": false,
+    "Make a virtual machine": false
   },
   "Tools": {
     "meta": {
