@@ -1,30 +1,39 @@
+:root {
+  --gray-3: #F7E5CB;
+  --gray-2: #74C5CF;
+}
 body {
   >div {
+    padding: 0;
     header {
-      background-color: var(--gray-2); position: relative;
+      background-image: url("/public/img/blog/blue.webp");
+      position: relative;
       >div {
-        border: 2px solid var(--white); border-left: 0;
-        background-color: var(--gray-2);
+        background-image: url("/public/img/blog/blue.webp");
+        border: 2px solid var(--gray-3); border-left: 0;
         padding: 1rem 2rem 1.5rem 0; margin: 3rem 0;
-        display: inline-block; color: var(--white);
+        display: inline-block; color: var(--gray-3);
         position: relative; z-index: 1;
         h1 {
-          padding: 0 0 0 3rem; font-size: 3rem;
-          border-bottom: 2px solid var(--white);
+          padding: 0 0 0 3rem; font-size: 3.5rem;
+          color: var(--gray-2);
+          border-bottom: 2px solid var(--gray-2);
         }
         p { padding: 0.25rem 0 0 3rem; }
       }
       &::before {
         content: ''; width: 30%; height: 100%;
         display: block; position: absolute; right: 0;
-        border-left: 1px solid var(--gray-2);
-        background-image: url("../../img/blog/graph.webp");
-        background-size: 10rem;
+        border-left: 2px solid var(--gray-2);
+        background-image: url("/public/img/blog/graph.webp");
+        background-size: 8rem;
         background-position-y: -0.5rem;
       }
     }
     main {
-      padding: 0 1rem;
+      padding: 0 1rem 2rem 1rem;
+      background-image: url("/public/img/blog/graph.webp");
+      background-position: -.5rem -.5rem; background-size: 5rem;
     }
   }
 }
@@ -33,31 +42,41 @@ body {
   body>div>header {
     div {
       padding: 0.25rem 1rem 0.5rem 0; margin: 2rem 1rem 2rem 0;
-      h1 {font-size: 2.5rem; padding: 0 0 0 1rem;}
+      h1 {font-size: 3rem; padding: 0 0 0 1rem;}
       p {padding: 0.25rem 0 0 1rem;}
     }
-    &::before { width: 25%; }
+    &::before { width: 25%; background-size: 6rem; }
   }
 }
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
-  body>div>header {
-    div {
-      margin: 4rem 0; padding-right: 2rem;
-      h1 {font-size: 4rem; padding-left: 4rem}
-      p { padding: 1rem 0 0 4rem;}
+  body>div {
+    header {
+      div {
+        margin: 4rem 0; padding-right: 2rem;
+        h1 {font-size: 4rem; padding-left: 6rem}
+        p { padding: 1rem 0 0 6rem;}
+      }
+    }
+    main {
+      padding: 0 10% 2rem 10%;
     }
   }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
-  body>div>header {
-    div {
-      padding-right: 3rem;
-      h1 {font-size: 5rem; padding-left: 5rem;}
-      p { padding-left: 5rem;}
+  body>div {
+    header {
+      div {
+        padding-right: 3rem;
+        h1 {font-size: 5rem; padding-left: 10rem;}
+        p { padding-left: 10rem;}
+      }
+    }
+    main {
+      padding: 0 20% 2rem 20%;
     }
   }
 }
