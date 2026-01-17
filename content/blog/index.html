@@ -3,10 +3,14 @@ title: Blog
 layout: base.html
 style: blog/index.css
 ---
-<header><div>
-  <h1>The BLOG</h1>
-  <p>Public writing archive</p>
-</div></header>
+<header>
+  <div>
+    <h1>The BLOG</h1>
+    <p>Public writing archive</p>
+  </div>
+  <nav>
+  </nav>
+</header>
 
 <main>
   {% for year, zodiac in blog.index.years | dictsort | reverse %}
