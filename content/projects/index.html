@@ -1,0 +1,25 @@
+---
+title: Projects
+layout: base.html
+style: projects/index.css
+---
+<header>
+  <h1>PROJECTSS</h1>
+</header>
+
+<main>
+  <p>okay look i know this list looks absolutely pathetic right now but i WILL lock in for 2026 i promise</p>
+  {% for name, info in projects.index.projectlist %}
+  <article>
+    <div>
+      <h2><a href="{{ info.link }}">{{ name }}</a></h2>
+      <p>{{ info.start }} - {{ info.end }}</p>
+      <p>{{ info.description }}</p>
+    </div>
+    <figure>
+      <img src="{{ info.img }}" alt="{{ info.imgalt }}">
+      <figcaption>{{ info.figcaption }}</figcaption>
+    </figure>
+  </article>
+  {% endfor %}
+</main>
