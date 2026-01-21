@@ -62,7 +62,7 @@ body {
           }
           >a {
             background-color: var(--gray-2); padding: 0.75rem 1.5rem;
-            display: inline-block; border-radius: 0.5rem;
+            display: inline-block; border-radius: 1rem;
             align-content: center;
             &:hover {background-color: var(--black); color: var(--gray-2);}
           }
@@ -113,7 +113,7 @@ body {
           align-content: center;
         }
         nav {
-          align-content: center;
+          align-content: center; gap: 0.75rem;
           h2 {
             position: absolute; left: 0; top: 0.25rem;
             font-size: 3rem;
