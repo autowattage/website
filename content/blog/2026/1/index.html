@@ -1,0 +1,16 @@
+---
+title: January 2026
+layout: base.html
+style: blog/2026/1.css
+---
+<header>
+  <h1>January 2026</h1>
+</header>
+
+<main>
+  <ul>
+    {% for post in collections.post %}
+    <li><a href="{{ post.url }}"><span>{{ post.data.date.toUTCString() }}</span>{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+</main>
