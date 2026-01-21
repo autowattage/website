@@ -1,0 +1,13 @@
+{
+  "projectlist": {
+    "twoswap": {
+      "start": "09.20.2025",
+      "end": "11.02.2025",
+      "description": "A TV-head contructed for Hack Club's alleyway program",
+      "link": "https://github.com/autowattage/2swap",
+      "img": "/public/img/ocs/bunnyguy.webp",
+      "imgalt": "Bunnyguy in its natural environment",
+      "figcaption": "Bunnyguy in its natural environment"
+    }
+  }
+}
