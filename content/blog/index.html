@@ -14,16 +14,16 @@ style: blog/index.css
 
 <main>
   {% for year, zodiac in blog.index.years | dictsort | reverse %}
-  <section>
-    <h2>
-      <span>{{ year }}</span>
-      <a href="{{ blog.index.url }}{{ year }}/"><img src="{{blog.index.icon}}{{year}}.webp" alt="The {{ zodiac }}, zodiac animal of {{ year }}"></a>
-    </h2>
+  <article>
+    <a href="{{ blog.index.url }}{{ year }}/">
+      <img src="{{blog.index.icon}}{{year}}.webp" alt="The {{ zodiac }}, zodiac animal of {{ year }}">
+    </a>
     <nav>
+      <h2><a href="{{ blog.index.url }}{{ year }}/">{{ year }}</a></h2>
       {% for i in range(0,12) %}
       <a href="{{ blog.index.url }}{{ year }}/{{ i+1 }}/">{{ blog.index.months[i] }}</a>
       {% endfor %}
     </nav>
-  </section>
+  </article>
   {% endfor %}
 </main>

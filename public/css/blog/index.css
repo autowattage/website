@@ -1,6 +1,6 @@
 :root {
   --gray-3: #F7E5CB;
-  --gray-2: #74C5CF;
+  --gray-2: #79CAD5;
 }
 body {
   >div {
@@ -22,35 +22,77 @@ body {
         p { padding: 0.25rem 0 0 3rem; }
       }
       &::before {
-        content: ''; width: 30%; height: 100%;
+        content: ''; width: 45%; height: 100%;
         display: block; position: absolute; right: 0;
         border-left: 2px solid var(--gray-2);
         background-image: url("/public/img/blog/graph.webp");
-        background-size: 8rem;
+        background-size: 8rem; opacity: 0.5;
         background-position-y: -0.5rem;
+      }
+      &::after{
+        content: ''; height: 80%; aspect-ratio: 1/1;
+        display: block; position: absolute; right: 1rem; top: 10%;
+        background-image: url("/public/img/blog/doodles.webp");
+        background-size: 100% auto;
       }
     }
     main {
-      padding: 0 1rem 2rem 1rem;
+      padding: 1rem 10% 2rem;
       background-image: url("/public/img/blog/graph.webp");
+      background-color: rgba(255,255,255,0.5); background-blend-mode: lighten;
       background-position: -.5rem -.5rem; background-size: 5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+      article {
+        display: flex; flex-direction: column; gap: 0.5rem;
+        background-color: var(--gray-3);
+        border: 2px solid var(--gray-2);
+        background-image: url("/public/img/blog/indexcard.webp");
+        background-size: 2.5rem;
+        padding: 1rem; border-radius: 1rem;
+        img {
+          max-height: 16rem; width: auto; margin: auto;
+          &:hover {rotate: 2deg;}
+        }
+        nav {
+          display: flex; flex-wrap: wrap; gap: 0.5rem; 
+          justify-content: center;
+          h2 {
+            display: block; width: 100%; text-align: center;
+            font-size: 2.25rem; margin: 0; color: var(--link);
+          }
+          >a {
+            background-color: var(--gray-2); padding: 0.75rem 1.5rem;
+            display: inline-block; border-radius: 0.5rem;
+            align-content: center;
+            &:hover {background-color: var(--black); color: var(--gray-2);}
+          }
+        }
+      }
     }
   }
 }
 /* Tiny-mobile */
 @media screen and (max-width: 30rem) {
-  body>div>header {
-    div {
-      padding: 0.25rem 1rem 0.5rem 0; margin: 2rem 1rem 2rem 0;
-      h1 {font-size: 3rem; padding: 0 0 0 1rem;}
-      p {padding: 0.25rem 0 0 1rem;}
+  body>div {
+    >header {
+      div {
+        padding: 0.25rem 1rem 0.5rem 0; margin: 2rem 1rem 2rem 0;
+        h1 {font-size: 3rem; padding: 0 0 0 1rem;}
+        p {padding: 0.25rem 0 0 1rem;}
+      }
+      &::before { width: 40%; background-size: 6rem; }
     }
-    &::before { width: 25%; background-size: 6rem; }
+    main {
+      padding: 1rem 8% 2rem;
+      article {
+        >a>img {max-height: 12rem; max-width: 100%;}
+      }
+    }
   }
 }
 
 /* Tablet view */
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 50rem) {
   body>div {
     header {
       div {
@@ -58,9 +100,27 @@ body {
         h1 {font-size: 4rem; padding-left: 6rem}
         p { padding: 1rem 0 0 6rem;}
       }
+      &::before{ width: 35%;}
+      &::after{ right: 2rem;}
     }
     main {
-      padding: 0 10% 2rem 10%;
+      padding: 1rem 10% 2rem;
+      article {
+        flex-direction: row; padding-top: 5rem;
+        position: relative; gap: 1rem;
+        >a {
+          img { max-height: 100%; max-width: 15rem;}
+          align-content: center;
+        }
+        nav {
+          align-content: center;
+          h2 {
+            position: absolute; left: 0; top: 0.25rem;
+            font-size: 3rem;
+          }
+          >a {padding: 1rem 2rem;}
+        }
+      }
     }
   }
 }
@@ -74,9 +134,9 @@ body {
         h1 {font-size: 5rem; padding-left: 10rem;}
         p { padding-left: 10rem;}
       }
+      &::before{ width: 30%;}
+      &::after{ right: 4rem;}
     }
-    main {
-      padding: 0 20% 2rem 20%;
-    }
+    main { padding: 1rem 18% 2rem; }
   }
 }
