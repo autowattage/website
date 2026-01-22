@@ -18,8 +18,8 @@ style: blog/index.css
     </a>
     <nav>
       <h2><a href="{{ blog.index.url }}{{ year }}/">{{ year }}</a></h2>
-      {% for i in range(0,12) %}
-      <a href="{{ blog.index.url }}{{ year }}/{{ i+1 }}/">{{ blog.index.months[i] }}</a>
+      {% for month, len in blog.index.months  %}
+      <a href="{{ blog.index.url }}{{ year }}/{{ loop.index }}/">{{ month }}</a>
       {% endfor %}
     </nav>
   </article>

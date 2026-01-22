@@ -1,0 +1,29 @@
+---
+title: 2026
+layout: base.html
+style: blog/2026/index.css
+---
+<header>
+  <h1>2026</h1>
+</header>
+
+<main>
+  <table>
+    <tr>
+      <th></th>
+      {% for month, length in blog.index.months %}
+      <th>{{ loop.index }}</th>
+      {% endfor %}
+    </tr>
+    {% for i in range(0,36) %}
+    <tr>
+      <th>{{ blog.index.weekdays[i % 7] }}</th>
+      {% set offset = 4 %}
+      {% for month, length in blog.index.months %}
+      <td>{% if i in range(offset, length+offset) %}{{ i-offset+1 }}{% endif %}</td>
+      {% set offset = (offset+length)%7 %}
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</main>
