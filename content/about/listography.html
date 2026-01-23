@@ -30,7 +30,7 @@ style: about/listography.css
     {% else %} {# else, checklist #}
     <form>
       {% for key, value in content %}{% if key != "meta" %}
-      <label><input type="checkbox" disabled=true {% if value %}checked{% endif %}>{{ key }}</label>
+      <label><input type="checkbox" disabled {% if value %}checked{% endif %}>{{ key }}</label>
       {% endif %}{% endfor %}
     </form>
     {% endif %}

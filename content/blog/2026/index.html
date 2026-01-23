@@ -3,27 +3,68 @@ title: 2026
 layout: base.html
 style: blog/2026/index.css
 ---
-<header>
-  <h1>2026</h1>
-</header>
-
 <main>
-  <table>
-    <tr>
-      <th></th>
-      {% for month, length in blog.index.months %}
-      <th>{{ loop.index }}</th>
+  <header>
+    <h1>2026</h1>
+  </header>
+  <article>
+    <h2>Most recent 5 posts:</h2>
+    <ul>
+      {% for post in collections.post %}
+      <li><a href="{{ post.url }}"><span>{{ post.date }}</span>{{ post.data.title }}</a></li>
       {% endfor %}
-    </tr>
-    {% for i in range(0,36) %}
-    <tr>
-      <th>{{ blog.index.weekdays[i % 7] }}</th>
-      {% set offset = 4 %}
-      {% for month, length in blog.index.months %}
-      <td>{% if i in range(offset, length+offset) %}{{ i-offset+1 }}{% endif %}</td>
-      {% set offset = (offset+length)%7 %}
-      {% endfor %}
-    </tr>
-    {% endfor %}
-  </table>
+    </ul>
+  </article>
+  <article>
+    <h2>Year goals</h2>
+    <form>
+      {% for name, status in about.listography["2026 Goals"] %}{% if name != "meta" %}
+      <label>
+        <input type="checkbox" disabled {% if status %}checked{% endif %} >
+        {{ name }}
+      </label>
+      {% endif %}{% endfor %}
+    </form>
+  </article>
+  <article>
+    <h2>Bucket List</h2>
+    <form>
+      {% for name, status in about.listography["2026 Bucket List"] %}{% if name != "meta" %}
+      <label>
+        <input type="checkbox" disabled {% if status %}checked{% endif %} >
+        {{ name }}
+      </label>
+      {% endif %}{% endfor %}
+    </form>
+  </article>
+  <article>
+    <h2>Consumption list</h2>
+    <form>
+      {% for name, status in about.listography["2026 Consumption List"] %}{% if name != "meta" %}
+      <label>
+        <input type="checkbox" disabled {% if status %}checked{% endif %} >
+        {{ name }}
+      </label>
+      {% endif %}{% endfor %}
+    </form>
+  </article>
 </main>
+
+<aside><table>
+  <tr>
+    <th></th>
+    {% for month, length in blog.index.months %}
+    <th>{{ loop.index }}</th>
+    {% endfor %}
+  </tr>
+  {% for i in range(0,36) %}
+  <tr>
+    <th>{{ blog.index.weekdays[i % 7] }}</th>
+    {% set offset = 4 %}
+    {% for month, length in blog.index.months %}
+    <td>{% if i in range(offset, length+offset) %}{{ i-offset+1 }}{% endif %}</td>
+    {% set offset = (offset+length)%7 %}
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table></aside>
