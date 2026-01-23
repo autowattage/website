@@ -1,0 +1,22 @@
+header {
+  position: relative; height: 10rem; overflow: hidden;
+  background-image: url("/public/img/blog/blue.webp");
+  >*{ position:relative; z-index: 1;}
+  h1 {
+    font-size: 2.5rem; color: var(--white);
+  }
+  &::before {
+    content:''; width: 75%; max-width: 22rem;
+    aspect-ratio: 1/1; display: block;
+    opacity: 0.4;
+    position: absolute; right: -8%; top: -28%;
+    background-image: url("/public/img/now.webp");
+    background-size: 100%; rotate: 15deg;
+  }
+}
+@media screen and (max-width: 30rem) {
+}
+@media screen and (min-width: 40rem) {
+}
+@media screen and (min-width: 67rem) {
+}

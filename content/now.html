@@ -1,0 +1,27 @@
+---
+title: Now
+layout: base.html
+style: now.css
+---
+<header>
+  <h1>bunnyguy NOW!</h1>
+</header>
+
+<main>
+  {% for update in now %}
+
+  {% if loop.index == 1 %}<article>{% else %}<details><summary>{% endif %}
+  <h2>{{ update["date"] }}, {{ update["time"] }}</h2>
+  {% if loop.index != 1 %}</summary>{% endif %}
+
+  <ul>
+    {% for listname, listitem in update["list"] %}
+    <li><span>{{ listname }}</span>: {{ listitem }}</li>
+    {% endfor %}
+  </ul>
+
+  {% for paragraph in update["paragraphs"] %}<p>{{ paragraph }}</p>{% endfor %}
+  {% if loop.index == 1 %}</article>{% else %}</details>{% endif %}
+
+  {% endfor %}
+</main>
