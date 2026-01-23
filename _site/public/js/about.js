@@ -5,10 +5,15 @@ const funfacts = [
   "I'm left-handed",
   "I just lost the game",
   "I used to play Tetr.io competitively",
-  "The Summer of Making starts now! The premise is simple: build stuff, get stuff!"
+  "The Summer of Making starts now! The premise is simple: build stuff, get stuff!",
   "I once almost crashed into Micheal Reeves' car with a scooter board",
-  "I was the first to coin the term RV3/V3R for the Tamagotchi 20th anniversary Connection"
+  "I was the first to coin the term RV3/V3R for the Tamagotchi 20th anniversary Connection",
+  "My first fursona was a fox"
 ]
 function funfact() {
-  document.getElementById("funfact").innerHTML = funfacts[Math.floor(Math.random()*funfacts.length)];
+  var index;
+  do {
+    index = Math.floor(Math.random()*funfacts.length);
+  } while ( document.getElementById("funfact").innerHTML == funfacts[index] );
+  document.getElementById("funfact").innerHTML = funfacts[index];
 }
