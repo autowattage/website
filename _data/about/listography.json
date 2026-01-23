@@ -25,25 +25,6 @@
     "Sewing/patterning",
     "Embroidery"
   ],
-  "2026 Goals": {
-    "meta": {
-      "created": "01/12/2026",
-      "updated": "01/16/2026",
-      "type": "checklist"
-    },
-    "Learn Forth": false,
-    "Learn Golang": false,
-    "Learn Rust": false,
-    "Learn C": false,
-    "Learn Parkour": true,
-    "Get General Ham Radio License": false,
-    "Get CompTIA": false,
-    "Get CCNA Networking": false,
-    "Get a job/internship": false,
-    "Make swatchbox": false,
-    "Ship out twoswap": false,
-    "Make a virtual machine": false
-  },
   "Tools": {
     "meta": {
       "created": "01/15/2026",
@@ -57,5 +38,61 @@
     "Linux distro": "Fedora",
     "Password manager": "KeePassXC",
     "IRC Client": "Weechat"
+  },
+  "2026 Goals": {
+    "meta": {
+      "created": "01/12/2026",
+      "updated": "01/23/2026",
+      "type": "checklist"
+    },
+    "Learn Forth": false,
+    "Learn Golang": false,
+    "Learn Rust": false,
+    "Learn C": false,
+    "Learn Parkour": true,
+    "Get General Ham Radio License": false,
+    "Get CompTIA": false,
+    "Get CCNA Networking": false,
+    "Get a job/internship": false,
+    "Ship out twoswap": false,
+    "Make a video game": false,
+    "Make a virtual machine": false,
+    "Make swatchbox": false
+  },
+  "2026 Bucket List": {
+    "meta": {
+      "created": "01/23/2026",
+      "updated": "01/23/2026",
+      "type": "checklist"
+    },
+    "Go skydiving": false,
+    "Volunteer as a ham operator for an event": false,
+    "Win a big hackathon": false,
+    "Host/organize a hackathon": false,
+    "Participate in a parkour event": false,
+    "Visit an earthship": false
+  },
+  "2026 Consumption List": {
+    "meta": {
+      "created": "01/23/2026",
+      "updated": "01/23/2026",
+      "type": "checklist"
+    },
+    "Goodnight Pun Pun (book)": false,
+    "Children of the Whales (book)": false,
+    "The Sculptor (book)": false,
+    "Understanding Comics (book)": false,
+    "FLCL (manga)": false,
+    "Girl's Last Tour (anime)": false,
+    "FLCL (anime)": false,
+    "Lazarus (anime)": false,
+    "Cowboy Bebop (anime)": false,
+    "Arknights: Endfield (game)": false,
+    "Windosill (game)": false,
+    "Mirror's Edge Catalyst (game)": false,
+    "Half-Life (game)": false,
+    "Subnautica (game)": false,
+    "Inscryption (game)": false,
+    "Monument Valley (game)": false
   }
 }
