@@ -57,7 +57,8 @@
     "Ship out twoswap": false,
     "Make a video game": false,
     "Make a virtual machine": false,
-    "Make swatchbox": false
+    "Make swatchbox": false,
+    "Make an autonomous robot w/ ROS2": false
   },
   "2026 Bucket List": {
     "meta": {
@@ -70,7 +71,8 @@
     "Win a big hackathon": false,
     "Host/organize a hackathon": false,
     "Participate in a parkour event": false,
-    "Visit an earthship": false
+    "Visit an earthship": false,
+    "Go out of country": false
   },
   "2026 Consumption List": {
     "meta": {
