@@ -1,6 +1,47 @@
+:root {
+  --yellow: #E0B255;
+  --orange: #E86A3A;
+  --red: #C22A43;
+  --purple: #871669;
+  --black: #301B40;
+  --blue: #2B6191;
+  --blue-light: #DBECF7;
+  --red-light: #F9E0E4;
+}
+body>div {
+  main {
+    header {
+      background-color: var(--yellow);
+      text-align: center; padding-bottom: 1rem;
+      h1 {font-size: 4rem; padding-bottom: 0;}
+      p {font-size: 1.5rem;}
+    }
+    article {
+      margin: auto; width: 80%; box-sizing: border-box;
+      summary>h2 {display: inline-block; margin: 0;}
+      label {display: block;}
+    }
+  }
+  >aside {
+    margin: 1rem auto; text-align: center; justify-content: center;
+    tr:nth-child(7n+1) { color: var(--blue); background-color: var(--blue-light);}
+    tr:nth-child(7n+2) { color: var(--red); background-color: var(--red-light);}
+  }
+}
 @media screen and (max-width: 30rem) {
+  body>div {
+    main {
+      article {margin: 0 1rem; width: auto;}
+    }
+  }
+
 }
 @media screen and (min-width: 40rem) {
 }
-@media screen and (min-width: 67rem) {
+@media screen and (min-width: 50rem) {
+  body>div {
+    width: max(50rem, 75%); margin: auto;
+    flex-direction: row-reverse;
+    >aside { margin: 1rem;}
+  }
 }
