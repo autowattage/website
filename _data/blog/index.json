@@ -16,15 +16,7 @@
     "November": 30,
     "December": 31
   },
-  "weekdays": [
-    "S",
-    "M",
-    "T",
-    "W",
-    "T",
-    "F",
-    "S"
-  ],
+  "weekdays": ["S", "M", "T", "W", "T", "F", "S"],
   "url": "/blog/",
   "icon": "/public/img/blog/"
 }
