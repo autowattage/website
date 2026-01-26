@@ -39,6 +39,36 @@
     "Password manager": "KeePassXC",
     "IRC Client": "Weechat"
   },
+  "Favorite Games": [
+    {
+      "created": "01/25/2026",
+      "updated": "01/25/2026"
+    },
+    "Portal 2",
+    "Mirror's Edge (+Catalyst)",
+    "Alto's Adventure",
+    "Pico Park",
+    "PHIGHTING!",
+    "Hexcells Infinite",
+    "reky",
+    "Potion Craft: Alchemist Simulator",
+    "Flood Escape (1/2)"
+  ],
+  "Favorite Books": [
+    {
+      "created": "01/25/2026",
+      "updated": "01/25/2026"
+    },
+    "The Maze Runner series",
+    "The Giver series",
+    "Ragweed series",
+    "See you in the Cosmos",
+    "Freak the Mighty",
+    "Hatchet",
+    "Girl's Last Tour (manga)",
+    "Takopi's Original Sin (manga)",
+    "Mrs. Frisby and the Rats of NIMH"
+  ],
   "2026 Goals": {
     "meta": {
       "created": "01/12/2026",

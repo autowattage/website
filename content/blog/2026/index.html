@@ -6,6 +6,7 @@ style: blog/2026/index.css
 <main>
   <header>
     <h1>2026</h1>
+    <p>year of the fire horse</p>
   </header>
   <article>
     <h2>Most recent 5 posts:</h2>
@@ -15,8 +16,8 @@ style: blog/2026/index.css
       {% endfor %}
     </ul>
   </article>
-  <article>
-    <h2>Year goals</h2>
+  <article><details>
+    <summary><h2>Year goals</h2></summary>
     <form>
       {% for name, status in about.listography["2026 Goals"] %}{% if name != "meta" %}
       <label>
@@ -25,9 +26,9 @@ style: blog/2026/index.css
       </label>
       {% endif %}{% endfor %}
     </form>
-  </article>
-  <article>
-    <h2>Bucket List</h2>
+  </details></article>
+  <article><details>
+    <summary><h2>Bucket List</h2></summary>
     <form>
       {% for name, status in about.listography["2026 Bucket List"] %}{% if name != "meta" %}
       <label>
@@ -36,9 +37,9 @@ style: blog/2026/index.css
       </label>
       {% endif %}{% endfor %}
     </form>
-  </article>
-  <article>
-    <h2>Consumption list</h2>
+  </details></article>
+  <article><details>
+    <summary><h2>Consumption list</h2></summary>
     <form>
       {% for name, status in about.listography["2026 Consumption List"] %}{% if name != "meta" %}
       <label>
@@ -47,12 +48,12 @@ style: blog/2026/index.css
       </label>
       {% endif %}{% endfor %}
     </form>
-  </article>
+  </details></article>
 </main>
 
 <aside><table>
   <tr>
-    <th></th>
+    <th>Month</th>
     {% for month, length in blog.index.months %}
     <th>{{ loop.index }}</th>
     {% endfor %}
