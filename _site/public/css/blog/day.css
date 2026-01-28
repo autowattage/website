@@ -1,0 +1,39 @@
+:root {
+  --gray-3: #F7E5CB;
+  --gray-2: #79CAD5;
+}
+
+body {
+  background-image: url("/public/img/blog/graph.webp");
+  background-color: rgba(255,255,255,0.3); background-blend-mode: lighten;
+  background-position: -0.5rem -0.5rem; background-size: 5rem;
+  div {
+    header {
+      background-color: var(--gray-2); color: var(--link);
+      h2 { margin-top: 0;}
+      > div {
+        display: flex; flex-wrap: wrap; gap: 0.5rem;
+        a {
+          padding: 0.6rem 1.2rem; border-radius: 1rem; display: inline-block;
+          background-color: var(--white);
+        }
+      }
+    }
+    main {
+      background-image: url("/public/img/blog/indexcard.webp");
+      background-color: var(--gray-3); background-size: 2.5rem;
+      border: 2px solid var(--gray-2); border-radius: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 30rem) {
+}
+@media screen and (min-width: 40rem) {
+  header { padding: 1rem 10% 2rem; }
+  main { margin: 1rem 10% 2rem; }
+}
+@media screen and (min-width: 67rem) {
+  header { padding: 1rem 20% 2rem; }
+  main { margin: 1rem 20% 2rem; }
+}
