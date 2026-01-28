@@ -10,8 +10,7 @@ const funfacts = [
   "I once almost crashed into Micheal Reeves' car with a scooter board. If you're reading this, I'm sorry.",
   "I was the first to coin the term RV3/V3R for the Tamagotchi 20th anniversary Connection.",
   "My first fursona was a fox.",
-  "I am <a href=\"https://www.bopimo.com/users/bunnyguy\">the 97th user</a> to sign up for <a href=\"https://bopimo.com\">Bopimo</a>, an online 3D platformer. I also own the <a href=\"https://www.bopimo.com/users/foo\">foo user</a>.",
-  "Nirav Patel (the Framework Guy) took a selfie with me as <a href=\"/projects/twoswap\">twoswap</a> once."
+  "I am <a href=\"https://www.bopimo.com/users/bunnyguy\">the 97th user</a> to sign up for <a href=\"https://bopimo.com\">Bopimo</a>, an online 3D platformer. I also own the <a href=\"https://www.bopimo.com/users/foo\">foo user</a>."
 ]
 function funfact() {
   var index;

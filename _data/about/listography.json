@@ -54,6 +54,31 @@
     "Potion Craft: Alchemist Simulator",
     "Flood Escape (1/2)"
   ],
+  "Favorite Songs": {
+    "meta": {
+      "created": "01/27/2026",
+      "updated": "01/27/2026",
+      "type": "dictionary"
+    },
+    "Speed Racer": "Her's",
+    "READY TO FLY": "Masayoshi Takanaka",
+    "The International Tweexcore Underground": "Los Campesinos!",
+    "Caterpillar Cake Club": "Protodome",
+    "Lonely Rolling Star": "Yoshihito Yano, Saki Kabata",
+    "Ride on Shooting Star": "The Pillows",
+    "Show 10": "Ginger Root",
+    "September": "Earth, Wind, and Fire",
+    "Resonance": "Home",
+    "High Five": "Home",
+    "Mr. Blue Sky": "Electric Light Orchestra",
+    "Don't Stop Me Now": "Queen",
+    "Bohemian Rhapsody": "Queen",
+    "Light Floor": "glue70",
+    "Imaginary Express": "Snail's House",
+    "Escalator [dreamix]": "nelward",
+    "Crystal Dolphin": "Cuco",
+    "Shard": "Solar Fields"
+  },
   "Favorite Books": [
     {
       "created": "01/25/2026",
@@ -108,12 +133,11 @@
   "2026 Consumption List": {
     "meta": {
       "created": "01/23/2026",
-      "updated": "01/24/2026",
+      "updated": "01/27/2026",
       "type": "checklist"
     },
     "Children of the Whales (book)": false,
     "Understanding Comics (book)": false,
-    "FLCL (manga)": false,
     "Girl's Last Tour (anime)": false,
     "FLCL (anime)": false,
     "Lazarus (anime)": false,
