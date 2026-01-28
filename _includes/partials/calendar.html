@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    {% for letter in blog.index.weekdays %}
+    <th>{{ letter }}</th>
+    {% endfor %}
+  </tr>
+  {% for day in range(1, blog.index.months[month]+1+monthoffset) %}
+  {% if (day-1)%7 == 0 %}<tr>{% endif %}
+    <td>{% if day>(monthoffset) %}
+    {{ day-monthoffset }} {% else %}.
+    {% endif %}</td>
+  {% if (day-1)%7 == 6 %}</tr>{% endif %}
+  {% endfor %}
+</table>
