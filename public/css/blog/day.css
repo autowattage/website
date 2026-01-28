@@ -10,6 +10,7 @@ body {
   div {
     header {
       background-color: var(--gray-2); color: var(--link);
+      padding: 1rem 1rem 2rem;
       h2 { margin-top: 0;}
       > div {
         display: flex; flex-wrap: wrap; gap: 0.5rem;
@@ -23,17 +24,17 @@ body {
       background-image: url("/public/img/blog/indexcard.webp");
       background-color: var(--gray-3); background-size: 2.5rem;
       border: 2px solid var(--gray-2); border-radius: 1rem;
-      padding: 1rem;
+      padding: 1rem; margin: 1rem;
     }
   }
 }
 @media screen and (max-width: 30rem) {
 }
 @media screen and (min-width: 40rem) {
-  header { padding: 1rem 10% 2rem; }
-  main { margin: 1rem 10% 2rem; }
+  body>div>header { padding: 1rem 10% 2rem; }
+  body>div>main { margin: 1rem 10% 2rem; }
 }
 @media screen and (min-width: 67rem) {
-  header { padding: 1rem 20% 2rem; }
-  main { margin: 1rem 20% 2rem; }
+  body>div>header { padding: 1rem 20% 2rem; }
+  body>div>main { margin: 1rem 20% 2rem; }
 }

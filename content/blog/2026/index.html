@@ -12,7 +12,7 @@ style: blog/2026/index.css
     <h2>Most recent 5 posts:</h2>
     <ul>
       {% for post in collections.post %}
-      <li><a href="{{ post.url }}"><span>{{ post.date }}</span>{{ post.data.title }}</a></li>
+      <li><a href="{{ post.url }}"><span>{{ post.date | postDate }}</span>: {{ post.data.title }}</a></li>
       {% endfor %}
     </ul>
   </article>
@@ -55,7 +55,7 @@ style: blog/2026/index.css
   <tr>
     <th>Month</th>
     {% for month, length in blog.index.months %}
-    <th>{{ loop.index }}</th>
+    <th><a href="./{{ loop.index }}">{{ loop.index }}</a></th>
     {% endfor %}
   </tr>
   {% for i in range(0,36) %}

@@ -8,9 +8,13 @@ style: blog/2026/1.css
 </header>
 
 <main>
+  {% set month = "January" %}
+  {% set monthoffset = 4 %}
+  {% include 'partials/calendar.html' %}
+  <h2>Most recent 5 posts:</h2>
   <ul>
-    {% for post in collections.post %}
-    <li><a href="{{ post.url }}"><span>{{ post.data.date.toUTCString() }}</span>{{ post.data.title }}</a></li>
+    {% for post in collections["2026"] %}
+    <li><a href="{{ post.url }}"><span>{{ post.date | postDate }}</span>: {{ post.data.title }}</a></li>
     {% endfor %}
   </ul>
 </main>

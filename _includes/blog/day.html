@@ -13,7 +13,7 @@
     <div>
       <header>
         <h1>{{ title }}</h1>
-        <h2>{{ page.date }}</h2>
+        <h2>{{ page.date | postDate }}</h2>
         <div>
           {% for tag in tags %}
           <a href="/tags/{{ tag }}">{{ tag }}</a>
