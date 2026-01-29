@@ -1,0 +1,16 @@
+---
+title: All Pages
+layout: base.html
+style: global.css
+---
+<header>
+  <h1>All Pages</h1>
+</header>
+
+<main>
+  <ul>
+    {% for item in collections.all %}
+    <li><a href="{{ item.url }}">{{ item.url }}</a></li>
+    {% endfor %}
+  </ul>
+</main>
