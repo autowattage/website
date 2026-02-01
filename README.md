@@ -7,6 +7,16 @@ the goal of sundial city is to:
 - become my strongest internet presence in lieu of social media
 
 ![A screenshot of the header on Sundial city's index page.](https://hc-cdn.hel1.your-objectstorage.com/s/v3/2b8686ad1bcdac26_screenshot_from_2026-01-06_19-51-08.png)
+(note: CDN is down)
 
 sundial city is made with 11ty and html (rendered as nunjucks), css, and markdown (rendered with liquid).
 artwork, assets, and paper textures are made by scanning constrution paper and applying color filters (HSL adjustment) on krita.
+
+## local live preview
+1. git clone the repo (`git clone https://github.com/autowattage/website.git`)
+2. install 11ty (`npm install @11ty/eleventy`)
+3. run `npx @11ty/eleventy --serve`
+4. visit `localhost:8080` in your web browser
+5. profit??
+
+( to just build the output, run `npx @11ty/eleventy`)
