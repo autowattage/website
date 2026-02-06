@@ -1,6 +1,8 @@
 import { DateTime } from "luxon";
 
 export default async function(eleventyConfig) {
+	// copy /archive folder to _site
+  eleventyConfig.addPassthroughCopy({"archive": "archive"});
 	// copy /public folder to _site
   eleventyConfig.addPassthroughCopy({"public": "public"});
 
