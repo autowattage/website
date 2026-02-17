@@ -2,5 +2,57 @@
 title: About
 layout: base.html
 style: about/index.css
+nofooter: true
 ---
-<p>Under construction...</p>
+<details open>
+  <summary>README.md</summary>
+  <main>
+    <p>whoami?</p>
+    <p>Who knows... Who knows... I'm a mystery! Can't catch me!</p>
+  </main>
+</details>
+
+<details open>
+  <summary>bunnyguy.md</summary>
+  <article>
+    <p>Bunnyguy is all things bunny and guy.</p>
+  </article>
+</details>
+
+<details open>
+  <summary>mouse.md</summary>
+  <article>
+    <p>Nick, the mouse behind the screen</p>
+  </article>
+</details>
+
+<details open>
+  <summary>contact.md</summary>
+  <article>
+    <nav>
+      <a href="mailto:hello@sundial.city">hello@sundial.city</a>
+      <a href="https://github.com/autowattage">Github</a>
+      <a href="https://autowattage.newgrounds.com">Newgrounds</a>
+      <a href="https://x.com/autowattage">Twitter</a>
+    </nav>
+  </article>
+</details>
+
+<details open>
+  <summary>now.md</summary>
+  <article>
+    <p>{{ now[0]["date"] }}, {{ now[0]["time"] }}</p>
+    <ul>
+      {% for status, entry in now[0]["list"] %}
+      <li><strong>{{ status }}</strong>: {{ entry }}</li>
+      {% endfor %}
+    </ul>
+    {% for paragraph in now[0]["paragraphs"] %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+  </article>
+</details>
+
+<footer>
+  <button type="button">Start</button>
+</footer>

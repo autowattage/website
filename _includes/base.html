@@ -20,6 +20,8 @@
     <div>
       {{ content }}
     </div>
-    {% include "./partials/footer.html" %}
+    {% if not nofooter %}
+      {% include "./partials/footer.html" %}
+    {% endif %}
   </body>
 </html>
