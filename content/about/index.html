@@ -1,9 +1,20 @@
----
-title: About
-layout: base.html
-style: about/index.css
-nofooter: true
----
+{% extends "base.html" %}
+{% set title = "About" %}
+{% set stylelist = ["about/index.css"] %}
+
+{% block content %}
+<nav id="desktopicons">
+  <figure>
+    <img src="" alt="README.md icon">
+    <figcaption>README.md</figcaption>
+  </figure>
+
+  <figure>
+    <img src="" alt="README.md icon">
+    <figcaption>README.md</figcaption>
+  </figure>
+</nav>
+
 <details open>
   <summary>README.md</summary>
   <main>
@@ -53,6 +64,22 @@ nofooter: true
   </article>
 </details>
 
+<script src="/public/js/about.js"></script>
+{% endblock %}
+
+{% set footer %}
 <footer>
-  <button type="button">Start</button>
+  <button type="button" id="startmenu">start</button>
+  <nav id="appmenu">
+    <button type="button">README.md</button>
+    <button type="button">mouse.md</button>
+    <button type="button">calculator.exe</button>
+  </nav>
+  <!-- Software icons.. -->
+  <div>
+    <p>date</p>
+    <p>audio off</p>
+    <p>battery 98%</p>
+  </div>
 </footer>
+{% endset %}

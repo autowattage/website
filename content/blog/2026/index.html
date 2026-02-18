@@ -1,8 +1,8 @@
----
-title: 2026
-layout: base.html
-style: blog/2026/index.css
----
+{% extends "base.html" %}
+{% set title = "2026" %}
+{% set stylelist = ["blog/2026/index.css"] %}
+
+{% block content %}
 <main>
   <header>
     <h1>2026</h1>
@@ -69,3 +69,4 @@ style: blog/2026/index.css
   </tr>
   {% endfor %}
 </table></aside>
+{% endblock %}

@@ -1,8 +1,13 @@
----
-title: Index
-layout: base.html
-style: index.css
----
+{% extends "base.html" %}
+{% set title = "Index" %}
+{% set stylelist = ["index.css"] %}
+
+{% block head %}
+<link href="https://github.com/autowattage" rel="me"/>
+<link href="https://x.com/autowattage" rel="me"/>
+{% endblock %}
+
+{% block content %}
 <link href="https://github.com/autowattage" rel="me"/>
 <link href="https://neocities.org/site/snipchu" rel="me"/>
 <link href="https://artfight.net/~autowattage" rel="me"/>
@@ -65,3 +70,4 @@ style: index.css
 </section>
 
 <script src="https://pagering.gideon.sh/embed.js" defer></script>
+{% endblock %}

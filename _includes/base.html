@@ -6,21 +6,20 @@
     <meta name="description" content="">
     <title>{{ title }} | sundial.city</title>
     <link rel="stylesheet" href="/public/css/global.css">
-    {% if style %}
-    <link rel="stylesheet" href="/public/css/{{ style }}">
-    {% endif %}
-    {% if page.url == "/" %}
-    <link href="https://github.com/autowattage" rel="me"/>
-    <link href="https://twitter.com/autowattage" rel="me"/>
-    {% endif %}
+    {% for file in stylelist %}
+    <link rel="stylesheet" href="/public/css/{{ file }}">
+    {% endfor %}
+    {% block head %}{% endblock %}
 
   </head>
 
   <body>
     <div>
-      {{ content }}
+      {% block content %}{% endblock %}
     </div>
-    {% if not nofooter %}
+    {% if footer|length %}
+      {{ footer }}
+    {% else %}
       {% include "./partials/footer.html" %}
     {% endif %}
   </body>

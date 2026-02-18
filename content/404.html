@@ -1,9 +1,10 @@
 ---
-title: 404 error :(
-layout: base.html
 permalink: 404.html
-style: global.css
 ---
+{% extends "base.html" %}
+{% set title = "404 Error" %}
+
+{% block content %}
 <header>
   <h1>404: not found :(</h1>
 </header>
@@ -15,3 +16,4 @@ style: global.css
   <br>
   <p>(while you're here, send me an email at <a href="mailto:hello@sundial.city">hello@sundial.city</a>! I'm bored! Talk to me!)</p>
 </main>
+{% endblock %}

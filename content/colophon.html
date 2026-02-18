@@ -1,8 +1,7 @@
----
-title: Colophon
-layout: base.html
-style: colophon.css
----
+{% extends "base.html" %}
+{% set title = "Colophon" %}
+
+{% block content %}
 <header>
   <h1>colophon</h1>
 </header>
@@ -11,3 +10,4 @@ style: colophon.css
   <p>This site is written in raw HTML and CSS and uses the Eleventy static site generator (SSG).</p>
   <p>HTML pages are rendered with the Nunjucks templating engine, and Markdown files (usually blog posts) are rendered with the Liquid templating engine.</p>
 </main>
+{% endblock %}

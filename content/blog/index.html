@@ -1,8 +1,8 @@
----
-title: Blog
-layout: base.html
-style: blog/index.css
----
+{% extends "base.html" %}
+{% set title = "Blog" %}
+{% set stylelist = ["blog/index.css"] %}
+
+{% block content %}
 <header>
   <div>
     <h1>The BLOG</h1>
@@ -25,3 +25,4 @@ style: blog/index.css
   </article>
   {% endfor %}
 </main>
+{% endblock %}

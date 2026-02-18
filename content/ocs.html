@@ -1,8 +1,8 @@
----
-title: OC
-layout: base.html
-style: ocs.css
----
+{% extends "base.html" %}
+{% set title = "Characters" %}
+{% set stylelist = ["ocs.css"] %}
+
+{% block content %}
 <header>
   <h1>ocs</h1>
 </header>
@@ -12,3 +12,4 @@ style: ocs.css
   <a href="/ocs/bunnyguy/"><img src="/public/img/ocs/bunnyguy.webp" alt="Bunnyguy opening a window"/></a>
   <a href="/ocs/bunnyguy/"><img src="/public/img/ocs/bunnyguy.webp" alt="Bunnyguy opening a window"/></a>
 </main>
+{% endblock %}

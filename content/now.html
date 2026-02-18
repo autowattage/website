@@ -1,8 +1,8 @@
----
-title: Now
-layout: base.html
-style: now.css
----
+{% extends "base.html" %}
+{% set title = "Now" %}
+{% set stylelist = ["now.css"] %}
+
+{% block content %}
 <header>
   <h1>bunnyguy <em>NOW!</em></h1>
 </header>
@@ -25,3 +25,4 @@ style: now.css
 
   {% endfor %}
 </main>
+{% endblock %}

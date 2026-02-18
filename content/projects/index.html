@@ -1,8 +1,8 @@
----
-title: Projects
-layout: base.html
-style: projects/index.css
----
+{% extends "base.html" %}
+{% set title = "Projects" %}
+{% set stylelist = ["proejcts/index.css"] %}
+
+{% block content %}
 <header>
   <h1>PROJECTSS</h1>
 </header>
@@ -23,3 +23,4 @@ style: projects/index.css
   </article>
   {% endfor %}
 </main>
+{% endblock %}

@@ -1,8 +1,7 @@
----
-title: All Pages
-layout: base.html
-style: global.css
----
+{% extends "base.html" %}
+{% set title = "Pages" %}
+
+{% block content %}
 <header>
   <h1>All Pages</h1>
 </header>
@@ -14,3 +13,4 @@ style: global.css
     {% endfor %}
   </ul>
 </main>
+{% endblock %}
