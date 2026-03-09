@@ -1,24 +1,3 @@
-details {
-  border: 1px solid var(--black);
-  background-color: var(--white);
-  width: 30rem; height: 30rem;
-  display: inline-block; position: absolute;
-  left: 0; top: 0;
-  summary {
-    cursor: pointer; list-style-type: '+';
-    padding: 1rem;
-    background-color: var(--blue);
-  }
-  main, article {
-    padding: 1rem;
-    h1 { padding-top: 0;}
-  }
-}
-details[open] {
-  summary { list-style-type: '-';}
-}
-html>body>div, html { width: 100%; overflow: hidden; }
-
 /* Tiny-mobile */
 @media screen and (max-width: 30rem) {
 }
