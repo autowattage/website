@@ -3,5 +3,63 @@
 {% set stylelist = ["about/index.css"] %}
 
 {% block content %}
-<p>whoami</p>
+<header>
+  <div>
+    <h1>whoami</h1>
+    <nav>
+      <a href="/about/">About</a>
+      <a href="./listography/">Listography</a>
+      <a href="./inventory/">Inventory</a>
+      <a href="./shrines/">Shrines</a>
+    </nav>
+  </div>
+  <img src="/public/img/about/pair-side.webp" alt="Mouse and Bunnyguy peeking out together">
+</header>
+
+<main>
+  <section id="landing">
+    <figure>
+      <form>
+        <label><input type="radio" value="nick" name="pfpselect">nick</label>
+        <label><input type="radio" value="mouse" name="pfpselect">mouse</label>
+        <label><input type="radio" value="b4g" name="pfpselect">bunnyguy</label>
+      </form>
+      <img class="nick" src="/public/img/grass.webp" alt="Grass texture">
+      <img class="mouse" src="/public/img/sand.webp" alt="Sand texture">
+      <img class="b4g" src="/public/img/dirt.webp" alt="Dirt texture">
+
+      <figcaption class="nick">Nick, the webmaster and person of the world</figcaption>
+      <figcaption class="mouse">Mouse, the artistic abstraction of Nick</figcaption>
+      <figcaption class="b4g">Bunnyguy, the mascot</figcaption>
+    </figure>
+    <p>Are you looking for my <a href="/about/portfolio/">professional work portfolio</a>?</p>
+    <p>Bunnyguy is a 17-year old self-proclaimed 'tinkering artist' and programmer based in the United States.
+       They are most known for their TV-head cosplay <a href="/projects/twoswap">twoswap</a> and as an artist/merch designer for <a href="https://hackclub.com">Hack Club</a>.</p>
+    <p>Bunnyguy has previously contributed art to make stickers, postcards, jackets, PCBs, and more for Hack Club programs such as <a href="https://counterspell.hackclub.com">Counterspell</a>, <a href="https://summer.hackclub.com">Summer of Making</a>, <a href="https://apocalypse.hackclub.com">Apocalpyse</a>, and <a href="https://highseas.hackclub.com">High Seas</a>.
+       In the summer of 2025, Bunnyguy became an intern to help organize <a href="https://highway.hackclub.com">Highway</a> and <a href="https://undercity.hackclub.com">Undercity</a>.</p>
+    <p>In its free time, Bunnyguy likes to draw art, code websites, and play puzzle games.</p>
+  </section>
+
+  <section id="inventory">
+    <h2>inventory</h2>
+    <p><a href="/about/inventory/">visit the full page?</a></p>
+    {% for item, contents in about.inventory %}
+    <figure>
+      <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
+      <figcaption>{{ item }}</figcaption>
+    </figure>
+    {% endfor %}
+  </section>
+
+  <section id="shrines">
+    <h2>shrines</h2>
+    <p><a href="/shrines/">visit the full page?</a></p>
+    {% for item, contents in shrines %}
+    <figure>
+      <img src="/public/img/shrines/{{ contents[0] }}/icon.webp" alt="{{ contents[1] }}">
+      <figcaption><a href="/shrines/{{ contents[0] }}">{{ item }}</a></figcaption>
+    </figure>
+    {% endfor %}
+  </section>
+</main>
 {% endblock %}

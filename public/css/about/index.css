@@ -1,5 +1,40 @@
-/* Tiny-mobile */
-@media screen and (max-width: 30rem) {
+header {
+  background-image: url("/public/img/black.webp"); color: var(--white);
+  padding: 0 1rem; overflow: hidden;
+  >div {
+    border: 2px solid var(--gray-3); border-radius: 2rem;
+    padding: 1rem; margin: 1rem auto; max-width: 30rem;
+    h1 {padding-top: 0; color: var(--gray-3); font-size: 3rem;}
+    >nav {
+      display: flex; gap: 0.5rem; flex-wrap: wrap;
+      justify-content: center;
+      >a {
+        background-image: url("/public/img/sand.webp");
+        padding: 0.5rem 1rem; border-radius: 1rem;
+      }
+    }
+  }
+  >img {
+    max-width: 15rem; margin: 1rem auto 0 auto;
+    /* padding-left: 15%; */
+  }
+}
+
+main {
+  #landing {
+    padding: 1rem;
+    >figure {
+      margin: 0 auto; max-width: 12rem; 
+      img, figcaption { display: none; }
+      input[value="nick"]:checked ~ .nick {
+        color: red;
+        display: block;
+      }
+    }
+  }
+}
+/* Large mobile view */
+@media screen and (min-width: 30rem) {
 }
 
 /* Tablet view */
