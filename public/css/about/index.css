@@ -24,10 +24,16 @@ main {
   #landing {
     padding: 1rem;
     >figure {
-      margin: 0 auto; max-width: 12rem; 
+      margin: 0 auto; max-width: 15rem; 
+      label { display: inline-block; break-inside: avoid;}
       img, figcaption { display: none; }
-      input[value="nick"]:checked ~ .nick {
-        color: red;
+      label:has(input[value="nick"]:checked) ~ .nick {
+        display: block;
+      }
+      label:has(input[value="mouse"]:checked) ~ .mouse {
+        display: block;
+      }
+      label:has(input[value="b4g"]:checked) ~ .b4g {
         display: block;
       }
     }
