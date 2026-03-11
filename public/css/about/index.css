@@ -1,17 +1,28 @@
 header {
-  background-image: url("/public/img/black.webp"); color: var(--white);
+  background-image: url("/public/img/blog/blue.webp"); color: var(--white);
   padding: 0 1rem; overflow: hidden;
   >div {
-    border: 2px solid var(--gray-3); border-radius: 2rem;
+    background-image: url("/public/img/sand.webp");
+    border-radius: 2rem;
     padding: 1rem; margin: 1rem auto; max-width: 30rem;
-    h1 {padding-top: 0; color: var(--gray-3); font-size: 3rem;}
+    position: relative; margin-bottom: 2rem;
+    h1 { text-align: center; padding-top: 0; color: var(--gray-1); font-size: 3rem;}
     >nav {
       display: flex; gap: 0.5rem; flex-wrap: wrap;
       justify-content: center;
       >a {
-        background-image: url("/public/img/sand.webp");
+        background-image: url("/public/img/blog/blue.webp");
         padding: 0.5rem 1rem; border-radius: 1rem;
+        color: var(--gray-3) !important;
+        &:active { background-image: url("/public/img/black.webp"); }
       }
+    }
+    &::after {
+      content:''; width: 0; height: 0; display: block;
+      position: absolute; bottom: -1.5rem; left: calc(50% - 1rem);
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-top: 1.5rem solid var(--gray-3);
     }
   }
   >img {
@@ -21,6 +32,7 @@ header {
 }
 
 main {
+  background-image: url("/public/img/white.webp");
   #landing {
     padding: 1rem;
     >figure {
