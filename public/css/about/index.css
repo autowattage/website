@@ -50,6 +50,9 @@ main {
       }
     }
   }
+  #inventory {
+    img { max-height: 15rem; max-width: 100%; height: auto; width: auto;}
+  }
 }
 /* Large mobile view */
 @media screen and (min-width: 30rem) {

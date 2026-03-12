@@ -5,8 +5,8 @@
   "cell phone": ["cellphone.webp", "A black rugged Google Pixel 7 with a puffy Mimitchi keychain"],
   "watch": ["watch.webp", "A black Casio F-91W"],
   "kazoo": ["kazoo.webp", "A red and gold metal kazoo"],
-  "tamagotchi (sometimes)": ["tamagotchi.webp", "A Pink Tamagotchi Pix Party"],
+  "tamagotchi (sometimes)": ["tmgc.webp", "A Pink Tamagotchi Pix Party"],
   "<a href=\"/shrines/qbee\">QBEE</a>": ["qbee.webp", "A worn 7x7x7\" plush companion cube"],
-  "tech pouch": ["techpouch.webp", "A small green and yellow Tamagotchi-themed zipper pouch"],
+  "tech pouch": ["pouch.webp", "A small green and yellow Tamagotchi-themed zipper pouch"],
   "ventoy USB drive": ["ventoy.webp", "A black and red Sandisk Cruzer Glide 64GB USB drive"]
 }
