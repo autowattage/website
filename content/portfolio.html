@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% set title = "Portfolio" %}
+{% set stylelist = ["portfolio.css"] %}
+
+{% block content %}
+
+<header>
+  <h1>Portfolio</h1>
+  <img src="/public/img/portfolio/globe.webp" alt="An earth globe">
+  <img src="/public/img/portfolio/b4g-walk.gif" alt="Bunnyguy walking around the globe">
+</header>
+
+<main>
+  <section>
+    <a href="/public/resume.pdf" target="_blank">Download my resume!</a>
+  </section>
+
+  <section class="art">
+    <h2>Featured artworks</h2>
+    <p>Visit the <a href="/art/">art</a> page?</p>
+    <div>
+      {% for item, info in portfolio.feat %}
+      <figure>
+        <img src="/public/img/art/{{ info[0] }}" alt="{{ info[1] }}">
+        <figcaption>{{ item }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>contact</h2>
+    <nav>
+      <a href="https://github.com/autowattage" target="_blank">GitHub</a>
+      <a href="https://autowattage.newgrounds.com" target="_blank">Newgrounds</a>
+      <a href="https://x.com/autowattage" target="_blank">Twitter</a>
+      <a href="https://youtube.com/@autowattage" target="_blank">Youtube</a>
+      <a href="https://neocities.org/site/snipchu" target="_blank">Neocities</a>
+      <a href="https://artfight.net/~autowattage" target="_blank">Artfight</a>
+      <a href="https://autowattage.itch.io/" target="_blank">itch.io</a>
+      <a href="mailto:hello@sundial.city">Email (funsies)</a>
+      <a href="mailto:nick@sundial.city">Email (work)</a>
+    </nav>
+  </section>
+</main>
+
+{% endblock %}

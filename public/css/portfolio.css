@@ -1,0 +1,39 @@
+h1,h2 { margin-top: 0; font-size: 2rem; }
+h1 { font-size: 3rem; }
+section { padding: 1rem; }
+
+header {
+  background-image: url("/public/img/black.webp"); color: var(--gray-3);
+}
+.art {
+  padding: 0 1rem 0;
+  div {
+    display: flex; gap: 1rem; overflow-x: scroll;
+    figure {
+      margin: 0; text-align: center; padding: 1rem;
+      img { max-height: 12rem; width: auto;}
+    }
+  }
+}
+#contact {
+  background-image: url("/public/img/black.webp"); color: var(--gray-3);
+  padding-bottom: 2rem; margin-bottom: -1rem;
+  nav {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+    a {
+      background-image: url("/public/img/sand.webp");
+      border-radius: 1rem; padding: 0.5rem 1rem;
+    }
+  }
+}
+/* Large mobile view */
+@media screen and (min-width: 30rem) {
+}
+
+/* Tablet view */
+@media screen and (min-width: 40rem) {
+}
+
+/* Desktop view */
+@media screen and (min-width: 67rem) {
+}

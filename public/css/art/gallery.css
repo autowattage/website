@@ -1,0 +1,16 @@
+main {
+  display: flex; gap: 1rem; flex-direction: column;
+  padding: 1rem;
+  figure { margin: 0; }
+}
+/* Large mobile view */
+@media screen and (min-width: 30rem) {
+}
+
+/* Tablet view */
+@media screen and (min-width: 40rem) {
+}
+
+/* Desktop view */
+@media screen and (min-width: 67rem) {
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% set title = "Art Gallery" %}
+{% set stylelist = ["art/gallery.css"] %}
+
+{% block content %}
+<header>
+  <h1>art gallery</h1>
+</header>
+
+<main>
+  {% for item, info in art %}
+  <a href="/public/img/art/{{ item }}"><figure class="{{ info[1] }}">
+    <img src="/public/img/art/{{ item }}" alt="{{ info[2] }}">
+    <figcaption>{{ info[0] }}</figcaption>
+  </figure></a>
+  {% endfor %}
+</main>
+{% endblock %}
