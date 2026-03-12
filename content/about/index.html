@@ -8,9 +8,10 @@
     <h1>whoami</h1>
     <nav>
       <a href="/about/">About</a>
+      <a href="./portfolio/">Portfolio</a>
       <a href="./listography/">Listography</a>
       <a href="./inventory/">Inventory</a>
-      <a href="./shrines/">Shrines</a>
+      <a href="/shrines/">Shrines</a>
     </nav>
   </div>
   <img src="/public/img/about/pair-side.webp" alt="Mouse and Bunnyguy peeking out together">
@@ -18,7 +19,6 @@
 
 <main>
   <section id="landing">
-    <p>Are you looking for my <a href="/about/portfolio/">professional work portfolio</a>?</p>
     <figure>
       <label><input type="radio" value="nick" name="pfpselect" checked>nick</label>
       <label><input type="radio" value="b4g" name="pfpselect" checked>bunnyguy</label>
@@ -32,33 +32,39 @@
       <figcaption class="b4g">Bunnyguy, the mascot and culprit behind his high school's vandalized whiteboards</figcaption>
       <figcaption class="mouse">Mouse, the middle-mouse of Nick and Bunnyguy, the in-between</figcaption>
     </figure>
+    <p>Are you looking for my <a href="/about/portfolio/">professional work portfolio</a>?</p>
     <p>Bunnyguy is a 17-year old self-proclaimed 'tinkering artist' and programmer based in the United States.
        They are most known for their TV-head cosplay <a href="/projects/twoswap">twoswap</a> and as an artist/merch designer for <a href="https://hackclub.com">Hack Club</a>.</p>
     <p>Bunnyguy has previously contributed art to make stickers, postcards, jackets, PCBs, and more for Hack Club programs such as <a href="https://counterspell.hackclub.com">Counterspell</a>, <a href="https://summer.hackclub.com">Summer of Making</a>, <a href="https://apocalypse.hackclub.com">Apocalpyse</a>, and <a href="https://highseas.hackclub.com">High Seas</a>.
        In the summer of 2025, Bunnyguy became an intern to help organize <a href="https://highway.hackclub.com">Highway</a> and <a href="https://undercity.hackclub.com">Undercity</a>.</p>
     <p>In its free time, Bunnyguy likes to draw art, code websites, and play puzzle games.</p>
+    <p>For more information, visit Bunnyguy's <a href="./listography/">listography</a> page or click this <button type="button">button</button> for a fun fact (wip)!</p>
   </section>
 
   <section id="inventory">
     <h2>inventory</h2>
     <p><a href="/about/inventory/">visit the full page?</a></p>
-    {% for item, contents in about.inventory %}
-    <figure>
-      <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
-      <figcaption>{{ item }}</figcaption>
-    </figure>
-    {% endfor %}
+    <div>
+      {% for item, contents in about.inventory %}
+      <figure>
+        <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
+        <figcaption>{{ item }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
   </section>
 
   <section id="shrines">
     <h2>shrines</h2>
     <p><a href="/shrines/">visit the full page?</a></p>
-    {% for item, contents in shrines %}
-    <figure>
-      <img src="/public/img/shrines/{{ contents[0] }}/icon.webp" alt="{{ contents[1] }}">
-      <figcaption><a href="/shrines/{{ contents[0] }}">{{ item }}</a></figcaption>
-    </figure>
-    {% endfor %}
+    <div>
+      {% for item, contents in shrines %}
+      <a href="/shrines/{{ contents[0] }}"><figure>
+        <img src="/public/img/shrines/{{ contents[0] }}/icon.webp" alt="{{ contents[1] }}">
+        <figcaption><a href="/shrines/{{ contents[0] }}">{{ item }}</a></figcaption>
+      </figure></a>
+      {% endfor %}
+    </div>
   </section>
 </main>
 {% endblock %}

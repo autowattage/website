@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% set title = "Inventory" %}
+{% set stylelist = ["about/inventory.css"] %}
+
+{% block content %}
+
+<h1>inventory</h1>
+<main>
+  {% for item, contents in about.inventory %}
+  <figure>
+    <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
+    <figcaption>{{ item }}</figcaption>
+  </figure>
+  {% endfor %}
+</main>
+
+{% endblock %}

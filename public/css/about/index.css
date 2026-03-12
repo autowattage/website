@@ -6,7 +6,7 @@ header {
     border-radius: 2rem;
     padding: 1rem; margin: 1rem auto; max-width: 30rem;
     position: relative; margin-bottom: 2rem;
-    h1 { text-align: center; padding-top: 0; color: var(--gray-1); font-size: 3rem;}
+    >h1 { text-align: center; padding-top: 0; color: var(--gray-1); font-size: 3rem;}
     >nav {
       display: flex; gap: 0.5rem; flex-wrap: wrap;
       justify-content: center;
@@ -33,35 +33,76 @@ header {
 
 main {
   background-image: url("/public/img/white.webp");
+  margin-bottom: -1rem;
   #landing {
     padding: 1rem;
     >figure {
-      margin: 1rem auto; max-width: 15rem; 
+      margin: 0 auto 1rem auto; max-width: 15rem; 
       label { display: inline-block; break-inside: avoid;}
       img, figcaption { display: none; }
-      label:has(input[value="nick"]:checked) ~ .nick {
-        display: block;
-      }
-      label:has(input[value="mouse"]:checked) ~ .mouse {
-        display: block;
-      }
+      label:has(input[value="nick"]:checked) ~ .nick,
+      label:has(input[value="mouse"]:checked) ~ .mouse,
       label:has(input[value="b4g"]:checked) ~ .b4g {
         display: block;
       }
     }
   }
-  #inventory {
-    img { max-height: 15rem; max-width: 100%; height: auto; width: auto;}
+  #inventory, #shrines {
+    padding: 1rem;
+    h2 { margin-top: 0; font-size: 2rem; }
+    background-image: url("/public/img/sand.webp");
+    >div {
+      display: flex; gap: 1rem; padding: 0 1rem; overflow: scroll;
+      figure {
+        text-align: center; margin: 0;
+        img { max-height: 10rem; height: auto; width: auto; margin: auto; }
+      }
+    }
+  }
+  #shrines {
+    background-image: url("/public/img/grass.webp");
+    padding-bottom: 2rem;
   }
 }
 /* Large mobile view */
 @media screen and (min-width: 30rem) {
+  header {
+    >div>h1 {font-size: 3.5rem;}
+    img { max-width: 17rem; padding-left: calc(20% + 4rem);}
+    div {
+      width: 80%; padding: 1.5rem; margin-top: 1.5rem;
+      &::after { left: calc(50% + 5rem); }
+    }
+  }
+  main>section {
+    padding-left: 10% !important; padding-right: 10% !important;
+  }
 }
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
+  header {
+    >div>h1 {font-size: 4rem;}
+    div {
+      padding: 2rem; margin-top: 2rem;
+      &::after { left: calc(50% + 6rem); }
+    }
+  }
+  main>section {
+    padding-left: 15% !important; padding-right: 15% !important;
+  }
+  #landing {
+    overflow: auto;
+    >figure { padding-right: 1rem; float: left;}
+  }
 }
 
 /* Desktop view */
 @media screen and (min-width: 67rem) {
+  header {
+    img { max-width: 20rem; }
+  }
+  main>section {
+    padding-left: 20% !important; padding-right: 20% !important;
+  }
 }

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% set title = "Shrines" %}
+{% set stylelist = ["shrines.css"] %}
+
+{% block content %}
+
+<h1>shrines</h1>
+<main>
+  {% for item, contents in shrines %}
+  <a href="/shrines/{{ contents[0] }}/"><figure>
+    <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
+    <figcaption>{{ item }}</figcaption>
+  </figure></a>
+  {% endfor %}
+</main>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+main {
+  display: flex; flex-wrap: wrap;
+  flex-direction: row; justify-content: center;
+  gap: 1rem; padding: 0 1rem;
+  figure {
+    text-align: center; flex-shrink: 1; margin: 0;
+    img {
+      max-height: 10rem; max-width: 100%;
+      height: auto; width: auto; margin: auto;
+    }
+  }
+}
+/* Large mobile view */
+@media screen and (min-width: 30rem) {
+}
+
+/* Tablet view */
+@media screen and (min-width: 40rem) {
+  main>figure>img { max-height: 12rem; }
+}
+
+/* Desktop view */
+@media screen and (min-width: 67rem) {
+  main>figure>img { max-height: 15rem; }
+}
