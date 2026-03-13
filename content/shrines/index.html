@@ -7,11 +7,10 @@
 <h1>shrines</h1>
 <main>
   {% for item, contents in shrines %}
-  <a href="/shrines/{{ contents[0] }}/"><figure>
-    <img src="/public/img/about/{{ contents[0] }}" alt="{{ contents[1] }}">
-    <figcaption>{{ item }}</figcaption>
+  <a href="/shrines/{{ contents[0] }}"><figure>
+    <img src="/public/img/shrines/{{ contents[0] }}/icon.webp" alt="{{ contents[1] }}">
+    <figcaption><a href="/shrines/{{ contents[0] }}">{{ item }}</a></figcaption>
   </figure></a>
   {% endfor %}
 </main>
-
 {% endblock %}
