@@ -16,7 +16,7 @@ html {
   color: var(--black); font-family: Arial, Helvetica, sans-serif;
   &, body, p, h1 { margin:0; }
 }
-p {
+body>div p {
   &:not(:first-child) { margin-top: 1rem; }
   &:not(:last-child) { margin-bottom: 1rem; }
 }

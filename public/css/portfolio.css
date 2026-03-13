@@ -1,7 +1,7 @@
 h1,h2 { margin-top: 0; font-size: 2rem; }
 h1 { font-size: 3rem; }
+main { margin-bottom: -1rem; }
 section { padding: 1rem; }
-
 header {
   background-image: url("/public/img/black.webp"); color: var(--gray-3);
 }
@@ -17,7 +17,7 @@ header {
 }
 #contact {
   background-image: url("/public/img/black.webp"); color: var(--gray-3);
-  padding-bottom: 2rem; margin-bottom: -1rem;
+  padding-bottom: 2rem;
   nav {
     display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
     a {
