@@ -1,3 +1,11 @@
+main>a {
+  display: inline-block; height: auto; text-align: center;
+  width: 100%;
+  &:not(:first-child) { padding-top: 1rem;}
+  &:not(:last-child) { padding-bottom: 1rem;}
+  figure { margin: 0; }
+}
+
 body>div {
   display: flex;
   header {
@@ -6,29 +14,31 @@ body>div {
     h1 {padding: 0;}
     details {
       h2 { display: inline-block; margin: 0; }
+      h3 {margin: 0.5rem 0;}
       label { display: inline-block; break-inside: avoid;}
     }
   }
   main {
     padding: 1rem; columns: 1;
-    >a {
-      display: inline-block; height: auto;
-      margin: auto; text-align: center;
-      &:not(:first-child) { padding-top: 1rem;}
-      &:not(:last-child) { padding-bottom: 1rem;}
-      max-width: 15rem;
-      figure { margin: 0; }
+    a {
+      span {
+        display: inline-block; padding: 0.5rem 1rem; margin: 0 0.25rem;
+        border-radius: 1rem; background-color: var(--gray-3);
+      }
     }
   }
 }
 /* Large mobile view */
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 25rem) {
+  body>div>main { columns: 2; }
 }
 
 /* Tablet view */
 @media screen and (min-width: 40rem) {
+  body>div>main { columns: 3; }
 }
 
 /* Desktop view */
-@media screen and (min-width: 67rem) {
+@media screen and (min-width: 60rem) {
+  body>div>main { columns: 4; }
 }

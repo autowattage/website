@@ -8,21 +8,28 @@
   <p>Currently BROKEN: a work in progress.</p>
   <details>
     <summary><h2>filters</h2></summary>
-    {% for item, info in art.filters %}
-    <h3>{{ item }}</h3>
-    {% for filter in info %}
-    <label><input type="checkbox">{{ filter }}</label>
-    {% endfor %}
+    {% for header, filters in art.filters %}
+    <h3>{{ header }}</h3>
+    {% if filters[0] %}
+      {% for filter in filters %}<label><input type="checkbox">{{ filter }}</label>{% endfor %}
+    {% else %}
+      {% for nn, long in filters %}<label><input type="checkbox">{{ long }}</label>{% endfor %}
+    {% endif %}
     {% endfor %}
   </details>
 </header>
+<script src="/public/js/art/gallery.js"></script>
 
 <main>
-  {% for item, info in art.index %}
+  {% for item, info in art.gallery %}
   <a href="/public/img/art/{{ item }}" class="{{ info[1] | join(" ") }}"><figure>
     <img src="/public/img/art/{{ item }}" alt="{{ info[2] }}">
-    <figcaption>{{ info[0] }}</figcaption>
-  </figure></a>
+    <figcaption>
+    {{ info[0] }}
+    </figcaption>
+  </figure>
+  {% for class in info[1] %}<span>{{ class }}</span>{% endfor %}
+  </a>
   {% endfor %}
 </main>
 {% endblock %}

@@ -1,18 +1,16 @@
 {
-  "other": [
-    "commission",
-    "hack club"
-  ],
-  "media": [
-    "digital",
-    "traditional"
-  ],
+  "media": {
+    "dig": "digital",
+    "trad": "traditional"
+  },
   "mediums": [
     "krita",
     "figma",
+    "blender",
     "ibispaintx",
     "heavypaint",
     "piskelapp",
+    "roblox",
     "clay"
   ],
   "characters": [
@@ -23,8 +21,19 @@
     "sunspot",
     "jetkid"
   ],
-  "fandoms": [
-    "portal 2",
-    "mirror's edge"
-  ]
+  "fandoms": {
+    "p2": "portal 2",
+    "medge": "mirror's edge"
+  },
+  "years": [
+    "2026",
+    "2025",
+    "2024",
+    "2023",
+    "2022"
+  ],
+  "other": {
+    "cmx": "commissions",
+    "hc": "hack club"
+  }
 }
