@@ -1,9 +1,27 @@
 h1,h2 { margin-top: 0; font-size: 2rem; }
-h1 { font-size: 3rem; }
 main { margin-bottom: -1rem; }
 section { padding: 1rem; }
+@keyframes globe {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
 header {
   background-image: url("/public/img/black.webp"); color: var(--gray-3);
+  position: relative; overflow: hidden; height: 30rem; text-align: center;
+  h1 { font-size: 3rem; }
+  a {
+    background-color: var(--gray-3);
+    padding: 0.5rem 1rem; border-radius: 1rem;
+  }
+  #header-b4g {
+    width: 12rem; height: auto; margin: 8rem auto 0;
+    position: relative; left: 10%; z-index: 1;
+  }
+  #header-globe {
+    width: 200%; margin: -1rem 0 0 -40%;
+    object-fit: cover; object-position: 50% 0;
+    animation: globe 120s linear infinite;
+  }
 }
 .art {
   padding: 0 1rem 0;

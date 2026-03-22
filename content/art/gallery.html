@@ -1,15 +1,25 @@
 {% extends "base.html" %}
-{% set title = "Art Gallery" %}
+{% set title = "Art gallery" %}
 {% set stylelist = ["art/gallery.css"] %}
 
 {% block content %}
 <header>
   <h1>art gallery</h1>
+  <p>Currently BROKEN: a work in progress.</p>
+  <details>
+    <summary><h2>filters</h2></summary>
+    {% for item, info in art.filters %}
+    <h3>{{ item }}</h3>
+    {% for filter in info %}
+    <label><input type="checkbox">{{ filter }}</label>
+    {% endfor %}
+    {% endfor %}
+  </details>
 </header>
 
 <main>
-  {% for item, info in art %}
-  <a href="/public/img/art/{{ item }}"><figure class="{{ info[1] }}">
+  {% for item, info in art.index %}
+  <a href="/public/img/art/{{ item }}" class="{{ info[1] | join(" ") }}"><figure>
     <img src="/public/img/art/{{ item }}" alt="{{ info[2] }}">
     <figcaption>{{ info[0] }}</figcaption>
   </figure></a>

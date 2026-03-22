@@ -1,7 +1,25 @@
-main {
-  display: flex; gap: 1rem; flex-direction: column;
-  padding: 1rem;
-  figure { margin: 0; }
+body>div {
+  display: flex;
+  header {
+    background-image: url("/public/img/sand.webp");
+    padding: 1rem;
+    h1 {padding: 0;}
+    details {
+      h2 { display: inline-block; margin: 0; }
+      label { display: inline-block; break-inside: avoid;}
+    }
+  }
+  main {
+    padding: 1rem; columns: 1;
+    >a {
+      display: inline-block; height: auto;
+      margin: auto; text-align: center;
+      &:not(:first-child) { padding-top: 1rem;}
+      &:not(:last-child) { padding-bottom: 1rem;}
+      max-width: 15rem;
+      figure { margin: 0; }
+    }
+  }
 }
 /* Large mobile view */
 @media screen and (min-width: 30rem) {
