@@ -1,3 +1,30 @@
 {% extends "base.html" %}
 {% set title = "Listography" %}
 {% set stylelist = ["about/listography.css"] %}
+
+{% block content %}
+<header>
+  <h1>listography</h1>
+</header>
+<main>
+  {% for list, entries in about.listography %}
+  <aside>
+    <h2>{{ list }}</h2>
+    {% if 'meta' in entries %}
+    <p>Created: {{ entries.meta.created }}<br>
+    Last updated: {{ entries.meta.updated }}</p>
+    {% else %}
+    <p>Created: {{ entries[0].created }}<br>
+    Last updated: {{ entries[0].updated }}</p>
+    {% endif %}
+    <ul>
+    {% if entries[0] %}
+      {% for entry in entries %}{% if loop.index>1 %}<li>{{ entry }}</li>{% endif %}{% endfor %}
+    {% else %}
+      {% for key, value in entries %}{% if loop.index>1 %}<li><strong>{{ key }}</strong>: {{ value }}</li>{% endif %}{% endfor %}
+    {% endif %}
+    </ul>
+  </aside>
+  {% endfor %}
+</main>
+{% endblock %}

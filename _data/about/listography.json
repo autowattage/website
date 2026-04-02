@@ -2,8 +2,7 @@
   "Favorites": {
     "meta": {
       "created": "01/12/2026",
-      "updated": "01/21/2026",
-      "type": "dictionary"
+      "updated": "01/21/2026"
     },
     "Color": "Yellow",
     "Number": 153,
@@ -28,37 +27,33 @@
   "Tools": {
     "meta": {
       "created": "01/15/2026",
-      "updated": "01/15/2026",
-      "type": "dictionary"
+      "updated": "04/01/2026"
     },
     "Text editor": "Helix",
     "Drawing software": "Krita",
     "Pixel art": "Aseprite",
-    "Animation": "Krita/Blender Grease Pencil",
-    "Linux distro": "Fedora",
+    "Animation": "Krita/Blender/Aesprite",
+    "Computer": "Framework Laptop 12",
+    "Linux distro": "Fedora 43",
     "Password manager": "KeePassXC",
     "IRC Client": "Weechat"
   },
   "Favorite Games": [
     {
       "created": "01/25/2026",
-      "updated": "01/25/2026"
+      "updated": "04/01/2026"
     },
     "Portal 2",
     "Mirror's Edge (+Catalyst)",
     "Alto's Adventure",
     "Pico Park",
-    "PHIGHTING!",
-    "Hexcells Infinite",
     "reky",
-    "Potion Craft: Alchemist Simulator",
-    "Flood Escape (1/2)"
+    "LOK"
   ],
   "Favorite Songs": {
     "meta": {
       "created": "01/27/2026",
-      "updated": "01/27/2026",
-      "type": "dictionary"
+      "updated": "01/27/2026"
     },
     "Speed Racer": "Her's",
     "READY TO FLY": "Masayoshi Takanaka",
@@ -97,10 +92,9 @@
   "2026 Goals": {
     "meta": {
       "created": "01/12/2026",
-      "updated": "01/24/2026",
-      "type": "checklist"
+      "updated": "04/01/2026"
     },
-    "Learn Forth": false,
+    "Learn Forth": true,
     "Learn Golang": false,
     "Learn Rust": false,
     "Learn C": false,
@@ -119,8 +113,7 @@
   "2026 Bucket List": {
     "meta": {
       "created": "01/23/2026",
-      "updated": "01/23/2026",
-      "type": "checklist"
+      "updated": "01/23/2026"
     },
     "Go skydiving": false,
     "Volunteer as a ham operator for an event": false,
@@ -133,13 +126,12 @@
   "2026 Consumption List": {
     "meta": {
       "created": "01/23/2026",
-      "updated": "01/27/2026",
-      "type": "checklist"
+      "updated": "04/01/2026"
     },
     "Children of the Whales (book)": false,
     "Understanding Comics (book)": false,
     "Girl's Last Tour (anime)": false,
-    "FLCL (anime)": false,
+    "FLCL (anime)": true,
     "Lazarus (anime)": false,
     "Cowboy Bebop (anime)": false,
     "Arknights: Endfield (game)": false,
