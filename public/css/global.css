@@ -3,7 +3,7 @@
   --gray-1: #376FA0;
   --gray-2: #5CB3BE;
   --gray-3: #F2CF9F;
-  --white: #FFF8E7;
+  --white: #f0eae4;
   --link-active: #7C1581;
   --link: #243C85;
   --yellow: #D5B63B;
@@ -12,8 +12,8 @@
 }
 
 html {
-  background-image: url("../img/white.webp");
-  color: var(--black); font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white); color: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
   &, body, p, h1 { margin:0; }
 }
 body>div p {
@@ -35,8 +35,8 @@ body {
     main {flex-grow: 1;}
   }
   footer {
-    background-image: url("../img/footer.webp"); background-size: contain;
-    color: var(--white); position: relative;
+    background-color: var(--blue); color: var(--white); position: relative;
+    background-image: url("../img/paper.webp"); background-blend-mode: overlay;
     display: flex; flex-direction: row; gap: 1rem;
     padding: 1rem;
     & * {align-content: center;}
