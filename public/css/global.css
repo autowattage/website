@@ -1,6 +1,6 @@
 :root {
   --black: #0B173E;
-  --gray-1: #376FA0;
+  --gray-1: #356C9C;
   --gray-2: #5CB3BE;
   --gray-3: #F2CF9F;
   --white: #f0eae4;
@@ -8,7 +8,7 @@
   --link: #243C85;
   --yellow: #D5B63B;
   --green: #6F9B32;
-  --blue: #376FA0;
+  --blue: #356C9C;
 }
 
 html {

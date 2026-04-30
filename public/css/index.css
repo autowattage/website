@@ -1,6 +1,6 @@
 html>body>div {padding: 0;}
 #headerwrapper {
-  background-image: url("../img/paper.webp"), linear-gradient(to bottom, #375f97 25%, #3d6ea9 25%, #3d6ea9 50%, #4B85B6 50%, #4B85B6 75%, #4c94be 75%);
+  background-image: url("../img/paper.webp"), linear-gradient(to bottom, #3d6ea9 25%, #467CB1 25%, #467CB1 50%,  #4A88B8 50%,  #4A88B8 75%, #4c94be 75%);
   background-blend-mode: overlay;
   padding: 0 0 15rem; position: relative;
   &::after {
@@ -41,8 +41,8 @@ html>body>div {padding: 0;}
         a {
           background-color: var(--green); color: var(--black); flex-grow: 1;
           padding: 0.5rem 2rem; border-radius: 0.5rem; text-align: center;
-          &:first-child, &:nth-child(2), &:nth-child(3){background-color: var(--yellow);}
-          &:nth-child(7), &:last-child {background-color: var(--blue); color: var(--white);}
+          &:first-child, &:nth-child(2) {background-color: var(--yellow);}
+          &:nth-child(5), &:last-child {background-color: var(--blue); color: var(--white);}
           &:hover { background-color: var(--black); color: var(--white); }
         }
       }
