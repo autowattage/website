@@ -16,7 +16,7 @@ artwork, assets, and paper textures are made by scanning constrution paper and a
   - /public/css contains CSS files
   - /public/js contains JS files
   - /public/img contains image files (png, svg, gif, webp)
-- /archive, where old HTML and markdown files are snapshotted
+- /_archive, where old HTML and markdown files are snapshotted
 - /_includes, where template HTML and markdown files are stored
 - /_data, where JSON and data files are stored
 - /_site, the static site output when running `npx @11ty/eleventy`
