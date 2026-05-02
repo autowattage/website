@@ -1,5 +1,13 @@
 ---
-permalink: 404.html
+pagination:
+  data: webpages
+  size: 1
+  alias: url
+  
+webpages:
+ - /404.html
+ - /not_found.html
+permalink: "{{ url }}"
 ---
 {% extends "base.html" %}
 {% set title = "404 Error" %}
