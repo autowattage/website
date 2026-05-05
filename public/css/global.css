@@ -16,7 +16,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   &, body, p, h1 { margin:0; }
 }
-body>div p {
+body>div p  {
   &:not(:first-child) { margin-top: 1rem; }
   &:not(:last-child) { margin-bottom: 1rem; }
 }
@@ -53,11 +53,11 @@ body {
 }
 
 @media screen and (max-width: 30rem) {
-  body > footer {flex-direction: column; text-align: center;}
+  body footer {flex-direction: column; text-align: center;}
 }
 @media screen and (min-width: 40rem) {
-  body > footer { padding: 1rem 10%; }
+  body footer { padding: 1rem 10%; }
 }
 @media screen and (min-width: 67rem) {
-  body > footer { padding: 1rem 20%; }
+  body footer { padding: 1rem 20%; }
 }

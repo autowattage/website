@@ -1,12 +1,38 @@
 {% extends "base.html" %}
 {% set title = "whoami" %}
+{% set stylelist = ["about.css"] %}
 
 {% block content %}
-<header>
+<nav>
   <h1>whoami</h1>
-</header>
+  <ul>
+    <li class="about"><a href="">about</a></li>
+    <li class="website"><a href="">website</a></li>
+    <li class="inventory"><a href="">inventory</a></li>
+    <li class="listography"><a href="">listography</a></li>
+  </ul>
+</nav>
 
 <main>
-  <p>great question i have no idea</p>
+  <h1>whoami</h1>
+  <section class="about">
+    <h2>about me</h2>
+    <p>hello world</p>
+  </section>
+  <section class="website">
+    <h2>website</h2>
+    <p>hello world</p>
+  </section>
+  <section class="inventory">
+    <h2>inventory</h2>
+    <p>hello world</p>
+  </section>
+  <section class="listography">
+    <h2>listography</h2>
+    <p>hello world</p>
+  </section>
 </main>
+
 {% endblock %}
+
+{% set footer = " " %}
