@@ -1,14 +1,5 @@
 # Sundial city
-you're on version 11 of my website, made for hack club's [page](https://page.hackclub.com) YSWS program.
-
-the goal of sundial city is to:
-- serve as a web-based personal digital assistant
-- archive/track my life over time
-- express myself
-- become my strongest internet presence in lieu of social media
-
-sundial city is made with 11ty and html (rendered as nunjucks), css, and markdown (rendered with liquid).
-artwork, assets, and paper textures are made by scanning constrution paper and applying color filters (HSL adjustment) on krita.
+you're on version 12 of my website! sundial city uses 11ty and is hosted on vercel.
 
 ## folder structure
 - /content, where HTML and markdown files are stored

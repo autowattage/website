@@ -4,23 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="">
-    <title>{{ title }} | sundial.city</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/public/css/global.css">
     {% for file in stylelist %}
     <link rel="stylesheet" href="/public/css/{{ file }}">
     {% endfor %}
     {% block head %}{% endblock %}
-
   </head>
 
   <body>
-    <div>
-      {% block content %}{% endblock %}
-    </div>
-    {% if footer|length %}
-      {{ footer }}
-    {% else %}
-      {% include "./partials/footer.html" %}
-    {% endif %}
+    {% block content %}{% endblock %}
   </body>
 </html>

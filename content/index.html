@@ -2,60 +2,11 @@
 {% set title = "Index" %}
 {% set stylelist = ["index.css"] %}
 
-{% block head %}
-<link href="https://github.com/autowattage" rel="me"/>
-<link href="https://x.com/autowattage" rel="me"/>
-{% endblock %}
-
 {% block content %}
-<div id="headerwrapper">
-  <div id="headerstars">
-    <img src="/public/img/index/moon.webp" alt="A white crescent moon"/>
-    <img src="/public/img/index/4star.webp" alt="A white 4-pointed star"/>
-    <img src="/public/img/index/5star.webp" alt="A yellow 5-pointed star"/>
-    <img src="/public/img/index/4star.webp" alt="A white 4-pointed star"/>
-    <img src="/public/img/index/5star.webp" alt="A yellow 5-pointed star"/>
-    <img src="/public/img/index/4star.webp" alt="A white 4-pointed star"/>
-    <img src="/public/img/index/5star.webp" alt="A yellow 5-pointed star"/>
-  </div>
-  <header>
-    <img src="/public/img/index/icon.webp" alt="Bunnyguy peeking out from a house"/>
-    <div>
-      <img src="/public/img/logo.webp" alt="Sundial City"/>
-      <nav>
-        <a href="/about/">about</a>
-        <a href="/art/">art</a>
-        <a href="/projects/">projects</a>
-        <a href="/blog/">blog</a>
-        <a href="/goodies/">goodies</a>
-        <a href="/sitemap/">sitemap</a>
-      </nav>
-    </div>
-  </header>
+<div align="center">
+  <h1>sundial.city</h1>
+  <p>...is on maintenance for version 12!</p>
+  <p>check back later!</p>
+  <img src="/public/foo.png" style="height: 10rem; width: auto;">
 </div>
-
-<main>
-  <!-- <section id="landing"> -->
-    <!-- <h1>You've landed at <em>Sundial City!</em></h1> -->
-    <!-- <figure> -->
-      <!-- <figcaption>It's nice to meet you!</figcaption> -->
-      <!-- <img src="/public/img/index/bunnyguy-landing.webp" alt="Bunnyguy waving to the camera"/> -->
-    <!-- </figure> -->
-    <!-- <aside> -->
-      <!-- <p>Sundial City serves as a wiki, archive, and the main online presence of the webmaster, Bunnyguy (and their art and writings). They're a tinkering artist and also a white bunny with a bucket hat and bowtie.</p> -->
-      <!-- <p>Learn <a href="/about/">more about Bunnyguy</a>, go to a <a href="">random page</a> (link soon), or <a href="/sitemap/">explore the website</a>.</p> -->
-      <!-- <p>Sundial City is forever in a work-in-progress state  and was first made for Hack Club's <a href="https://page.hackclub.com">Page</a> program.</p> -->      
-      <!-- <pagering-link theme="light"></pagering-link> -->
-    <!-- </aside> -->
-  <!-- </section> -->
-</main>
-
-<section id="beach">
-  <a id="fishing" href="/games/fishing/"><img src="/public/img/index/fishing.webp" onmouseleave="this.src='/public/img/index/fishing.webp';" onmouseenter="this.src='/public/img/index/fishing-hover.webp';" alt="Bunnyguy holding a fishing rod on a dock"></img></a>
-  <a id="liferaft" href="/games/liferaft/"><img src="/public/img/index/liferaft.webp" onmouseleave="this.src='/public/img/index/liferaft.webp';" onmouseenter="this.src='/public/img/index/liferaft-hover.webp';" alt="Bunnyguy swimming in a red-and-white life raft"></img></a>
-  <img id="fish-1" class="fish" src="/public/img/index/fish-1.webp" alt="A school of yellow, blue, and green fish"></img>
-  <img id="fish-2" class="fish" src="/public/img/index/fish-2.webp" alt="A school of black, blue, and purple fish"></img>
-</section>
-
-<script src="https://pagering.gideon.sh/embed.js" defer></script>
 {% endblock %}
