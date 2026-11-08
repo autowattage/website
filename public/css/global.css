@@ -1,0 +1,21 @@
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#F3EDE5, #051C43);
+  --fg: light-dark(#051C43, #F3EDE5);
+  --yellow: #D9BC5A;
+  --green: #83B73A;
+  --blue: #217599;
+  --blue-dark: #143C6C;
+}
+
+html {
+  background-color: var(--bg); color: var(--fg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 30rem) {
+}
+@media screen and (min-width: 40rem) {
+}
+@media screen and (min-width: 67rem) {
+}

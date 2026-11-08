@@ -1,0 +1,16 @@
+---
+title: Sitemap — sundial.city
+description: Sundial city's sitemap!
+stylelist:
+  - index.css
+---
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Sitemap</h1>
+<ul>
+{% for file in collections.all %}
+  <li><a href="{{ file.url }}">{{ file.url }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

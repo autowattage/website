@@ -1,12 +1,9 @@
-export default async function(eleventyConfig) {
-	// copy /public folder to _site
-  eleventyConfig.addPassthroughCopy({"public": "public"});
+import { DateTime } from "luxon";
+// const TIME_ZONE = "America/Toronto";
 
-  // enable inserting HTML in markdown
-  eleventyConfig.setNunjucksEnvironmentOptions({
-		throwOnUndefined: true,
-		autoescape: false, // warning: don’t do this! <- NEVER! <- No.
-	});
+export default async function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({"public": "public"});
+  eleventyConfig.addPassthroughCopy({"rootpublic": "."});
 };
 
 export const config = {

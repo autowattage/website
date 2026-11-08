@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="description" content="{{ description }}"/>
+    <!-- <meta name="theme-color" content="#217599" media="(prefers-color-scheme: light)"/> -->
+    <!-- <meta name="theme-color" content="#143C6C" media="(prefers-color-scheme: dark)"/> -->
+  
+    <!-- <meta name="robots" content="index, follow"> -->
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <!-- <meta name="robots" content="noindex, max-image-preview:large"> -->
+
+    <link rel="canonical" href="https://sundial.city{{ page.url }}"/>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+    <link rel="icon" href="/favicon.ico" sizes="32x32"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest"/>
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/public/css/global.css">
+    <link rel="stylesheet" href="/public/css/global.css"/>
     {% for file in stylelist %}
-    <link rel="stylesheet" href="/public/css/{{ file }}">
+    <link rel="stylesheet" href="/public/css/{{ file }}"/>
     {% endfor %}
     {% block head %}{% endblock %}
   </head>
 
   <body>
     {% block content %}{% endblock %}
+    {% if footer|length %}
+      {{ footer }}
+    {% else %}
+      <footer>
+        <p><a href="/">sundial.city</a> © 2023-2026</p>
+      </footer>
+    {% endif %}
   </body>
 </html>

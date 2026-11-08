@@ -1,0 +1,18 @@
+---
+title: Art — sundial.city
+description: Nick's art
+stylelist:
+---
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Art</h1>
+{% for filepath, metadata in art %}
+  <a href="/public/img/art/{{ filepath }}" class="{{ metadata[2] | join(" ") }}"><figure>
+    <img src="/public/img/art/{{ filepath }}" alt="{{ metadata[3] }}" style="width: 10rem; height: auto;">
+    <p>{% if metadata[0]|length %}{{ metadata[0] }}{% else %}{{ filepath }}{% endif %}</p>
+    {% if metadata[1]|length %}<p>{{ metadata[1] }}</p>{% endif %}
+  </figure></a>
+{% endfor %}
+
+{% endblock %}

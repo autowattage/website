@@ -1,12 +1,21 @@
+---
+title: Home — sundial.city
+description: Nick's personal website!
+stylelist:
+  - index.css
+---
 {% extends "base.html" %}
-{% set title = "Index" %}
-{% set stylelist = ["index.css"] %}
 
 {% block content %}
-<div align="center">
-  <h1>sundial.city</h1>
-  <p>...is on maintenance for version 12!</p>
-  <p>check back later!</p>
-  <img src="/public/foo.png" style="height: 10rem; width: auto;">
-</div>
+<h1>sundial.city</h1>
+<nav><ul>
+  <li><a href="/about/">about</a></li>
+  <li><a href="/art/">art</a></li>
+  <li><a href="/goodies/">goodies</a></li>
+  <li><a href="/hobby/">hobby</a></li>
+  <li><a href="/journal/">journal</a></li>
+  <li><a href="/library/">library</a></li>
+  <li><a href="/media/">media</a></li>
+  <li><a href="/projects/">projects</a></li>
+</ul></nav>
 {% endblock %}
