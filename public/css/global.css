@@ -1,21 +1,45 @@
 :root {
   color-scheme: light dark;
   --bg: light-dark(#F3EDE5, #051C43);
+  --bg-soft: light-dark(#B9D0D4, #10234E);
   --fg: light-dark(#051C43, #F3EDE5);
-  --yellow: #D9BC5A;
-  --green: #83B73A;
-  --blue: #217599;
-  --blue-dark: #143C6C;
+  --fg-soft: light-dark(#10234E, #B9D0D4);
+  
+  --yellow: light-dark(#D9BC5A, #A79044);
+  --green: light-dark(#83B73A, #6A9B27);
+  --blue: light-dark(#217599, #1B5B76);
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/public/fonts/Roboto.ttf")
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/public/fonts/Roboto-Italic.ttf");
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, figure { margin: 0; padding: 0.25rem 0;}
+h1 { padding: 1rem 0;}
+h2 { font-size: 1.75rem; padding: 0.5rem 0;}
+h3 { font-size: 1.5rem;}
+h4 { font-size: 1.3rem;}
+h5, h6 { font-size: 1.2rem;}
+ul { padding: 0 0 0 2rem;}
 
 html {
   background-color: var(--bg); color: var(--fg);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
+body { margin: 0 .5rem; }
 
-@media screen and (max-width: 30rem) {
+@media screen and (min-width: 30rem) {
+  body { margin: 0 1rem; }
 }
 @media screen and (min-width: 40rem) {
+  body { margin: 0 auto; width: 80%; }
 }
 @media screen and (min-width: 67rem) {
+  body { width: 75%; }
 }
